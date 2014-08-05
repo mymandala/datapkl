@@ -49,7 +49,7 @@
   					</button>
 					<ul class="dropdown-menu" role="menu">
 						<li>
-							<a href="#"> Lihat </a>
+							<a href="index.php?pages=view&nis=<?php echo $data['nis'];?>"> Lihat </a>
 						</li>
 						<li> 
 							<a href="proses/data_siswa/hapus.php?nis=<?php echo $data['nis'];?>"onclick="return confirm('Apakah Anda yakin akan menghapus data siswa <?php echo $data['nama_siswa']; ?>?')">Hapus</a>
