@@ -51,10 +51,7 @@
 		<div class="form-group">
 			<label class="col-sm-2 control-label"> Tanggal Lahir </label>
 			<div class="col-sm-5">
-                <div class="input-group input-append  date" id="dpYears" data-date="12-02-2012" data-date-format="dd-mm-yyyy" data-date-viewmode="years">
-                    <input class="form-control" type="text" value="12-02-2012" readonly name="ttl">
-                     <span class="input-group-addon add-on"><i class="fa fa-calendar"></i></span> 
-                </div>
+                <input type="date" name="tanggal_lahir" class="form-control">
             </div>
 		</div>
 		<div class="form-group">
@@ -119,6 +116,6 @@
 		</div>	
 		<div class="form-group"></div>
 		<input type="submit" value="kirim" class="btn btn-primary">
-		<a href="index.php?pages=pembimbing"> <input type="button" value="batal" class="btn btn-primary"> </a>
+		<a href="index.php?pages=data_siswa"> <input type="button" value="batal" class="btn btn-primary"> </a>
 	</form>
 <?php } ?>
