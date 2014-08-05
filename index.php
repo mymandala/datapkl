@@ -105,7 +105,7 @@
                                     <a href="index.php?pages=pembimbing">Data Pembimbing</a>
                                 </li>
                                 <li>
-                                    <a href="#">Data Program Keahlian</a>
+                                    <a href="index.php?pages=data_prog_keahlian">Data Program Keahlian</a>
                                 </li>
                             </ul>
                             <!-- /.nav-second-level -->
@@ -158,8 +158,23 @@
                     case 'ubah_pembimbing':
                             include 'modul/pembimbing/ubah.php';
                         break;
+                    case 'entry_data_sekolah':
+                        include "modul/sekolah/entry_data.php";
+                        break;
                     case 'data_sekolah':
                             include 'modul/sekolah/data_sekolah.php';
+                        break;
+                    case 'ubah_data_sekolah':
+                        include "proses/sekolah/ubah.php";
+                        break;
+                    case 'data_prog_keahlian':
+                        include "modul/prog_keahlian/data_prog_keahlian.php";
+                        break;
+                    case 'entry_prog_keahlian':
+                        include "modul/prog_keahlian/entry_data.php";
+                        break;
+                    case 'ubah_prog_keahlian':
+                        include "proses/prog_keahlian/ubah.php";
                         break;
                     case 'data_siswa';
                             include 'modul/data_siswa/siswa.php';

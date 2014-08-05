@@ -1,11 +1,10 @@
 <?php 
-include "../../config/config.php";
 $id_sekolah = $_GET['id_sekolah'];
 $sql="SELECT * from sekolah where id_sekolah='$id_sekolah'";
 $query = mysql_query($sql);
 $sekolah = mysql_fetch_array($query);
 ?>
-<form action="ubah.exe.php" method="post">
+<form action="proses/sekolah/ubah.exe.php" method="post">
 	<table>
 		<tr>
 			<td>id_sekolah</td>
