@@ -103,9 +103,18 @@
 			</div>
 		</div>
 		<div class="form-group">
-			<label class="col-sm-2 control-label"> Periode PKL </label>
+		<label class="col-sm-2 control-label"> Periode PKL </label>
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Tanggal Masuk </label>
 			<div class="col-sm-5"> 
-				<input type="text" name="p_telp" class="form-control">
+				<input type="date" name="tgl_masuk" class="form-control">
+			</div>
+		</div>	
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Tanggal Keluar </label>
+			<div class="col-sm-5"> 
+				<input type="date" name="tgl_keluar" class="form-control">
 			</div>
 		</div>	
 		<div class="form-group"></div>

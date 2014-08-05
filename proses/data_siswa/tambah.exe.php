@@ -11,7 +11,8 @@ $alamat = $_POST['alamat'];
 $id_sklh = $_POST['id_sekolah'];
 $id_pembimbing = $_POST['id_pembimbing'];
 $id_prog = $_POST['id_prog_keahlian'];
-$periode = $_POST['periode_pkl'];
+$tgl_masuk = $_POST['tgl_masuk'];
+$tgl_keluar = $_POST['tgl_keluar'];
 
 mysql_query("INSERT into data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
@@ -22,8 +23,11 @@ mysql_query("INSERT into data_siswa set nis = '$nis',
 										alamat = '$alamat',
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
-										id_prog_keahlian = '$id_prog',
-										periode_pkl = '$periode_pkl'") or die(mysql_error());
+										id_prog_keahlian = '$id_prog'") or die(mysql_error());
+
+mysql_query("INSERT into periode_pkl set tgl_masuk = '$tgl_masuk',
+										 tgl_keluar = '$tgl_keluar'") or die (mysql_error());
+
 header ("location:../../index.php?pages=data_siswa");
 
 ?>
