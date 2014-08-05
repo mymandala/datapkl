@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Data Pkl PT. Jerbee Indonesia</title>
+    <title>Data PKL PT. Jerbee Indonesia</title>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -91,35 +91,35 @@
                         <li>
                             <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
-                       
+                       <li>
+                            <a href="index.php?pages=data_siswa"><i class="fa fa-user fa-fw"></i> Data Siswa </a>
+                        </li>
                         
                         <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i> Multi-Level Dropdown<span class="fa arrow"></span></a>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>Data<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Second Level Item</a>
+                                    <a href="index.php?pages=data_sekolah">Data Sekolah</a>
                                 </li>
                                 <li>
-                                    <a href="#">Second Level Item</a>
+                                    <a href="index.php?pages=pembimbing">Data Pembimbing</a>
                                 </li>
                                 <li>
-                                    <a href="#">Third Level <span class="fa arrow"></span></a>
-                                    <ul class="nav nav-third-level">
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">Third Level Item</a>
-                                        </li>
-                                    </ul>
-                                    <!-- /.nav-third-level -->
+                                    <a href="#">Data Program Keahlian</a>
                                 </li>
+                            </ul>
+                            <!-- /.nav-second-level -->
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>Laporan<span class="fa arrow"></span></a>
+                            <ul class="nav nav-second-level">
+                                <li>
+                                    <a href="#">Laporan Perbulan</a>
+                                </li>
+                                <li>
+                                    <a href="#">Laporan Pertahun</a>
+                                </li>
+        
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -149,10 +149,24 @@
                 <?php 
 
                 switch ($_GET['pages']) {
-                    case '':
-                        # code...
+                    case 'pembimbing':
+                            include 'modul/pembimbing/pembimbing.php';
                         break;
-                    
+                    case 'tambah_pembimbing':
+                            include 'modul/pembimbing/tambah.php';
+                        break;
+                    case 'ubah_pembimbing':
+                            include 'modul/pembimbing/ubah.php';
+                        break;
+                    case 'data_sekolah':
+                            include 'modul/sekolah/data_sekolah.php';
+                        break;
+                    case 'data_siswa';
+                            include 'modul/data_siswa/siswa.php';
+                        break;
+                    case 'tambah_siswa':
+                            include 'modul/data_siswa/tambah.php';
+                        break;
                     default:
                             include 'modul/dashb.php';
                         break;
