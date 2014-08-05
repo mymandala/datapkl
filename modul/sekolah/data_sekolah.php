@@ -28,7 +28,7 @@ while ($sekolah = mysql_fetch_array($qry)){
         </a>
     </td>
     <td>
-        <a href="proses/sekolah/ubah.php?id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
+        <a href="index.php?pages=ubah_data_sekolah&id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
             <input type="button" value="ubah" name="sunting">
         </a>
     </td>
