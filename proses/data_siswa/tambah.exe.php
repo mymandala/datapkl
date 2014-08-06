@@ -13,10 +13,10 @@ $id_pembimbing = $_POST['id_pembimbing'];
 $id_prog = $_POST['id_prog_keahlian'];
 $tgl_masuk = $_POST['tgl_masuk'];
 $tgl_keluar = $_POST['tgl_keluar'];
-$datetime1 = date_create('$tgl_masuk');
-$datetime2 = date_create('$tgl_keluar');
+$datetime1 = date_create($_POST['tgl_masuk']);
+$datetime2 = date_create($_POST['tgl_keluar']);
 $interval = date_diff($datetime1, $datetime2);
-$hasil = $interval->format('%a hari');
+$hasil = $interval->format('%m Bulan');
 
 echo "$hasil";
 
