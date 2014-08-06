@@ -13,6 +13,12 @@ $id_pembimbing = $_POST['id_pembimbing'];
 $id_prog = $_POST['id_prog_keahlian'];
 $tgl_masuk = $_POST['tgl_masuk'];
 $tgl_keluar = $_POST['tgl_keluar'];
+$datetime1 = date_create('$tgl_masuk');
+$datetime2 = date_create('$tgl_keluar');
+$interval = date_diff($datetime1, $datetime2);
+$hasil = $interval->format('%a hari');
+
+echo "$hasil";
 
 mysql_query("INSERT into data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
@@ -23,7 +29,8 @@ mysql_query("INSERT into data_siswa set nis = '$nis',
 										alamat = '$alamat',
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
-										id_prog_keahlian = '$id_prog'") or die(mysql_error());
+										id_prog_keahlian = '$id_prog',
+										periode_pkl = '$hasil'") or die(mysql_error());
 
 mysql_query("INSERT into periode_pkl set nis = '$nis',
 										 tgl_masuk = '$tgl_masuk',
