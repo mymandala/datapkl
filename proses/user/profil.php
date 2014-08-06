@@ -4,7 +4,7 @@ $sql="SELECT * from user where id_user='$id_user'";
 $query = mysql_query($sql);
 $user = mysql_fetch_array($query);
 ?>
-<form action="proses/user/ubah.exe.php" method="post">
+<form action="" method="post">
 <table>
 	<tr>
 		<td>Id_User</td>
@@ -43,6 +43,6 @@ $user = mysql_fetch_array($query);
 		</td>
 	</tr>
 	</table>
-	<input type="submit" value="kirim" >
+	
 
 </form>

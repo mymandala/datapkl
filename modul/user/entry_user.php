@@ -39,10 +39,10 @@
 	<tr>
 		<td>Email</td>
 		<td>:</td>
-		<td><select>
+		<td><select name="level">
 				<option>--Pilih Type--</option>
-				<option>Administrator</option>
-				<option>User</option>
+				<option value="administrator">Administrator</option>
+				<option value="user">User</option>
 			</select>
 		</td>
 	</tr>

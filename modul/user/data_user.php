@@ -22,6 +22,7 @@ while ($user = mysql_fetch_array($qry)){
 	<td><?php echo $user['username']?></td>
 	<td><?php echo $user['nama']?></td>
 	<td><?php echo $user['email']?></td>
+	<td><?php echo $user['level']?></td>
 	<td><a href="proses/user/hapus.php?id_user=<?php echo $user ['id_user']; ?> ">
             <input type="button" value="hapus" name="hapus">
         </a>
