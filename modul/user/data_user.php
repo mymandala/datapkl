@@ -10,7 +10,7 @@
 	<td>Username</td>
 	<td>Nama</td>
 	<td>Email</td>
-	<td>satus</td>
+	<td>status</td>
 	<td colspan="2">action</td>
 </tr>
 <?
