@@ -1,4 +1,9 @@
-<?php include 'config/config.php' ; ?>
+<?php include 'config/config.php' ;
+session_start () ;
+if (empty ($_SESSION['usernamer']) && empty ($_SESSION['password']) ) { 
+header ("location:login.php")  ; 
+}
+else { ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -226,3 +231,4 @@
 
 </html>
 
+<? } ?>
