@@ -13,9 +13,10 @@
 	<td>Telp_sekolah</td>
 	<td colspan="2">action</td>
 </tr>
-<?
+<?php
 $qry = mysql_query("SELECT * FROM sekolah");
-while ($sekolah = mysql_fetch_array($qry)){
+while ($sekolah = mysql_fetch_array($qry))
+{
 ?>
 <tr>
 	<td><?php echo $sekolah['id_sekolah']?></td>
@@ -33,7 +34,7 @@ while ($sekolah = mysql_fetch_array($qry)){
         </a>
     </td>
 </tr>
-<?php }?>
+<?php } ?>
 </table>
 </body>
 </html>
