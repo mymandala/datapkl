@@ -200,6 +200,12 @@ else { ?>
                     case 'tambah_siswa':
                             include 'modul/data_siswa/tambah.php';
                         break;
+                    case 'ubah_siswa' :
+                            include 'modul/data_siswa/ubah.php';
+                        break;
+                    case 'view' :
+                            include 'modul/data_siswa/view.php';
+                        break;
                     default:
                             include 'modul/dashb.php';
                         break;

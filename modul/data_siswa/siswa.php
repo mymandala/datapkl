@@ -1,12 +1,7 @@
-<html>
-<head>
-	<title></title>
-</head>
-<body>
 <div class="table-responsive">
 	<table style="margin:10px;" width="1000">
 		<tr>
-			<td width="200" style="font-size:40px;"> <h2> Data Siswa </h2> </td>
+			<td width="270" style="font-size:40px;"> <h2> Data Siswa PKL </h2> </td>
 			<td> <a href="index.php?pages=tambah_siswa"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
 			<td align="right"> 
 			<form method="post" action="" class="form-inline">
@@ -25,7 +20,8 @@
 			<td> Sekolah </td>
 			<td> Program Keahlian </td>
 			<td> Pembimbing </td>
-			<td> Periode PKL </td>
+			<td> Tanggal Masuk </td>
+			<td> Tanggal Keluar </td>
 			<td> &nbsp; </td>
 		</tr>
 		<?php 
@@ -39,7 +35,8 @@
 			<td> <?php echo $data['s_nama']; ?> </td>			
 			<td> <?php echo $data['nama_prog_keahlian']; ?> </td>
 			<td> <?php echo $data['p_nama']; ?> </td>
-			<td> <?php echo $data['periode_pkl']; ?> </td>
+			<td> <?php echo $data['tgl_masuk']; ?> </td>
+			<td> <?php echo $data['tgl_keluar']; ?> </td>
 			<td> 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary">Aksi</button>
@@ -64,5 +61,3 @@
 		<? } ?>
 	</table>
 </div>
-</body>
-</html>

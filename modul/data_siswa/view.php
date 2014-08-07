@@ -59,6 +59,19 @@ if ($_GET['pages']=='view') {
 				<td> : </td>
 				<td> <?php echo $data['periode_pkl']; ?> </td>
 			</tr>
+			<tr>
+				<td> Tanggal Masuk </td>
+				<td> : </td>
+				<td> <?php echo $data['tgl_masuk']; ?> </td>
+			</tr>
+			<tr>
+				<td> Tanggal Keluar </td>
+				<td> : </td>
+				<td> <?php echo $data['tgl_keluar']; ?> </td>
+			</tr>
+			<tr>
+				<td colspan="3"> <a href="index.php?pages=data_siswa"> kembali </a> </td>
+			</tr>
 		</table>
 
 

@@ -1,5 +1,5 @@
 <?php if ($_GET['pages']=='tambah_siswa') { ?>
-<h3> Tambah Data Siswa </h3>
+<h3> Tambah Data Siswa PKL </h3>
 <br>
 	<form action="proses/data_siswa/tambah.exe.php" method="post" class="form-horizontal" role="form">
 		<div class="form-group">
