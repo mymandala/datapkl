@@ -15,8 +15,8 @@ $password=md5($_POST['pass']);
             if($usr==$username AND $pss==$password) {
                 session_start();
 
-                    $_SESSION['username'] = $_fetch['username'];
-                    $_SESSION['password'] = $_fetch['password'];
+                    $_SESSION['username'] = $usr;
+                    $_SESSION['password'] = $pss;
             header ("location:../index.php");
             }
             else { echo "<meta http-equiv='refresh' content='0; url=../login.php'>";
