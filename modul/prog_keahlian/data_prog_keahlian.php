@@ -16,7 +16,7 @@
 							<tr>
 								<th> Id Program Keahlian</th>
 								<th> Jenis Program Keahlian</th>
-								<th width="150"> action </th>
+								<th width="130"> action </th>
 							</tr>
 						</thead>
 						<?php

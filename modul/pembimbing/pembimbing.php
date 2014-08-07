@@ -19,7 +19,7 @@
 								<th> Email </th>
 								<th> No Telp </th>
 								<th> Sekolah </th>
-								<th> Menu </th>
+								<th width="130"> Menu </th>
 							</tr>
 						</thead>
 						<tbody>
