@@ -10,7 +10,7 @@
 		<td>Jenis Program Keahlian</td>
 		<td colspan="2">action</td>
 	</tr>
-	<?
+	<?php
 $qry = mysql_query("SELECT * FROM prog_keahlian");
 while ($jurusan = mysql_fetch_array($qry)){
 ?>
@@ -27,7 +27,7 @@ while ($jurusan = mysql_fetch_array($qry)){
 	        </a>
 	    </td>
 	</tr>
-<? } ?>
+<?php } ?>
 </table>
 </body>
 </html>

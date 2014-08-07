@@ -31,7 +31,7 @@
 			<td> <a href="proses/pembimbing/hapus.php?id_pembimbing=<?php echo $data['id_pembimbing'];?>"onclick="return confirm('Apakah Anda yakin akan menghapus pembimbing <?php echo $data['p_nama']; ?>?')"> Hapus </a> + 
 			<a href="index.php?pages=ubah_pembimbing&id_pembimbing=<?php echo $data['id_pembimbing']?>"> Ubah </a> </td>
 		</tr>
-		<? } ?>
+		<?php } ?>
 	</table>
 </div>
 </body>
