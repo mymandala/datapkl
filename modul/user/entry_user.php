@@ -3,56 +3,52 @@
 <title>Entry User</title>
 </head>
 <body>
-
-<form action="proses/user/input.php" method="post">
-<table>
-	<tr>
-		<td>Id_User</td>
-		<td>:</td>
-		<td><input type="text" name="id_user"></td>
-	</tr>
-	<tr>
-		<td>Nama</td>
-		<td>:</td>
-		<td><input type="text" name="nama"></td>
-	</tr>
-	<tr>
-		<td>Email</td>
-		<td>:</td>
-		<td><input type="text" name="email"></td>
-	</tr>
-	<tr>
-		<td>Username</td>
-		<td>:</td>
-		<td><input type="text" name="username"></td>
-	</tr>
-	<tr>
-		<td>Password</td>
-		<td>:</td>
-		<td><input type="text" name=""></td>
-	</tr>
-	<tr>
-		<td>Confirm Password</td>
-		<td>:</td>
-		<td><input type="text" name="password"></td>
-	</tr>
-	<tr>
-		<td>Type</td>
-		<td>:</td>
-		<td><select name="level">
-				<option>--Pilih Type--</option>
-				<option value="administrator">Administrator</option>
-				<option value="user">User</option>
-			</select>
-		</td>
-	</tr>
-	<tr>
-		<td>
-	            <input type="submit" name="simpan" value="simpan">
-	    </td>
-	    
-	</tr>
-</table>
-</form>
+<h3> Tambah Data Siswa PKL </h3>
+<br>
+	<form action="proses/user/input.php" method="post" class="form-horizontal" role="form">
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Id User </label>
+			<div class="col-xs-2"> 
+				<input type="text" name="id_user" required="required" class="form-control"> </td>
+			</div> 
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Nama </label>
+			<div class="col-xs-5"> 
+				<input type="text" name="nama" required="required" class="form-control"> </td>
+			</div> 
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Email </label>
+			<div class="col-xs-5"> 
+				<input type="text" name="email" required="required" class="form-control"> </td>
+			</div> 
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Username </label>
+			<div class="col-xs-5"> 
+				<input type="text" name="username" required="required" class="form-control"> </td>
+			</div> 
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Password </label>
+			<div class="col-xs-5"> 
+				<input type="text" name="password" required="required" class="form-control"> </td>
+			</div> 
+		</div>
+		<div class="form-group">
+			<label class="col-sm-2 control-label"> Type </label>
+			<div class="col-sm-5">
+				<select name="level" class="form-control">
+					<option>--pilih type--</option>
+					<option value="administrator">administrator</option>
+					<option value="user">user</option>
+				</select>
+			</div>
+		</div>
+		<div class="form-group"></div>
+		<input type="submit" value="kirim" class="btn btn-primary">
+		<a href="index.php?pages=data_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
+	</form>
 </body>
 </html>

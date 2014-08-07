@@ -2,7 +2,7 @@
 include "../../config/config.php";
 $id_user=$_POST['id_user'];
 $username=$_POST['username'];
-$password=$_POST['password'];
+$password=md5($_POST['password']);
 $nama=$_POST['nama'];
 $email=$_POST['email'];
 $level=$_POST['level'];

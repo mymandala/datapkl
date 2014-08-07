@@ -3,8 +3,21 @@
 <title>Data User</title>
 </head>
 <body>
-<a href="index.php?pages=entry_user" >tambah</a>
-<table border="1">
+<div class="table-responsive">
+	<table style="margin:10px;" width="1000">
+		<tr>
+			<td width="270" style="font-size:40px;"> <h2> Data User </h2> </td>
+			<td> <a href="index.php?pages=entry_user"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
+			<td align="right"> 
+			<form method="post" action="" class="form-inline">
+				<input type="text" name="cari" required="required" placeholder="Cari.." class="form-control">				
+				<input type="submit" value="Cari" name="pencarian" class="btn btn-primary">
+			</form> 
+			</td>
+		</tr>
+	</table>
+	<br>
+<table class="table table-hover">
 <tr>
 	<td>id_User</td>
 	<td>Username</td>
