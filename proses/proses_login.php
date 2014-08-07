@@ -1,26 +1,38 @@
 <?php
-Include "../config/config.php";
+session_start();
+include "../config/config.php";
+function anti_injection($data){
+  $filter = mysql_real_escape_string(stripslashes(strip_tags(htmlspecialchars($data,ENT_QUOTES))));
+  return $filter;
+}
 
-if ($_POST['login']) {
-$username=$_POST['user'];
-$password=md5($_POST['pass']);
+$username = htmlentities($_POST['user']);
+$pass     = htmlentities(md5($_POST['pass']));
 
-    $query = "SELECT username, password FROM user WHERE username='$username'";
-    $sql   = mysql_query($query);
-    $fetch = mysql_fetch_array($sql);
-           
-            $usr = $fetch['username'];
-            $pss = $fetch['password'];
+// pastikan username dan password adalah berupa huruf atau angka.
+if (!ctype_alnum($username) OR !ctype_alnum($pass)){
+    echo "didie" ;
+}
+else{
+$login=mysql_query("SELECT * FROM user WHERE username='$username' AND password='$pass'");
+$ketemu=mysql_num_rows($login);
+$r=mysql_fetch_array($login);
 
-            if($usr==$username AND $pss==$password) {
-                session_start();
+// Apabila username dan password ditemukan
+if ($ketemu > 0){
 
-                    $_SESSION['username'] = $usr;
-                    $_SESSION['password'] = $pss;
-            header ("location:../index.php");
-            }
-            else { echo "<meta http-equiv='refresh' content='0; url=../login.php'>";
-                    }
-                    }
+  $_SESSION['username']    = $r['username'];
+  $_SESSION['password']    = $r['password'];
+  
+  // session timeout
 
+  header("location:../index.php");
+}
+else{
+  header("location:../login.php");
+}
+}
+echo $username ; 
+echo $pass;
 ?>
+
