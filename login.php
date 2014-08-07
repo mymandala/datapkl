@@ -39,7 +39,7 @@
                                     <input class="form-control" placeholder="Password" name="pass" type="password" value="">
                                 </div>
                                 <!-- Change this to a button or input when using this as a form -->
-                                <input type="submit" name="login" value="Login" class="btn btn-lg btn-success btn-block">
+                                <input type="submit" name="login" value="Login" class="btn btn-lg btn-primary btn-block">
                             </fieldset>
                         </form>
                     </div>
