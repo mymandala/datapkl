@@ -26,7 +26,7 @@ if ($ketemu > 0){
   
   // session timeout
 
-  header("location:../index.php");
+  header("location:../index.php?pages=dash");
 }
 else{
   header("location:../login.php");

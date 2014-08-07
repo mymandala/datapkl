@@ -130,7 +130,7 @@ else { ?>
                                     <a href="#">Laporan Perbulan</a>
                                 </li>
                                 <li>
-                                    <a href="#">Laporan Pertahun</a>
+                                    <a href="index.php?pages=laporan_pertahun">Laporan Pertahun</a>
                                 </li>
         
                             </ul>
@@ -161,62 +161,17 @@ else { ?>
                
                 <?php 
 
-                switch ($_GET['pages']) {
-                    case 'pembimbing':
-                            include 'modul/pembimbing/pembimbing.php';
-                        break;
-                    case 'tambah_pembimbing':
-                            include 'modul/pembimbing/tambah.php';
-                        break;
-                    case 'ubah_pembimbing':
-                            include 'modul/pembimbing/ubah.php';
-                        break;
-                    case 'entry_data_sekolah':
-                        include "modul/sekolah/entry_data.php";
-                        break;
-                    case 'data_sekolah':
-                            include 'modul/sekolah/data_sekolah.php';
-                        break;
-                    case 'ubah_data_sekolah':
-                        include "proses/sekolah/ubah.php";
-                        break;
-                    case 'data_prog_keahlian':
-                        include "modul/prog_keahlian/data_prog_keahlian.php";
-                        break;
-                    case 'entry_prog_keahlian':
-                        include "modul/prog_keahlian/entry_data.php";
-                        break;
-                    case 'ubah_prog_keahlian':
-                        include "proses/prog_keahlian/ubah.php";
-                        break;
-                    case 'entry_user':
-                        include "modul/user/entry_user.php";
-                        break;
-                    case 'data_user':
-                        include "modul/user/data_user.php";
-                        break;
-                    case 'ubah_user':
-                        include "proses/user/ubah.php";
-                        break;
+                $get_page = $_GET['pages'];
 
-                    case 'data_siswa';
-                            include 'modul/data_siswa/siswa.php';
-                        break;
-                    case 'tambah_siswa':
-                            include 'modul/data_siswa/tambah.php';
-                        break;
-                    case 'ubah_siswa' :
-                            include 'modul/data_siswa/ubah.php';
-                        break;
-                    case 'view' :
-                            include 'modul/data_siswa/view.php';
-                        break;
-                    default:
-                            include 'modul/dashb.php';
-                        break;
-                }
+                $query = "SELECT id_page, inc_page from menu where id_page='$get_page'";
+                $sql   = mysql_query($query);
+                $data = mysql_fetch_array($sql);
+
+                $inc_mod = $data['inc_page'];
+                include $inc_mod ;
                 
                 ?>
+
 
             </div>
             <!-- /.row -->
@@ -224,7 +179,8 @@ else { ?>
         <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->
+    <!-- /#wrapper -->=]
+
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>
