@@ -55,7 +55,7 @@
 		<div class="form-group">
 			<label class="col-sm-2 control-label"> Tanggal Lahir </label>
 			<div class="col-sm-5">
-				<input type="date" name="tgl_lahir" class="form-control" value="<?php echo $data['tgl_lahir']; ?>">
+				<input type="date" name="tanggal_lahir" class="form-control" value="<?php echo $data['tgl_lahir']; ?>">
             </div>
 		</div>
 		<div class="form-group">

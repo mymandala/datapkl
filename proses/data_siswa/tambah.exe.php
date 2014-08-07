@@ -18,8 +18,6 @@ $datetime2 = date_create($_POST['tgl_keluar']);
 $interval = date_diff($datetime1, $datetime2);
 $hasil = $interval->format('%m Bulan');
 
-echo "$hasil";
-
 mysql_query("INSERT into data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
 										jenis_kelamin = '$jenkel',
