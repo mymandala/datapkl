@@ -1,4 +1,9 @@
-<?php include 'config/config.php' ; ?>
+<?php include 'config/config.php' ;
+session_start () ;
+if (empty ($_SESSION['username']) && empty ($_SESSION['password']) ) { 
+header ("location:login.php")  ; 
+}
+else { ?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -107,6 +112,9 @@
                                 <li>
                                     <a href="index.php?pages=data_prog_keahlian">Data Program Keahlian</a>
                                 </li>
+                                <li>
+                                    <a href="index.php?pages=data_user">Data User</a>
+                                </li>
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>
@@ -176,6 +184,16 @@
                     case 'ubah_prog_keahlian':
                         include "proses/prog_keahlian/ubah.php";
                         break;
+                    case 'entry_user':
+                        include "modul/user/entry_user.php";
+                        break;
+                    case 'data_user':
+                        include "modul/user/data_user.php";
+                        break;
+                    case 'ubah_user':
+                        include "proses/user/ubah.php";
+                        break;
+
                     case 'data_siswa';
                             include 'modul/data_siswa/siswa.php';
                         break;
@@ -219,3 +237,4 @@
 
 </html>
 
+<? } ?>
