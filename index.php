@@ -127,7 +127,7 @@ else { ?>
                             <a href="#"><i class="fa fa-sitemap fa-fw"></i>Laporan<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <a href="#">Laporan Perbulan</a>
+                                    <a href="index.php?pages=laporan_perbulan">Laporan Perbulan</a>
                                 </li>
                                 <li>
                                     <a href="index.php?pages=laporan_pertahun">Laporan Pertahun</a>
