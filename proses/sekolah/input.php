@@ -1,4 +1,4 @@
-<?
+<?php
 include "../../config/config.php";
 $id_sekolah=$_POST['id_sekolah'];
 $nm_sekolah=$_POST['nm_sekolah'];

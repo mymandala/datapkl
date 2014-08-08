@@ -152,7 +152,7 @@ else { ?>
         </nav>
 
         <!-- Page Content -->
-        <div id="page-wrapper" style="background:url(images/bac.png);">
+        <div id="page-wrapper" >
             <div class="row" >
                
                 <?php 
