@@ -13,6 +13,10 @@ $id_pembimbing = $_POST['id_pembimbing'];
 $id_prog = $_POST['id_prog_keahlian'];
 $tgl_masuk = $_POST['tgl_masuk'];
 $tgl_keluar = $_POST['tgl_keluar'];
+$datetime1 = date_create($_POST['tgl_masuk']);
+$datetime2 = date_create($_POST['tgl_keluar']);
+$interval = date_diff($datetime1, $datetime2);
+$hasil = $interval->format('%m Bulan');
 
 mysql_query("UPDATE data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
@@ -23,7 +27,8 @@ mysql_query("UPDATE data_siswa set nis = '$nis',
 										alamat = '$alamat',
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
-										id_prog_keahlian = '$id_prog' WHERE nis = '$nis'") or die(mysql_error());
+										id_prog_keahlian = '$id_prog',
+										periode_pkl = '$hasil' WHERE nis = '$nis'") or die(mysql_error());
 
 mysql_query("UPDATE periode_pkl set nis = '$nis',
 									tgl_masuk = '$tgl_masuk',
