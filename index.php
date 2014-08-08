@@ -139,8 +139,8 @@ else { ?>
         </nav>
 
         <!-- Page Content -->
-        <div id="page-wrapper">
-            <div class="row">
+        <div id="page-wrapper" style="background:url(images/bac.png);">
+            <div class="row" >
                
                 <?php 
 
