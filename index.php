@@ -38,9 +38,6 @@ else { ?>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-
-
 </head>
 
 <body>
@@ -83,6 +80,8 @@ else { ?>
                 <!-- /.dropdown -->
             </ul>
             <!-- /.navbar-top-links -->
+            
+
 
             <div class="navbar-default sidebar" role="navigation">
                 <div class="sidebar-nav navbar-collapse">
@@ -98,44 +97,28 @@ else { ?>
                             </div>
                             <!-- /input-group -->
                         </li>
-                        <li>
-                            <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
-                        </li>
-                       <li>
-                            <a href="index.php?pages=data_siswa"><i class="fa fa-user fa-fw"></i> Data Siswa </a>
-                        </li>
+                        <?php
+                $qry = mysql_query("SELECT * FROM menu where parent_page = '0'");
+                while ($menu = mysql_fetch_array($qry)) { ?>
+                    <li>
+                        <a href="index.php?pages=<?php echo $menu['id_page']; ?>">
+                        <i class="fa <?php echo $menu['icon_page']; ?> fa-fw"></i> 
+                        <?php echo $menu['label_page']; ?><span class="<?php echo $menu['arrow_page']; ?>"></span></a>
+                        <?php   
+                        $id = $menu['id_page'];
+                        $r = mysql_query("SELECT * FROM menu where parent_page = '$id'");
+                        while ($sub_menu = mysql_fetch_array($r)) { ?>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a href="index.php?pages=<?php echo $sub_menu['id_page']; ?>"><?php echo $sub_menu['label_page']; ?></a>
+                            </li>
+                        </ul>
+                        <?php } ?>
+                    </li>
+                   <?php } ?>
                         
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>Data<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="index.php?pages=data_sekolah">Data Sekolah</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?pages=pembimbing">Data Pembimbing</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?pages=data_prog_keahlian">Data Program Keahlian</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?pages=data_user">Data User</a>
-                                </li>
-                            </ul>
                             <!-- /.nav-second-level -->
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-sitemap fa-fw"></i>Laporan<span class="fa arrow"></span></a>
-                            <ul class="nav nav-second-level">
-                                <li>
-                                    <a href="index.php?pages=laporan_perbulan">Laporan Perbulan</a>
-                                </li>
-                                <li>
-                                    <a href="index.php?pages=laporan_pertahun">Laporan Pertahun</a>
-                                </li>
-        
-                            </ul>
-                            <!-- /.nav-second-level -->
-                        </li>
+                        
                         <li class="active">
                             <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
