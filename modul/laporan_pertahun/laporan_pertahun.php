@@ -1,37 +1,64 @@
-<html>
-<head>
-<title>Data Sekolah</title>
-</head>
-<body>
-<table border="1">
-<tr>
-	<td> No </td>
-	<td> Nis </td>
-	<td> Nama </td>
-	<td> Sekolah/Universitas</td>
-	<td> Tanggal Masuk </td>
-	<td> Tanggal Keluar</td>
-	<td> Periode PKL </td>
-	<td colspan="2">action</td>
-</tr>
-<?php
-$i =1;
-$qry = mysql_query("SELECT * FROM tampil_lengkap");
-while ($laporan_taun = mysql_fetch_array($qry))
-{ ?>
-<tr>
-	<td><?php echo $i++; ?> </td>
-	<td><?php echo $laporan_taun['nis']?></td>
-	<td><?php echo $laporan_taun['nama_siswa']?></td>
-	<td><?php echo $laporan_taun['s_nama']?></td>
-	<td><?php echo $laporan_taun['tgl_masuk']?></td>
-	<td><?php echo $laporan_taun['tgl_keluar']?></td>
-	<td><?php echo $laporan_taun['periode_pkl']?></td>
-	<td><a href="index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> Lihat </a>
-        </a>
-    </td>
-</tr>
-<?php } ?>
+<table style="margin:10px;" width="1000">
+	<tr class="page-header">
+		<td width="270" style="font-size:40px;"> <h2> Laporan Data Siswa PKL Pertahun </h2> </td>
+	</tr>
 </table>
+<br>
+<div class="row">
+	<div class="col-lg-12">
+    	<div class="panel panel-default">
+    		<div class="panel-heading">
+    			<form method="post" action="">
+					<div class="form-group">
+					<label class="col-sm-1 control-label"> Tahun </label>
+						<div class="col-sm-3">	
+							<input type="text" name="tahun" class="form-control">
+						</div>
+					</div>
+					<input type="submit" class="btn btn-primary" value="cari">
+				</form>
+			</div>
+            <div class="panel-body">
+            	<div class="table-responsive">
+					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
+						<thead>
+							<tr>
+								<th> No </th>
+								<th> Nis </th>
+								<th> Nama </th>
+								<th> Sekolah/Universitas</th>
+								<th> Tanggal Masuk </th>
+								<th> Tanggal Keluar</th>
+								<th> Periode PKL </th>
+								<th> Menu </th>
+							</tr>
+							<?php
+							$i =1;
+							$qry = mysql_query("SELECT * FROM tampil_lengkap");
+							while ($laporan_taun = mysql_fetch_array($qry))
+							{ ?>
+						</thead>
+						<tbody>
+							<tr>
+								<td><?php echo $i++; ?> </td>
+								<td><?php echo $laporan_taun['nis']?></td>
+								<td><?php echo $laporan_taun['nama_siswa']?></td>
+								<td><?php echo $laporan_taun['s_nama']?></td>
+								<td><?php echo $laporan_taun['tgl_masuk']?></td>
+								<td><?php echo $laporan_taun['tgl_keluar']?></td>
+								<td><?php echo $laporan_taun['periode_pkl']?></td>
+								<td><a href="index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> Lihat </a>
+							        </a>
+							    </td>
+							</tr>
+							<?php } ?>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
 </body>
 </html>

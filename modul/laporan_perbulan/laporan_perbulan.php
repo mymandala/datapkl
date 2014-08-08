@@ -43,15 +43,14 @@
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 						<thead>
 							<tr>
-								<td> No </td>
-								<td> NIS </td>
-								<td> Nama Siswa </td>
-								<td> Sekolah </td>
-								<td> Program Keahlian </td>
-								<td> Pembimbing </td>
-								<td> Tanggal Masuk </td>
-								<td> Tanggal Keluar </td>
-								<td> &nbsp; </td>
+								<th> No </th>
+								<th> NIS </th>
+								<th> Nama Siswa </th>
+								<th> Sekolah </th>
+								<th> Program Keahlian </th>
+								<th> Tanggal Masuk </th>
+								<th> Tanggal Keluar </th>
+								<th> &nbsp; </th>
 							</tr>
 						</thead>
 						<tbody>
@@ -65,7 +64,6 @@
 								<td> <?php echo $data['nama_siswa']; ?> </td>
 								<td> <?php echo $data['s_nama']; ?> </td>			
 								<td> <?php echo $data['nama_prog_keahlian']; ?> </td>
-								<td> <?php echo $data['p_nama']; ?> </td>
 								<td> <?php echo $data['tgl_masuk']; ?> </td>
 								<td> <?php echo $data['tgl_keluar']; ?> </td>
 								<td> 
