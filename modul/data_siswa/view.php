@@ -6,10 +6,10 @@ if ($_GET['pages']=='view') { ?>
 		$nis = $_GET['nis'];
 		$sql = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
 		while ($data = mysql_fetch_array($sql)) { ?>
-			<table>
+			<table width="500">
 				<tr>
 					<td> NIS </td>
-					<td> : </td>
+					<td width="30"> : </td>
 					<td> <?php echo $data['nis']; ?> </td>
 				</tr>
 				<tr>
@@ -72,10 +72,10 @@ if ($_GET['pages']=='view') { ?>
 					<td> : </td>
 					<td> <?php echo $data['tgl_keluar']; ?> </td>
 				</tr>
-				<tr>
-					<td colspan="3"> <a href="index.php?pages=data_siswa"> kembali </a> </td>
-				</tr>
 			</table>
+		</div>
+		<div align="center">
+			<a href="index.php?pages=data_siswa"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
 		</div>
 <?php	
 	}

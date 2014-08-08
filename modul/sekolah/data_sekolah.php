@@ -19,7 +19,7 @@
 								<th>Alamat Sekolah</th>
 								<th>Email Sekolah</th>
 								<th>Telp Sekolah</th>
-								<th width="130"> Menu </th>
+								<th width="115"> Menu </th>
 							</tr>
 						</thead>
 							<?php
@@ -37,10 +37,10 @@
 								<td><?php echo $sekolah['s_email']?></td>
 								<td><?php echo $sekolah['s_telp']?></td>
 								<td><a href="proses/sekolah/hapus.php?id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
-							            <input type="button" value="hapus" name="hapus" class="btn btn-primary">
+							            <input type="button" value="hapus" name="hapus" class="btn btn-primary btn-sm">
 							        </a>
 							        <a href="index.php?pages=ubah_data_sekolah&id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
-							            <input type="button" value="ubah" name="sunting" class="btn btn-primary">
+							            <input type="button" value="ubah" name="sunting" class="btn btn-primary btn-sm">
 							        </a>
 							    </td>
 							</tr>

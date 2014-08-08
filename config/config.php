@@ -1,5 +1,5 @@
 <?php 
-$host   = "localhost" ;
+$host   = "192.168.5.23";
 $user   = "root" ;
 $pass   = "" ;
 $db_name = "db_pkl";
