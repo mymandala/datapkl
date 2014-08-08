@@ -27,7 +27,7 @@ while ($laporan_taun = mysql_fetch_array($qry))
 	<td><?php echo $laporan_taun['tgl_masuk']?></td>
 	<td><?php echo $laporan_taun['tgl_keluar']?></td>
 	<td><?php echo $laporan_taun['periode_pkl']?></td>
-	<td><a href="index.php?pages=view_laporan&nis=<?php echo $laporan_taun['nis'];?>"> Lihat </a>
+	<td><a href="index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> Lihat </a>
         </a>
     </td>
 </tr>
