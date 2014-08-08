@@ -99,18 +99,31 @@ else { ?>
                         </li>
                         <?php
                 $qry = mysql_query("SELECT * FROM menu where parent_page = '0'");
-                while ($menu = mysql_fetch_array($qry)) { ?>
-                    <li>
+                while ($menu = mysql_fetch_array($qry)) { 
+                     if ($menu['id_page'] == $_GET['pages']) { $aktif = "class='active'"; }
+
+                    $id = $menu['id_page'];
+                    $sele = $_GET['pages'] ;
+                    $aktif = "";
+                    $r = mysql_query("select parent_page from menu where id_page = '$sele'");
+                    $row = mysql_fetch_array($r);
+                     if ($menu['id_page'] == $row['parent_page']) { $aktif = "class='active'"; }
+
+                    ?>
+                    <li <?php echo $aktif ?>>
                         <a href="index.php?pages=<?php echo $menu['id_page']; ?>">
                         <i class="fa <?php echo $menu['icon_page']; ?> fa-fw"></i> 
                         <?php echo $menu['label_page']; ?><span class="<?php echo $menu['arrow_page']; ?>"></span></a>
                         <?php   
-                        $id = $menu['id_page'];
                         $r = mysql_query("SELECT * FROM menu where parent_page = '$id'");
-                        while ($sub_menu = mysql_fetch_array($r)) { ?>
+                        while ($sub_menu = mysql_fetch_array($r)) { 
+                            $aktif = "";
+                            if ($sub_menu['id_page'] == $_GET['pages']) { $aktif = "class='active'"; }
+
+                            ?>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a href="index.php?pages=<?php echo $sub_menu['id_page']; ?>"><?php echo $sub_menu['label_page']; ?></a>
+                                <a <?php echo $aktif ?> href="index.php?pages=<?php echo $sub_menu['id_page']; ?>"><?php echo $sub_menu['label_page']; ?></a>
                             </li>
                         </ul>
                         <?php } ?>

@@ -50,7 +50,7 @@
 								<th> Program Keahlian </th>
 								<th> Tanggal Masuk </th>
 								<th> Tanggal Keluar </th>
-								<th> &nbsp; </th>
+								<th> Menu </th>
 							</tr>
 						</thead>
 						<tbody>
@@ -69,7 +69,7 @@
 								<td> 
 									<div class="btn-group">
 										<a href="index.php?pages=view_perbulan&nis=<?php echo $data['nis'];?>">
-											<button type="button" class="btn btn-primary">Lihat</button>
+											<input type="button" value="lihat" class="btn btn-primary btn-sm">
 										</a>
 									</div>
 								</td>
