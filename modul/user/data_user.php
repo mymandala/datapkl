@@ -21,7 +21,7 @@
 							</tr>
 						</thead>
 						<tbody>
-							<?
+							<?php
 							$qry = mysql_query("SELECT * FROM user");
 							while ($user = mysql_fetch_array($qry)){
 							?>

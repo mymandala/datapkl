@@ -1,9 +1,22 @@
-<?php include 'config/config.php' ;
-session_start () ;
-if (empty ($_SESSION['username']) && empty ($_SESSION['password']) ) { 
+<?php 
+
+    include 'config/config.php' ;
+
+        session_start () ;
+
+if (empty ($_SESSION['username']) && empty ($_SESSION['password']) ) 
+
+    { 
+
 header ("location:login.php")  ; 
-}
-else { ?>
+
+    }
+
+else 
+
+    { 
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -46,15 +59,25 @@ else { ?>
 
         <!-- Navigation -->
         <nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom: 0">
+
             <div class="navbar-header">
+            
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            
                     <span class="sr-only">Toggle navigation</span>
+            
                     <span class="icon-bar"></span>
+            
                     <span class="icon-bar"></span>
+            
                     <span class="icon-bar"></span>
+            
                 </button>
+            
                 <a class="navbar-brand" href="index.html">Data Prakerin Jerbee</a>
+            
             </div>
+            
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
@@ -62,111 +85,180 @@ else { ?>
                
                 <!-- /.dropdown -->
                 <li class="dropdown">
+            
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+            
                         <i class="fa fa-user fa-fw"></i>  <i class="fa fa-caret-down"></i>
+            
                     </a>
+            
                     <ul class="dropdown-menu dropdown-user">
+            
                         <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+            
                         </li>
+            
                         <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
+            
                         </li>
+            
                         <li class="divider"></li>
+            
                         <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout 
+            
                         </a>
+            
                         </li>
+            
                     </ul>
+            
                     <!-- /.dropdown-user -->
+            
                 </li>
+            
                 <!-- /.dropdown -->
+            
             </ul>
+            
             <!-- /.navbar-top-links -->
             
 
 
             <div class="navbar-default sidebar" role="navigation">
+            
                 <div class="sidebar-nav navbar-collapse">
+            
                     <ul class="nav" id="side-menu">
+            
                         <li class="sidebar-search">
+            
                             <div class="input-group custom-search-form">
+            
                                 <input type="text" class="form-control" placeholder="Search...">
+            
                                 <span class="input-group-btn">
+            
                                 <button class="btn btn-default" type="button">
+            
                                     <i class="fa fa-search"></i>
+            
                                 </button>
+            
                             </span>
+            
                             </div>
+            
                             <!-- /input-group -->
+            
                         </li>
-                        <?php
-                $qry = mysql_query("SELECT * FROM menu where parent_page = '0'");
-                while ($menu = mysql_fetch_array($qry)) { 
-                     if ($menu['id_page'] == $_GET['pages']) { $aktif = "class='active'"; }
+            
+        <?php
+            
+            $qry = mysql_query("SELECT * FROM menu where parent_page = '0'");
+            
+            while ($menu = mysql_fetch_array($qry)) 
 
+                { 
+                    if ($menu['id_page'] == $_GET['pages']) { $aktif = "class='active'"; }
+
+                    
                     $id = $menu['id_page'];
+                    
                     $sele = $_GET['pages'] ;
+                    
                     $aktif = "";
+                    
                     $r = mysql_query("select parent_page from menu where id_page = '$sele'");
+                    
                     $row = mysql_fetch_array($r);
+                    
                      if ($menu['id_page'] == $row['parent_page']) { $aktif = "class='active'"; }
 
-                    ?>
+        ?>
+        
                     <li <?php echo $aktif ?>>
+                        
                         <a href="index.php?pages=<?php echo $menu['id_page']; ?>">
-                        <i class="fa <?php echo $menu['icon_page']; ?> fa-fw"></i> 
-                        <?php echo $menu['label_page']; ?><span class="<?php echo $menu['arrow_page']; ?>"></span></a>
-                        <?php   
+                        
+                            <i class="fa <?php echo $menu['icon_page']; ?> fa-fw"></i> 
+                        
+                            <?php echo $menu['label_page']; ?>
+
+                            <span class="<?php echo $menu['arrow_page']; ?>"></span>
+
+                        </a>
+                        
+                    <?php   
+                    
                         $r = mysql_query("SELECT * FROM menu where parent_page = '$id'");
-                        while ($sub_menu = mysql_fetch_array($r)) { 
+                    
+                        while ($sub_menu = mysql_fetch_array($r)) 
+
+                        { 
+                        
                             $aktif = "";
+                        
                             if ($sub_menu['id_page'] == $_GET['pages']) { $aktif = "class='active'"; }
 
-                            ?>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a <?php echo $aktif ?> href="index.php?pages=<?php echo $sub_menu['id_page']; ?>"><?php echo $sub_menu['label_page']; ?></a>
-                            </li>
-                        </ul>
-                        <?php } ?>
-                    </li>
-                   <?php } ?>
+                    ?>
                         
-                            <!-- /.nav-second-level -->
-                        
-                        <li class="active">
-                            <a href="#"><i class="fa fa-files-o fa-fw"></i> Sample Pages<span class="fa arrow"></span></a>
                             <ul class="nav nav-second-level">
+                    
                                 <li>
-                                    <a class="active" href="blank.html">Blank Page</a>
+                    
+                                    <a <?php echo $aktif ?> href="index.php?pages=<?php echo $sub_menu['id_page']; ?>"><?php echo $sub_menu['label_page']; ?></a>
+                    
                                 </li>
-                                <li>
-                                    <a href="login.html">Login Page</a>
-                                </li>
+                    
                             </ul>
+                    
+                    <?php 
+                    
+                        } 
+                    
+                    ?>
+                    
+                    </li>
+                   
+            <?php 
+            
+               } 
+
+            ?>
+                        
                             <!-- /.nav-second-level -->
-                        </li>
                     </ul>
+               
                 </div>
                 <!-- /.sidebar-collapse -->
+            
             </div>
             <!-- /.navbar-static-side -->
+        
         </nav>
 
         <!-- Page Content -->
-        <div id="page-wrapper" >
+        
+        <div id="page-wrapper"  >
+        
             <div class="row" >
                
-                <?php 
+        <?php 
 
                 $get_page = $_GET['pages'];
 
                 $query = "SELECT id_page, inc_page from menu where id_page='$get_page'";
+ 
                 $sql   = mysql_query($query);
+ 
                 $data = mysql_fetch_array($sql);
 
                 $inc_mod = $data['inc_page'];
+ 
                 include $inc_mod ;
                 
-                ?>
+        ?>
+
 
 
             </div>
@@ -175,7 +267,7 @@ else { ?>
         <!-- /#page-wrapper -->
 
     </div>
-    <!-- /#wrapper -->=]
+    <!-- /#wrapper -->
 
 
     <!-- jQuery Version 1.11.0 -->
@@ -204,4 +296,8 @@ else { ?>
 
 </html>
 
-<?php } ?>
+<?php 
+
+    } 
+
+?>
