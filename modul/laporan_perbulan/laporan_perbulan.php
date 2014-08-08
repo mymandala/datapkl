@@ -50,7 +50,7 @@ Tahun : <input type="text" name="tahun">
 			<td> <?php echo $data['tgl_keluar']; ?> </td>
 			<td> 
 				<div class="btn-group">
-					<a href="index.php?pages=view&nis=<?php echo $data['nis'];?>">
+					<a href="index.php?pages=view_perbulan&nis=<?php echo $data['nis'];?>">
 						<button type="button" class="btn btn-primary">Lihat</button>
 					</a>
 				</div>
