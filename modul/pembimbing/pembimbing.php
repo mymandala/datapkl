@@ -31,8 +31,8 @@
 								<td> <?php echo $data['p_email']; ?> </td>			
 								<td> <?php echo $data['p_telp']; ?> </td>
 								<td> <?php echo $data['s_nama']; ?> </td>
-								<td> <a href="proses/pembimbing/hapus.php?id_pembimbing=<?php echo $data['id_pembimbing'];?>"onclick="return confirm('Apakah Anda yakin akan menghapus pembimbing <?php echo $data['p_nama']; ?>?')"> <input type="button" value="Hapus" class="btn btn-primary btn-sm"> </a>  
-								<a href="index.php?pages=ubah_pembimbing&id_pembimbing=<?php echo $data['id_pembimbing']?>"> <input type="button" value="Ubah" class="btn btn-primary btn-sm"> </a> </td>
+								<td> <a href="proses/pembimbing/hapus.php?id_pembimbing=<?php echo $data['id_pembimbing'];?>"onclick="return confirm('Apakah Anda yakin akan menghapus pembimbing <?php echo $data['p_nama']; ?>?')"> <input type="button" value="hapus" class="btn btn-primary btn-sm"> </a>  
+								<a href="index.php?pages=ubah_pembimbing&id_pembimbing=<?php echo $data['id_pembimbing']?>"> <input type="button" value="ubah" class="btn btn-primary btn-sm"> </a> </td>
 							</tr>
 							<?php } ?>
 						</tbody>
