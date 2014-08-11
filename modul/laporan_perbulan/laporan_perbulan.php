@@ -8,7 +8,7 @@
 	<div class="col-lg-12">
     	<div class="panel panel-default">
     		<div class="panel-heading">
-    			<form method="post" action="index.php?pages=proses">
+    			<form method="post" action="index.php?pages=search_perbulan">
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
 						<div class="col-sm-3">	
