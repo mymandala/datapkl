@@ -6,7 +6,7 @@
 </table>
 <br>
 <div class="row">
-	<div class="col-lg-12">
+	<div class="col-lg-8">
     	<div class="panel panel-default">
             <div class="panel-body">
             	<div class="table-responsive">
@@ -15,7 +15,7 @@
 							<tr>
 								<th> Id Program Keahlian</th>
 								<th> Jenis Program Keahlian</th>
-								<th width="115"> action </th>
+								<th width="60"> action </th>
 							</tr>
 						</thead>
 						<?php
