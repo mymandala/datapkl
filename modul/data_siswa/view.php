@@ -1,7 +1,9 @@
 <?php
 if ($_GET['pages']=='view') { ?>
-	<h2 align="center"> Data Siswa PKL </h2>
-	<div class="alert alert-info" role="alert" align="center" style="font-size:17px;">
+	<div class="page-header"> <h3> Data Siswa PKL </h3> </div>
+<div class="col-lg-12">
+    <div class="well"  style="font-size:17px;">
+        <p>
 		<?php
 		$nis = $_GET['nis'];
 		$sql = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
@@ -81,3 +83,6 @@ if ($_GET['pages']=='view') { ?>
 	}
 }
 ?>
+		</p> 
+	</div> 
+</div> 
