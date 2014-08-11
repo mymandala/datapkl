@@ -1,4 +1,4 @@
-<h3> Tambah Data Program Keahlian </h3>
+<div class="page-header"> <h3> Tambah Data Program Keahlian </h3> </div>
 <br>
 <div class="col-lg-12">
     <div class="well">

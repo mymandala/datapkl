@@ -1,5 +1,4 @@
-<h3> Tambah Data Sekolah </h3>
-<br>
+<div class="page-header"> <h3> Tambah Data Siswa PKL </h3> </div>
 <div class="col-lg-12">
     <div class="well">
         <p>

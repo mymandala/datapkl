@@ -1,6 +1,5 @@
 <?php if ($_GET['pages']=='tambah_pembimbing') { ?>
-<h3> Tambah Data Pembimbing </h3>
-<br>
+<div class="page-header"> <h3> Tambah Data Pembimbing </h3> </div>
 <div class="col-lg-12">
     <div class="well">
         <p>

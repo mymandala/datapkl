@@ -1,15 +1,6 @@
+<div class="page-header"> <h2> Dashboard </h2> </div>
 <br>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="jumbotron">
-            <h1>Selamat Datang <?php echo $_SESSION['nama'];  ?> !</h1>
-            <p>Selamat datang di Aplikasi Data Siswa PKL PT. Jerbee Indonesia</p>
-            <p><a class="btn btn-primary btn-lg" role="button" href="index.php?pages=list_siswa">Lanjutkan</a>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="col-lg-4 col-md-8">
+<div class="col-lg-3 col-md-6">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <div class="row">
@@ -31,8 +22,8 @@
         </a>
     </div>
 </div>
-<div class="col-lg-4 col-md-8">
-    <div class="panel panel-primary">
+<div class="col-lg-3 col-md-6">
+    <div class="panel panel-green">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
@@ -53,8 +44,8 @@
         </a>
     </div>
 </div>
-<div class="col-lg-4 col-md-8">
-    <div class="panel panel-primary">
+<div class="col-lg-3 col-md-6">
+    <div class="panel panel-yellow">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
@@ -75,8 +66,8 @@
         </a>
     </div>
 </div>
-<div class="col-lg-4 col-md-8">
-    <div class="panel panel-primary">
+<div class="col-lg-3 col-md-6">
+    <div class="panel panel-red">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
@@ -84,11 +75,11 @@
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge">26</div>
-                    <div>Data Program Keahlian</div>
+                    <div>Data User</div>
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=list_prog_keahlian">
+        <a href="index.php?pages=list_user">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -98,7 +89,7 @@
     </div>
 </div>
 <div class="col-lg-4 col-md-8">
-    <div class="panel panel-primary">
+    <div class="panel panel-red">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
@@ -106,11 +97,11 @@
                 </div>
                 <div class="col-xs-9 text-right">
                     <div class="huge">26</div>
-                    <div>Data User</div>
+                    <div>Data Program Keahlian</div>
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=list_user">
+        <a href="index.php?pages=list_prog_keahlian">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -133,6 +124,28 @@
              </div>
         </div>
         <a href="index.php?pages=laporan_pertahun">
+	        <div class="panel-footer">
+	            <span class="pull-left">Lihat Selengkapnya</span>
+	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+	            <div class="clearfix"></div>
+	        </div>
+        </a>
+    </div>
+</div>
+<div class="col-lg-4 col-md-8">
+    <div class="panel panel-green">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-file fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge">26</div>
+                    <div>Laporan Perbulan</div>
+                </div>
+             </div>
+        </div>
+        <a href="index.php?pages=laporan_perbulan">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
