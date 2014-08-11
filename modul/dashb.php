@@ -3,7 +3,7 @@
         <h1>Selamat Datang Administrator !</h1>
         <p>Selamat datang di Aplikasi Data Siswa PKL PT. Jerbee Indonesia</p>
         <p>
-          <a class="btn btn-primary btn-large" href="index.php?pages=data_siswa">
+          <a class="btn btn-primary btn-large" href="index.php?pages=list_siswa">
             Lanjutkan 
           </a>
         </p>
