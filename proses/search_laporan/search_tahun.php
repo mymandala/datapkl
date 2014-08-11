@@ -17,11 +17,23 @@
 					</div>
 					<input type="submit" class="btn btn-primary" value="cari" name="cari">
 				</form>
-			</div>
-            <div class="panel-body">
+				</div>
+
+
+<?php
+	$cari = $_POST['tahun'];
+	$tampil = "SELECT * from tampil_lengkap where YEAR(tgl_masuk) like '$cari%' or YEAR (tgl_keluar) like '$cari%'";
+	
+	$sql = mysql_query ($tampil) or die (mysql_error());
+	$i =1;
+
+?>
+
+<div class="panel-body">
             	<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 						<thead>
+							<thead>
 							<tr>
 								<th> No </th>
 								<th> Nis </th>
@@ -32,33 +44,20 @@
 								<th> Periode PKL </th>
 								<th> Menu </th>
 							</tr>
-							<?php
-							$i =1;
-							$qry = mysql_query("SELECT * FROM tampil_lengkap");
-							while ($laporan_taun = mysql_fetch_array($qry))
-							{ ?>
-						</thead>
-						<tbody>
-								<tr>
-									<td><?php echo $i++; ?> </td>
-									<td><?php echo $laporan_taun['nis']?></td>
-									<td><?php echo $laporan_taun['nama_siswa']?></td>
-									<td><?php echo $laporan_taun['s_nama']?></td>
-									<td><?php echo $laporan_taun['tgl_masuk']?></td>
-									<td><?php echo $laporan_taun['tgl_keluar']?></td>
-									<td><?php echo $laporan_taun['periode_pkl']?></td>
-									<td><a href="index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> <input type="button" value="lihat" class="btn btn-primary btn-sm"> </a>
-								        </a>
-								    </td>
-								</tr>
-							<?php } ?>
-						</tbody>
-					</table>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-</body>
-</html>
+								<?php while ($laporan_taun=mysql_fetch_array($sql)) { ?>
+		<tr>
+								<td><?php echo $i++; ?> </td>
+								<td><?php echo $laporan_taun['nis']?></td>
+								<td><?php echo $laporan_taun['nama_siswa']?></td>
+								<td><?php echo $laporan_taun['s_nama']?></td>
+								<td><?php echo $laporan_taun['tgl_masuk']?></td>
+								<td><?php echo $laporan_taun['tgl_keluar']?></td>
+								<td><?php echo $laporan_taun['periode_pkl']?></td>
+								<td><a href="../../index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> <input type="button" value="lihat" class="btn btn-primary btn-sm"> </a>
+								    </a>
+							    </td>
+							</tr>
+	<?php } ?>
+	</table>
+	<br>
+	<br>
