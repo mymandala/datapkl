@@ -41,14 +41,14 @@
 			<div class="col-sm-5">
 				<select name="level" class="form-control">
 					<option>--pilih type--</option>
-					<option value="administrator">administrator</option>
-					<option value="user">user</option>
+					<option value="1">Administrator</option>
+					<option value="2">User</option>
 				</select>
 			</div>
 		</div>
 		<div class="form-group"></div>
 		<input type="submit" value="kirim" class="btn btn-primary">
-		<a href="index.php?pages=data_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
+		<a href="index.php?pages=list_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
 	</form>
 </body>
 </html>

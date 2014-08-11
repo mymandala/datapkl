@@ -98,10 +98,6 @@ else
             
                         </li>
             
-                        <li><a href="#"><i class="fa fa-gear fa-fw"></i> Settings</a>
-            
-                        </li>
-            
                         <li class="divider"></li>
             
                         <li><a href="logout.php"><i class="fa fa-sign-out fa-fw"></i> Logout 
@@ -152,9 +148,16 @@ else
             
                         </li>
             
-        <?php
+        <?php 
+        	if ($_SESSION['level'] == '1') {
             
-            $qry = mysql_query("SELECT * FROM menu where parent_page = '0'");
+            	$qry = mysql_query("SELECT * FROM menu where parent_page = '0'");
+
+        	}
+        	elseif ($_SESSION['level'] == '2') {
+        	    $qry = mysql_query("SELECT * FROM menu where parent_page = '0' and level='0'");
+        	}
+            
             
             while ($menu = mysql_fetch_array($qry)) 
 

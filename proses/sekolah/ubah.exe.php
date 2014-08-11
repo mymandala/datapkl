@@ -10,5 +10,5 @@ mysql_query("UPDATE sekolah set s_nama='$nm_sekolah',
 								s_email='$email_sekolah',
 								s_telp='$telp_sekolah' where id_sekolah='$id_sekolah'")or die(mysql_error());
 
-echo "<meta http-equiv='refresh' content='0; url=../../index.php?pages=data_sekolah'>";
+echo "<meta http-equiv='refresh' content='0; url=../../index.php?pages=list_sekolah'>";
 ?>

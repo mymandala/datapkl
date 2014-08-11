@@ -6,7 +6,7 @@ if ($_GET['pages']=='view') { ?>
 		$nis = $_GET['nis'];
 		$sql = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
 		while ($data = mysql_fetch_array($sql)) { ?>
-			<table width="500">
+			<table>
 				<tr>
 					<td> NIS </td>
 					<td width="30"> : </td>

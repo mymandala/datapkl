@@ -14,13 +14,13 @@ $sekolah = mysql_fetch_array($query);
 				<div class="form-group">
 					<label class="col-sm-3 control-label"> ID Program Keahlian </label>
 					<div class="col-xs-2"> 
-						<input type="text" name="id_prog_keahlian" required="required" class="form-control" value="<?php echo $sekolah['id_prog_keahlian']?>"> </td>
+						<input type="text" name="id_prog_keahlian" readonly required="required" class="form-control" value="<?php echo $sekolah['id_prog_keahlian']?>"> </td>
 					</div> 
 				</div>
 				<div class="form-group">
 					<label class="col-sm-3 control-label"> Nama Program Keahlian </label>
 					<div class="col-sm-5">
-						<input type="text" name="nama_prog_keahlian" class="form-control" value="<?php echo $sekolah['nama_prog_keahlian']?>">
+						<input type="text" name="nm_prog_keahlian" class="form-control" value="<?php echo $sekolah['nama_prog_keahlian']?>">
 					</div>
 				</div>		
 				<div class="form-group">

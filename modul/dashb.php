@@ -2,7 +2,7 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="jumbotron">
-            <h1>Selamat Datang Administrator !</h1>
+            <h1>Selamat Datang <?php echo $_SESSION['nama'];  ?> !</h1>
             <p>Selamat datang di Aplikasi Data Siswa PKL PT. Jerbee Indonesia</p>
             <p><a class="btn btn-primary btn-lg" role="button" href="index.php?pages=list_siswa">Lanjutkan</a>
             </p>
