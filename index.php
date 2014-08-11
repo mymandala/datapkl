@@ -94,7 +94,7 @@ else
             
                     <ul class="dropdown-menu dropdown-user">
             
-                        <li><a href="#"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="index.php?pages=profil_user"><i class="fa fa-user fa-fw"></i> User Profile</a>
             
                         </li>
             
