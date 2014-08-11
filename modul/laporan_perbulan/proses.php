@@ -75,7 +75,7 @@ while($data=mysql_fetch_array($hasil)){?>
 			<td> 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary"> 
-						<a href="index.php?pages=view&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
+						<a href="index.php?pages=view_perbulan&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
 					</button>
 				</div>
 			</td>

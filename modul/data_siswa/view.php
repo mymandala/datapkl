@@ -75,7 +75,7 @@ if ($_GET['pages']=='view') { ?>
 			</table>
 		</div>
 		<div align="center">
-			<a href="index.php?pages=data_siswa"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
+			<a href="index.php?pages=list_siswa"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
 		</div>
 <?php	
 	}
