@@ -7,15 +7,15 @@
 <br>
 <div class="row">
 	<div class="col-lg-8">
-    	<div class="panel panel-default">
-            <div class="panel-body">
+    	<div class="panel panel-default" >
+            <div class="panel-body" >
             	<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 						<thead>
 							<tr>
 								<th> Id Program Keahlian</th>
 								<th> Jenis Program Keahlian</th>
-								<th width="60"> action </th>
+								<th width="60"> Menu </th>
 							</tr>
 						</thead>
 						<?php

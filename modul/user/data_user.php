@@ -34,7 +34,7 @@
 									echo "Administrator";
 								} else { echo "User"; } ?>
 								</td>
-								<td><a href="proses/user/hapus.php?id_user=<?php echo $user ['id_user']; ?> ">
+								<td><a href="proses/user/hapus.php?id_user=<?php echo $user ['id_user']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus data siswa <?php echo $user['id_user']; ?>?')">
 							            <input type="button" value="hapus" name="hapus" class="btn btn-primary btn-sm">
 							        </a>
 							        <a href="index.php?pages=ubah_user&id_user=<?php echo $user ['id_user']; ?> ">

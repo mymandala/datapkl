@@ -120,9 +120,12 @@
 						<input type="date" name="tgl_keluar" class="form-control" value="<?php echo $date['tgl_keluar']; ?>">
 					</div>
 				</div>	
-				<div class="form-group"></div>
-				<input type="submit" value="kirim" class="btn btn-primary">
-				<a href="index.php?pages=data_siswa"> <input type="button" value="batal" class="btn btn-primary"> </a>
+				<div class="form-group">
+					<div class="col-sm-5">
+						<input type="submit" value="kirim" class="btn btn-primary">
+						<a href="index.php?pages=list_siswa"> <input type="button" value="batal" class="btn btn-primary"> </a>
+					</div>
+				</div>
 				<?php } ?>
 			</form>
 			<?php } ?>

@@ -1,48 +1,57 @@
 <?php 
-$id_user= $_GET['id_user'];
-$sql="SELECT * from user where id_user='$id_user'";
-$query = mysql_query($sql);
-$user = mysql_fetch_array($query);
+	$id_user= $_GET['id_user'];
+	$sql="SELECT * from user where id_user='$id_user'";
+	$query = mysql_query($sql);
+	$user = mysql_fetch_array($query);
 ?>
-<form action="proses/user/ubah.exe.php" method="post">
-<table>
-	<tr>
-		<td>Id_User</td>
-		<td>:</td>
-		<td><input type="text" name="id_user" value="<?php echo $user['id_user']?>"></td>
-	</tr>
-	<tr>
-		<td>Nama</td>
-		<td>:</td>
-		<td><input type="text" name="nama" value="<?php echo $user['nama']?>"></td>
-	</tr>
-	<tr>
-		<td>Email</td>
-		<td>:</td>
-		<td><input type="text" name="email" value="<?php echo $user['email']?>"></td>
-	</tr>
-	<tr>
-		<td>Username</td>
-		<td>:</td>
-		<td><input type="text" name="username" value="<?php echo $user['username']?>"></td>
-	</tr>
-	<tr>
-		<td>Email</td>
-		<td>:</td>
-		<td><input type="text" name="username" value="<?php echo $user['username']?>"></td>
-	</tr>
-	<tr>
-		<td>Type</td>
-		<td>:</td>
-		<td>
-			<select>
-				<option>--Pilih Type--</option>
-				<option>Administrator</option>
-				<option>User</option>
-			</select>
-		</td>
-	</tr>
-	</table>
-	<input type="submit" value="kirim" >
 
-</form>
+<div class="page-header"> <h3> Ubah Data User </h3> </div>
+<div class="col-lg-12">
+    <div class="well">
+        <p>
+			<form action="proses/user/ubah.exe.php" method="post" class="form-horizontal" role="form">
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Id User </label>
+					<div class="col-xs-2"> 
+						<input type="text" name="id_user" readonly class="form-control" value="<?php echo $user['id_user']?>"> </td>
+					</div> 
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Nama </label>
+					<div class="col-xs-5"> 
+						<input type="text" name="nama" value="<?php echo $user['nama']?>" required="required" class="form-control"> </td>
+					</div> 
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Email </label>
+					<div class="col-xs-5"> 
+						<input type="text" name="email" value="<?php echo $user['email']?>" required="required" class="form-control"> </td>
+					</div> 
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Username </label>
+					<div class="col-xs-5"> 
+						<input type="text" name="username" value="<?php echo $user['username']?>" required="required" class="form-control"> </td>
+					</div> 
+				</div>
+				
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Type </label>
+					<div class="col-sm-5">
+						<select name="level" class="form-control">
+							<option>--pilih type--</option>
+							<option value="1">Administrator</option>
+							<option value="2">User</option>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-sm-5" align="center">
+						<input type="submit" value="kirim" class="btn btn-primary">
+						<a href="index.php?pages=list_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
+					</div>
+				</div>
+			</form>
+		</p> 
+	</div> 
+</div>

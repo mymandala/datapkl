@@ -1,4 +1,4 @@
-<div class="page-header"> <h3> Tambah Data Siswa User </h3> </div>
+<div class="page-header"> <h3> Tambah Data User </h3> </div>
 <div class="col-lg-12">
     <div class="well">
         <p>
@@ -43,9 +43,12 @@
 						</select>
 					</div>
 				</div>
-				<div class="form-group"></div>
-				<input type="submit" value="kirim" class="btn btn-primary">
-				<a href="index.php?pages=list_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
+				<div class="form-group">
+					<div class="col-sm-5" align="center">
+						<input type="submit" value="kirim" class="btn btn-primary">
+						<a href="index.php?pages=list_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
+					</div>
+				</div>
 			</form>
 		</p> 
 	</div> 

@@ -38,10 +38,10 @@
 								<td> <?php echo $data['tgl_keluar']; ?> </td>
 								<td> 
 									<div class="btn-group">
-										<button type="button" class="btn btn-primary"> 
+										<button type="button" class="btn btn-primary btn-sm"> 
 											<a href="index.php?pages=view&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
 										</button>
-					  						<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+					  						<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
 					    					<span class="caret"></span>
 					    					<span class="sr-only"></span>
 					  					</button>

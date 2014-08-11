@@ -4,8 +4,7 @@ $sql="SELECT * from sekolah where id_sekolah='$id_sekolah'";
 $query = mysql_query($sql);
 $sekolah = mysql_fetch_array($query);
 ?>
-<h3> Ubah Data Sekolah </h3>
-<br>
+<div class="page-header"> <h3> Ubah Data Sekolah </h3> </div>
 <div class="col-lg-12">
     <div class="well">
         <p>

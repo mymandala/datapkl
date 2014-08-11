@@ -44,7 +44,7 @@
 				<div class="form-group">
 					<div class="col-sm-5">
 						<input type="submit" value="kirim" class="btn btn-primary">
-						<a href="index.php?pages=pembimbing"> <input type="button" value="batal" class="btn btn-primary"> </a>
+						<a href="index.php?pages=list_pembimbing"> <input type="button" value="batal" class="btn btn-primary"> </a>
 					</div>
 				</div>
 			</form>

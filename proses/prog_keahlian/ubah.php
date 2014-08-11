@@ -5,8 +5,7 @@ $query = mysql_query($sql);
 $sekolah = mysql_fetch_array($query);
 ?>
 
-<h3> Ubah Data Program Keahlian </h3>
-<br>
+<div class="page-header"> <h3> Ubah Data Program Keahlian </h3> </div>
 <div class="col-lg-12">
     <div class="well">
         <p>

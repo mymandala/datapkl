@@ -74,7 +74,7 @@ while($data=mysql_fetch_array($hasil)){?>
 			<td> <?php echo $data['tgl_keluar']; ?> </td>
 			<td> 
 				<div class="btn-group">
-					<button type="button" class="btn btn-primary"> 
+					<button type="button" class="btn btn-primary btn-sm"> 
 						<a href="index.php?pages=view_perbulan&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
 					</button>
 				</div>
