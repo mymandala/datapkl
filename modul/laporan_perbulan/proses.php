@@ -1,3 +1,4 @@
+
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
 		<td width="270" style="font-size:40px;"> <h2> Laporan Data Siswa PKL Perbulan </h2> </td>
@@ -41,46 +42,43 @@
             <div class="panel-body">
             	<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
-						<thead>
-							<tr>
-								<th> No </th>
-								<th> NIS </th>
-								<th> Nama Siswa </th>
-								<th> Sekolah </th>
-								<th> Program Keahlian </th>
-								<th> Tanggal Masuk </th>
-								<th> Tanggal Keluar </th>
-								<th> Menu </th>
-							</tr>
-						</thead>
-						<tbody>
-							<?php 
-							$i =1;
-							$qry = mysql_query("SELECT * from tampil_lengkap");
-							while ($data = mysql_fetch_array($qry)) { ?>
-							<tr>
-								<td> <?php echo $i++; ?> </td>
-								<td> <?php echo $data['nis']; ?> </td>
-								<td> <?php echo $data['nama_siswa']; ?> </td>
-								<td> <?php echo $data['s_nama']; ?> </td>			
-								<td> <?php echo $data['nama_prog_keahlian']; ?> </td>
-								<td> <?php echo $data['tgl_masuk']; ?> </td>
-								<td> <?php echo $data['tgl_keluar']; ?> </td>
-								<td> 
-									<div class="btn-group">
-										<a href="index.php?pages=view_perbulan&nis=<?php echo $data['nis'];?>">
-											<input type="button" value="lihat" class="btn btn-primary btn-sm">
-										</a>
-									</div>
-								</td>
-							</tr>
-							<?php } ?>
-						</tbody>
-					</table>
+		<tr>
+		<th> No </th>
+		<th> NIS </th>
+		<th> Nama Siswa </th>
+		<th> Sekolah </th>
+		<th> Program Keahlian </th>
+		<th> Tanggal Masuk </th>
+		<th> Tanggal Keluar </th>
+		<th> Menu </th>
+		</tr>
+<?php
+include "config/config.php";
+//memilih table SQL yang akan ditampilkan
+if (!empty($_POST))
+{
+$tampil="SELECT * FROM tampil_lengkap WHERE '$_POST[bulan]' BETWEEN MONTH(tgl_masuk) AND MONTH(tgl_keluar) 
+ AND '$_POST[tahun]' BETWEEN YEAR(tgl_masuk) AND YEAR(tgl_keluar)";
+}
+$hasil=mysql_query($tampil);
+$no = 1;
+
+while($data=mysql_fetch_array($hasil)){?>
+		<tr>
+			<td> <?php echo $no++; ?> </td>
+			<td> <?php echo $data['nis']; ?> </td>
+			<td> <?php echo $data['nama_siswa']; ?> </td>
+			<td> <?php echo $data['s_nama']; ?> </td>
+			<td> <?php echo $data['nama_prog_keahlian']; ?> </td>	
+			<td> <?php echo $data['tgl_masuk']; ?> </td>
+			<td> <?php echo $data['tgl_keluar']; ?> </td>
+			<td> 
+				<div class="btn-group">
+					<button type="button" class="btn btn-primary"> 
+						<a href="index.php?pages=view&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
+					</button>
 				</div>
-			</div>
-		</div>
-	</div>
-</div>
-
-
+			</td>
+		</tr>
+		<?php } ?>
+		</table>
