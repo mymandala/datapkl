@@ -26,9 +26,7 @@
 							<tr>
 								<td><?php echo $jurusan['id_prog_keahlian']?></td>
 								<td><?php echo $jurusan['nama_prog_keahlian']?></td>
-								<td> <a href="proses/prog_keahlian/hapus.php?id_prog_keahlian=<?php echo $jurusan ['id_prog_keahlian']; ?> ">
-							            <input type="button" value="hapus" name="hapus" class="btn btn-primary btn-sm">
-							        </a>
+								<td>
 							        <a href="index.php?pages=ubah_prog_keahlian&id_prog_keahlian=<?php echo $jurusan ['id_prog_keahlian']; ?> ">
 							            <input type="button" value="ubah" name="sunting" class="btn btn-primary btn-sm">
 							        </a>
