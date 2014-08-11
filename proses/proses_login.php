@@ -25,6 +25,7 @@ if ($ketemu > 0){
   $_SESSION['password']    = $r['password'];
   $_SESSION['level']	   = $r['level'];
   $_SESSION['nama']        = $r['nama'];
+  $_SESSION['id_user']    = $r['id_user'];
   
   // session timeout
 
