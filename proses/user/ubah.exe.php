@@ -9,5 +9,5 @@ mysql_query("UPDATE user set username='$username',
 								  level='$level'
  								  where id_user='$id_user'")or die(mysql_error());
 
-echo "<meta http-equiv='refresh' content='0; url=../../index.php?pages=data_user'>";
+echo "<meta http-equiv='refresh' content='0; url=../../index.php?pages=list_user'>";
 ?>

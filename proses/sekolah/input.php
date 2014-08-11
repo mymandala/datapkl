@@ -11,5 +11,5 @@ mysql_query("INSERT into sekolah set id_sekolah='$id_sekolah',
 									 s_email='$email_sekolah',
 									 s_telp='$telp_sekolah'")or die(mysql_error());
 
-header ("location:../../index.php?pages=data_sekolah");
+header ("location:../../index.php?pages=list_sekolah");
 ?>

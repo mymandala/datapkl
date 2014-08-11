@@ -12,6 +12,6 @@ $sql = "UPDATE pembimbing set p_nama = '$nama',
 								p_telp = '$telp',
 								id_sekolah = '$id_sklh' where id_pembimbing = '$id_p'";
 mysql_query($sql);
-header("location:../../index.php?pages=pembimbing");
+header("location:../../index.php?pages=list_pembimbing");
 
 ?>
