@@ -11,11 +11,11 @@
 					</div> 
 				</div>
 				<div class="form-group">
-						<label class="col-sm-3 control-label"> Nama Program Keahlian </label>
-						<div class="col-sm-5">
-							<input type="text" name="nama_prog_keahlian" class="form-control">
-						</div>
+					<label class="col-sm-3 control-label"> Nama Program Keahlian </label>
+					<div class="col-sm-5">
+						<input type="text" name="nm_prog_keahlian" class="form-control">
 					</div>
+				</div>
 				<div class="form-group">
 					<div class="col-sm-5" align="center">
 						<input type="submit" value="Simpan" name="simpan" class="btn btn-primary">
