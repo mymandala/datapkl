@@ -27,14 +27,12 @@
 					<td> <?php echo $row['email']; ?> </td>
 				</tr>
 				<tr>
-					<td> Password </td>
-					<td> : </td>
-					<td> <?php echo $row['password']; ?> </td>
-				</tr>
-				<tr>
 					<td> level </td>
 					<td> : </td>
-					<td> <?php echo $row['level']; ?> </td>
+					<td> <?php if ($row['level']=='1') {
+							echo "Administrator";
+							} else { echo "User"; } ?>
+					</td>
 				</tr>
 			</table>
 		</div>
