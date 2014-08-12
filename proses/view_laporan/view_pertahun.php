@@ -67,12 +67,12 @@ if ($_GET['pages']=='view_pertahun') { ?>
 						<tr>
 							<td> Tanggal Masuk </td>
 							<td> : </td>
-							<td> <?php echo $data['tgl_masuk']; ?> </td>
+							<td> <?php echo tgl_indo($data['tgl_masuk']); ?> </td>
 						</tr>
 						<tr>
 							<td> Tanggal Keluar </td>
 							<td> : </td>
-							<td> <?php echo $data['tgl_keluar']; ?> </td>
+							<td> <?php echo tgl_indo($data['tgl_keluar']); ?> </td>
 						</tr>
 					</table>
 				</div>
