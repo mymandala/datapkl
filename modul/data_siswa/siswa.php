@@ -25,7 +25,7 @@
 						<tbody>
 							<?php 
 							$i =1;
-							$qry = mysql_query("SELECT * from tampil_lengkap");
+							$qry = mysql_query("SELECT * from tampil_lengkap where status = '1'");
 							while ($data = mysql_fetch_array($qry)) { ?>
 							<tr>
 								<td> <?php echo $i++; ?> </td>
@@ -43,9 +43,9 @@
 					    					<span class="caret"></span>
 					    					<span class="sr-only"></span>
 					  					</button>
-										<ul class="dropdown-menu" role="menu">;
+										<ul class="dropdown-menu" role="menu">
 											<li> 
-												<a href="proses/data_siswa/hapus.php?nis=<?php echo $data['nis'];?>" onclick="return confirm('Apakah Anda yakin akan menghapus data siswa <?php echo $data['nama_siswa']; ?>?')">Hapus</a>
+												<a href="proses/data_siswa/trash.php?nis=<?php echo $data['nis'];?>" onclick="return confirm('Apakah Anda yakin akan membuang data siswa <?php echo $data['nama_siswa']; ?>?')">Buang</a>
 											</li>
 											<li>
 												<a href="index.php?pages=ubah_siswa&nis=<?php echo $data['nis']?>"> Ubah </a>
