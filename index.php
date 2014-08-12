@@ -98,6 +98,11 @@ else
                         <li><a href="index.php?pages=profil_user"><i class="fa fa-user fa-fw"></i> User Profile</a>
             
                         </li>
+
+                        <li><a href="index.php?pages=trash"><i class="fa fa-trash fa-fw"></i> Trash </a>
+            
+                        </li>
+            
             
                         <li class="divider"></li>
             

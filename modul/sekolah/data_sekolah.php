@@ -1,6 +1,6 @@
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
-		<td width="270" style="font-size:40px;"> <h2> Data Sekolah/Universitas </h2> </td>
+		<td width="350" style="font-size:40px;"> <h2> Data Sekolah/Universitas </h2> </td>
 		<td> <a href="index.php?pages=entry_data_sekolah"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
 	</tr>
 </table>
@@ -13,7 +13,7 @@
 						<thead>
 							<tr>
 								<th> No </th>
-								<th> ID Sekolah/Universitas </th>
+								<th> ID  </th>
 								<th>Nama </th>
 								<th>Alamat </th>
 								<th>Email </th>
