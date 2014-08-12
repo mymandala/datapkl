@@ -17,7 +17,6 @@
 								<th> NIS </th>
 								<th> Nama Siswa </th>
 								<th> Sekolah/Universitas </th>
-								<th> Program Keahlian </th>
 								<th> Tanggal Masuk </th>
 								<th> Tanggal Keluar </th>
 								<th> Menu </th>
@@ -32,10 +31,9 @@
 								<td> <?php echo $i++; ?> </td>
 								<td> <?php echo $data['nis']; ?> </td>
 								<td> <?php echo $data['nama_siswa']; ?> </td>
-								<td> <?php echo $data['s_nama']; ?> </td>
-								<td> <?php echo $data['nama_prog_keahlian']; ?> </td>			
-								<td> <?php echo $data['tgl_masuk']; ?> </td>
-								<td> <?php echo $data['tgl_keluar']; ?> </td>
+								<td> <?php echo $data['s_nama']; ?> </td>			
+								<td> <?php echo tgl_indo($data['tgl_masuk']); ?> </td>
+								<td> <?php echo tgl_indo($data['tgl_keluar']); ?> </td>
 								<td> 
 									<div class="btn-group">
 										<button type="button" class="btn btn-primary btn-sm"> 
