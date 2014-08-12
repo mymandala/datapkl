@@ -18,6 +18,20 @@ $datetime2 = date_create($_POST['tgl_keluar']);
 $interval = date_diff($datetime1, $datetime2);
 $hasil = $interval->format('%m Bulan');
 
+ $fileName = $_FILES['gambar']['name'];  
+ $fileSize = $_FILES['gambar']['size'];  
+ $fileError = $_FILES['gambar']['error'];  
+ if($fileSize > 0 || $fileError == 0){  
+ $move = move_uploaded_file($_FILES['gambar']['tmp_name'], '../../images/'.$fileName);  
+ if($move){  
+ echo "File sudah diupload";  
+ }else{  
+ echo "Gagal mengupload file";  
+ }  
+ }else{  
+ echo "Gagal mengupload file: ".$fileError;  
+ }  
+
 mysql_query("INSERT into data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
 										jenis_kelamin = '$jenkel',
@@ -28,8 +42,8 @@ mysql_query("INSERT into data_siswa set nis = '$nis',
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
-										periode_pkl = '$hasil'") or die(mysql_error());
-
+										periode_pkl = '$hasil',
+										photo = '$fileName'") or die(mysql_error());
 mysql_query("INSERT into periode_pkl set nis = '$nis',
 										 tgl_masuk = '$tgl_masuk',
 										 tgl_keluar = '$tgl_keluar'") or die (mysql_error());

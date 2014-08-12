@@ -3,7 +3,8 @@
 <div class="col-lg-12">
     <div class="well">
         <p>
-			<form action="proses/data_siswa/tambah.exe.php" method="post" class="form-horizontal" role="form">
+			<form action="proses/data_siswa/tambah.exe.php" method="post" class="form-horizontal" role="form"
+			enctype="multipart/form-data">
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> NIS </label>
 					<div class="col-xs-2"> 
@@ -114,6 +115,12 @@
 					<label class="col-sm-2 control-label"> Tanggal Keluar </label>
 					<div class="col-sm-5"> 
 						<input type="date" name="tgl_keluar" class="form-control">
+					</div>
+				</div>	
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Photo </label>
+					<div class="col-sm-5"> 
+						<input type="file" name="gambar" class="form-control">
 					</div>
 				</div>	
 				<div class="form-group">
