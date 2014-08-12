@@ -16,7 +16,7 @@
 								<th> No </th>
 								<th> NIS </th>
 								<th> Nama Siswa </th>
-								<th> Sekolah </th>
+								<th> Sekolah/Universitas </th>
 								<th> Program Keahlian </th>
 								<th> Tanggal Masuk </th>
 								<th> Tanggal Keluar </th>

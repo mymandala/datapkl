@@ -10,7 +10,7 @@ $sekolah = mysql_fetch_array($query);
         <p>
 			<form action="proses/sekolah/ubah.exe.php" method="post"  class="form-horizontal" role="form">
 				<div class="form-group">
-				<label class="col-sm-3 control-label"> ID Sekolah </label>
+				<label class="col-sm-3 control-label"> ID Sekolah/Universitas </label>
 					<div class="col-xs-2"> 
 						<input type="text" name="id_sekolah" readonly class="form-control" value="<?php echo $sekolah['id_sekolah']?>"> </td>
 					</div> 

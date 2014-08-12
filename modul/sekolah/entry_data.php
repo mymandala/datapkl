@@ -10,7 +10,7 @@
 					</div> 
 				</div>
 				<div class="form-group">
-				<label class="col-sm-3 control-label"> Nama Sekolah </label>
+				<label class="col-sm-3 control-label"> Nama Sekolah/Universitas </label>
 					<div class="col-sm-5">
 						<input type="text" name="nm_sekolah" class="form-control">
 					</div>

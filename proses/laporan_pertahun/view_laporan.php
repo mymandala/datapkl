@@ -40,7 +40,7 @@ if ($_GET['pages']=='view_laporan') {
 				<td> <?php echo $data['alamat']; ?> </td>
 			</tr>
 			<tr>
-				<td> Nama Sekolah </td>
+				<td> Nama Sekolah/Universitas </td>
 				<td> : </td>
 				<td> <?php echo $data['s_nama']; ?> </td>
 			</tr>

@@ -63,7 +63,7 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-2 control-label"> Sekolah </label>
+					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
 					<div class="col-sm-5">
 						<select name="id_sekolah" class="form-control">
 							<?php 

@@ -46,10 +46,10 @@
 		<th> No </th>
 		<th> NIS </th>
 		<th> Nama Siswa </th>
-		<th> Sekolah </th>
-		<th> Program Keahlian </th>
+		<th> Sekolah/Universitas </th>
 		<th> Tanggal Masuk </th>
 		<th> Tanggal Keluar </th>
+		<th> Periode PKL </th>
 		<th> Menu </th>
 		</tr>
 <?php
@@ -68,10 +68,10 @@ while($data=mysql_fetch_array($hasil)){?>
 			<td> <?php echo $no++; ?> </td>
 			<td> <?php echo $data['nis']; ?> </td>
 			<td> <?php echo $data['nama_siswa']; ?> </td>
-			<td> <?php echo $data['s_nama']; ?> </td>
-			<td> <?php echo $data['nama_prog_keahlian']; ?> </td>	
+			<td> <?php echo $data['s_nama']; ?> </td>	
 			<td> <?php echo $data['tgl_masuk']; ?> </td>
 			<td> <?php echo $data['tgl_keluar']; ?> </td>
+			<td> <?php echo $data['periode_pkl']; ?> </td>
 			<td> 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary btn-sm"> 
