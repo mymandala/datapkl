@@ -74,6 +74,11 @@ if ($_GET['pages']=='view') { ?>
 					<td> : </td>
 					<td> <?php echo tgl_indo($data['tgl_keluar']); ?> </td>
 				</tr>
+				<tr>
+					<td> Photo </td>
+					<td> : </td>
+					<td> <img src="images/<?php echo $data['photo']; ?>" width="200" height="200" </td>
+				</tr>
 			</table>
 		</div>
 		<div align="center">

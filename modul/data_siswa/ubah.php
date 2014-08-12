@@ -3,7 +3,7 @@
 <div class="col-lg-12">
     <div class="well">
         <p>
-			<form action="proses/data_siswa/ubah.exe.php" method="post" class="form-horizontal" role="form">
+			<form action="proses/data_siswa/ubah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 			<?php 
 					$nis = $_GET['nis'];
 					$qry = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
@@ -123,9 +123,10 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Photo </label>
 					<div class="col-sm-5"> 
-						<input type="file" name="gambar" class="form-control">
+						<input type="file" name="gambar" class="form-control" value="<?php echo $date['photo']; ?>">
 					</div>
 				</div>	
+
 				<div class="form-group">
 					<div class="col-sm-5">
 						<input type="submit" value="kirim" class="btn btn-primary">

@@ -43,7 +43,9 @@ mysql_query("INSERT into data_siswa set nis = '$nis',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
 										periode_pkl = '$hasil',
-										photo = '$fileName'") or die(mysql_error());
+										photo = '$fileName',
+										status = '1'") or die(mysql_error());
+
 mysql_query("INSERT into periode_pkl set nis = '$nis',
 										 tgl_masuk = '$tgl_masuk',
 										 tgl_keluar = '$tgl_keluar'") or die (mysql_error());

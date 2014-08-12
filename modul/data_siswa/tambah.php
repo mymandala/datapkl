@@ -3,8 +3,7 @@
 <div class="col-lg-12">
     <div class="well">
         <p>
-			<form action="proses/data_siswa/tambah.exe.php" method="post" class="form-horizontal" role="form"
-			enctype="multipart/form-data">
+			<form action="proses/data_siswa/tambah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> NIS </label>
 					<div class="col-xs-2"> 
@@ -120,7 +119,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Photo </label>
 					<div class="col-sm-5"> 
-						<input type="file" name="gambar" class="form-control">
+						<input type="file" name="gambar" class="form-control" value="<?php echo $row['photo']; ?>">
 					</div>
 				</div>	
 				<div class="form-group">

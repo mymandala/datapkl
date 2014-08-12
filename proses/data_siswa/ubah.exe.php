@@ -17,6 +17,7 @@ $datetime1 = date_create($_POST['tgl_masuk']);
 $datetime2 = date_create($_POST['tgl_keluar']);
 $interval = date_diff($datetime1, $datetime2);
 $hasil = $interval->format('%m Bulan');
+
 $fileName = $_FILES['gambar']['name'];  
  $fileSize = $_FILES['gambar']['size'];  
  $fileError = $_FILES['gambar']['error'];  
