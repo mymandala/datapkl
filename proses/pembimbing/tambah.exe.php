@@ -11,7 +11,8 @@ mysql_query("INSERT into pembimbing set id_pembimbing = '$id',
 										p_nama = '$nama',
 										p_email = '$email',
 										p_telp = '$telp',
-										id_sekolah = '$id_sklh'") or die(mysql_error());
+										id_sekolah = '$id_sklh',
+										status = '1'") or die(mysql_error());
 header ("location:../../index.php?pages=list_pembimbing");
 
 ?>
