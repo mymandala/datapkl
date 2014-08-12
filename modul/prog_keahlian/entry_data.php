@@ -5,12 +5,6 @@
         <p>
 		    <form action="proses/prog_keahlian/input.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-3 control-label"> ID Program Keahlian </label>
-					<div class="col-xs-2"> 
-						<input type="text" name="id_prog_keahlian" required="required" class="form-control"> </td>
-					</div> 
-				</div>
-				<div class="form-group">
 					<label class="col-sm-3 control-label"> Nama Program Keahlian </label>
 					<div class="col-sm-5">
 						<input type="text" name="nm_prog_keahlian" class="form-control">

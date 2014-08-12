@@ -5,12 +5,6 @@
         <p>
 			<form action="proses/pembimbing/tambah.exe.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-2 control-label"> ID Pembimbing </label>
-					<div class="col-xs-2"> 
-						<input type="text" name="id_pembimbing" required="required" class="form-control"> </td>
-					</div> 
-				</div>
-				<div class="form-group">
 					<label class="col-sm-2 control-label"> Nama </label>
 					<div class="col-sm-5">
 						<input type="text" name="p_nama" class="form-control">

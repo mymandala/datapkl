@@ -4,12 +4,6 @@
         <p>
 			<form action="proses/sekolah/input.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
-				<label class="col-sm-3 control-label"> ID Sekolah </label>
-					<div class="col-xs-2"> 
-							<input type="text" name="id_sekolah" required="required" class="form-control"> </td>
-					</div> 
-				</div>
-				<div class="form-group">
 				<label class="col-sm-3 control-label"> Nama Sekolah/Universitas </label>
 					<div class="col-sm-5">
 						<input type="text" name="nm_sekolah" class="form-control">

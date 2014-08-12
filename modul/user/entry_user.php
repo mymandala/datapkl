@@ -4,12 +4,6 @@
         <p>
 			<form action="proses/user/input.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-2 control-label"> Id User </label>
-					<div class="col-xs-2"> 
-						<input type="text" name="id_user" required="required" class="form-control"> </td>
-					</div> 
-				</div>
-				<div class="form-group">
 					<label class="col-sm-2 control-label"> Nama </label>
 					<div class="col-xs-5"> 
 						<input type="text" name="nama" required="required" class="form-control"> </td>
