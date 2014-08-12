@@ -1,5 +1,7 @@
-<h2 align="center"> Data Siswa PKL </h2>
-	<div class="alert alert-info" role="alert" align="center" style="font-size:17px;">
+<div class="page-header"> <h3> Data User </h3> </div>
+<div class="col-lg-12">
+    <div class="well"  style="font-size:17px;">
+        <p>
 	<?php
 	$query 		= "SELECT * FROM user where id_user='$_SESSION[id_user]'";
 	$sql		= mysql_query($query);
@@ -39,3 +41,6 @@
 		<div align="center">
 			<a href="index.php?pages=list_user"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
 		</div>
+		</p>
+	</div> 
+</div>
