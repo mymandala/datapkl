@@ -9,7 +9,8 @@ mysql_query("INSERT into sekolah set id_sekolah='$id_sekolah',
 									 s_nama='$nm_sekolah',
 									 s_alamat='$alamat_sekolah',
 									 s_email='$email_sekolah',
-									 s_telp='$telp_sekolah'")or die(mysql_error());
+									 s_telp='$telp_sekolah',
+									 status = '1'")or die(mysql_error());
 
 header ("location:../../index.php?pages=list_sekolah");
 ?>

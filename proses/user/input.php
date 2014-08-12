@@ -11,6 +11,7 @@ mysql_query("INSERT into user set id_user='$id_user',
 								  password='$password',
 								  nama='$nama',
 								  email='$email',
-								  level='$level'")or die(mysql_error());
+								  level='$level',
+								  status = '1'")or die(mysql_error());
 header ("location:../../index.php?pages=list_user");
 ?>

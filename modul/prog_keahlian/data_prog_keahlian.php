@@ -15,11 +15,11 @@
 							<tr>
 								<th> Id Program Keahlian</th>
 								<th> Jenis Program Keahlian</th>
-								<th width="60"> Menu </th>
+								<th width="115"> Menu </th>
 							</tr>
 						</thead>
 						<?php
-						$qry = mysql_query("SELECT * FROM prog_keahlian");
+						$qry = mysql_query("SELECT * FROM prog_keahlian where status = '1'");
 						while ($jurusan = mysql_fetch_array($qry)){
 						?>
 						<tbody>
@@ -27,6 +27,9 @@
 								<td><?php echo $jurusan['id_prog_keahlian']?></td>
 								<td><?php echo $jurusan['nama_prog_keahlian']?></td>
 								<td>
+									<a href="proses/prog_keahlian/trash.php?id_prog_keahlian=<?php echo $jurusan ['id_prog_keahlian']; ?> "onclick="return confirm('Apakah Anda yakin akan membuang data Program Keahlian <?php echo $jurusan['nama_prog_keahlian']; ?>?')">
+							            <input type="button" value="buang" name="sunting" class="btn btn-primary btn-sm">
+							        </a>
 							        <a href="index.php?pages=ubah_prog_keahlian&id_prog_keahlian=<?php echo $jurusan ['id_prog_keahlian']; ?> ">
 							            <input type="button" value="ubah" name="sunting" class="btn btn-primary btn-sm">
 							        </a>

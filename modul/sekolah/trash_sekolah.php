@@ -1,7 +1,6 @@
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
-		<td width="350" style="font-size:40px;"> <h2> Data Sekolah/Universitas </h2> </td>
-		<td> <a href="index.php?pages=entry_data_sekolah"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
+		<td width="350" style="font-size:40px;"> <h2> Trash Data Sekolah/Universitas </h2> </td>
 	</tr>
 </table>
 <div class="row">
@@ -18,12 +17,12 @@
 								<th>Alamat </th>
 								<th>Email </th>
 								<th>Telp </th>
-								<th width="115"> Menu </th>
+								<th width="130"> Menu </th>
 							</tr>
 						</thead>
 							<?php
 							$i = 1;
-							$qry = mysql_query("SELECT * FROM sekolah where status = '1'");
+							$qry = mysql_query("SELECT * FROM sekolah where status = '0'");
 							while ($sekolah = mysql_fetch_array($qry))
 							{
 							?>
@@ -36,11 +35,11 @@
 								<td><?php echo $sekolah['s_email']?></td>
 								<td><?php echo $sekolah['s_telp']?></td>
 								<td>
-							        <a href="index.php?pages=ubah_data_sekolah&id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
-							            <input type="button" value="ubah" class="btn btn-primary btn-sm">
+							      	<a href="proses/sekolah/hapus.php?id_sekolah=<?php echo $sekolah ['id_sekolah']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus data Sekolah <?php echo $sekolah['s_nama']; ?>?')">
+							            <input type="button" value="hapus" class="btn btn-primary btn-sm">
 							        </a>
-							        <a href="proses/sekolah/trash.php?id_sekolah=<?php echo $sekolah ['id_sekolah']; ?>" onclick="return confirm('Apakah Anda yakin akan membuang data Sekolah <?php echo $sekolah['s_nama']; ?> ?')">
-							            <input type="button" value="buang" class="btn btn-primary btn-sm">
+							        <a href="proses/sekolah/restore.php?id_sekolah=<?php echo $sekolah ['id_sekolah']; ?>" onclick="return confirm('Apakah Anda yakin akan mengembalikan data Sekolah <?php echo $sekolah['s_nama']; ?>?')">
+							            <input type="button" value="restore" class="btn btn-primary btn-sm">
 							        </a>
 							    </td>
 							</tr>
