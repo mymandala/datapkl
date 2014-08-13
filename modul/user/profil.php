@@ -7,34 +7,47 @@
 	$sql		= mysql_query($query);
 	$row		= mysql_fetch_array($sql);
 	?>
-		<table width="500">
-				<tr>
-					<td> Id User </td>
-					<td width="30"> : </td>
-					<td> <?php echo $row['id_user']; ?> </td>
-				</tr>
-				<tr>
-					<td> Nama </td>
-					<td> : </td>
-					<td> <?php echo $row['nama']; ?> </td>
-				</tr>
-				<tr>
-					<td> User Name </td>
-					<td> : </td>
-					<td> <?php echo $row['username']; ?> </td>
-				</tr>
-				<tr>
-					<td> Email </td>
-					<td> : </td>
-					<td> <?php echo $row['email']; ?> </td>
-				</tr>
-				<tr>
-					<td> level </td>
-					<td> : </td>
-					<td> <?php if ($row['level']=='1') {
-							echo "Administrator";
-							} else { echo "User"; } ?>
-					</td>
+		<table>
+			<tr>
+				<td>
+					<table>
+						<tr>
+							<td> Id User </td>
+							<td width="30"> : </td>
+							<td> <?php echo $row['id_user']; ?> </td>
+						</tr>
+						<tr>
+							<td> Nama </td>
+							<td> : </td>
+							<td> <?php echo $row['nama']; ?> </td>
+						</tr>
+						<tr>
+							<td> User Name </td>
+							<td> : </td>
+							<td> <?php echo $row['username']; ?> </td>
+						</tr>
+						<tr>
+							<td> Email </td>
+							<td> : </td>
+							<td> <?php echo $row['email']; ?> </td>
+						</tr>
+						<tr>
+							<td> level </td>
+							<td> : </td>
+							<td> <?php if ($row['level']=='1') {
+									echo "Administrator";
+									} else { echo "User"; } ?>
+							</td>
+						</tr>
+					</table>
+				<td width="200"></td>
+				<td>
+					<table>
+						<tr>
+							<td> <img src="images/<?php echo $data['photo']; ?>" width="200" height="200" ></td>
+						</tr>
+						</table>
+				</td>
 				</tr>
 			</table>
 		</div>
