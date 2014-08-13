@@ -36,7 +36,7 @@
 								<td> 
 									<div class="btn-group">
 										<button type="button" class="btn btn-primary btn-sm"> 
-											<a href="proses/data_siswa/restore.php?nis=<?php echo $data['nis'];?>" onclick="return confirm('Apakah Anda yakin akan mengembalikan data siswa <?php echo $data['nama_siswa']; ?>?')"> <font color="white"> Restore </font> </a> 
+											<a href="proses/data_siswa/restore.php?id_siswa=<?php echo $data['id_siswa'];?>" onclick="return confirm('Apakah Anda yakin akan mengembalikan data siswa <?php echo $data['nama_siswa']; ?>?')"> <font color="white"> Restore </font> </a> 
 										</button>
 					  						<button type="button" class="btn btn-primary btn-sm dropdown-toggle" data-toggle="dropdown">
 					    					<span class="caret"></span>
@@ -44,7 +44,7 @@
 					  					</button>
 										<ul class="dropdown-menu" role="menu">
 											<li> 
-												<a href="proses/data_siswa/hapus.php?nis=<?php echo $data['nis'];?>" onclick="return confirm('Apakah Anda yakin akan menghapus data siswa <?php echo $data['nama_siswa']; ?>?')">Hapus</a>
+												<a href="proses/data_siswa/hapus.php?id_siswa=<?php echo $data['id_siswa'];?>" onclick="return confirm('Apakah Anda yakin akan menghapus data siswa <?php echo $data['nama_siswa']; ?>?')">Hapus</a>
 											</li>
 										</ul>
 									</div>

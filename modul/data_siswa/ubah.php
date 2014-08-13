@@ -5,8 +5,8 @@
         <p>
 			<form action="proses/data_siswa/ubah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 			<?php 
-					$nis = $_GET['nis'];
-					$qry = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
+					$id = $_GET['id_siswa'];
+					$qry = mysql_query("SELECT * from tampil_lengkap where id_siswa = '$id'");
 					while($data = mysql_fetch_array($qry)) { ?>
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> NIS </label>
