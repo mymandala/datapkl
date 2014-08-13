@@ -29,11 +29,19 @@
 
 ?>
 
-<div class="panel-body">
+<div class="form-group">
+					<label class="col-sm-1 control-label"> Tahun </label>
+						<div class="col-sm-3">	
+							<input type="text" name="tahun" class="form-control">
+						</div>
+					</div>
+					<input type="submit" class="btn btn-primary" value="cari">
+				</form>
+			</div>
+            <div class="panel-body">
             	<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 						<thead>
-							<thead>
 							<tr>
 								<th> No </th>
 								<th> Nis </th>
@@ -50,8 +58,8 @@
 								<td><?php echo $laporan_taun['nis']?></td>
 								<td><?php echo $laporan_taun['nama_siswa']?></td>
 								<td><?php echo $laporan_taun['s_nama']?></td>
-								<td><?php echo $laporan_taun['tgl_masuk']?></td>
-								<td><?php echo $laporan_taun['tgl_keluar']?></td>
+								<td><?php echo tgl_indo($laporan_taun['tgl_masuk'])?></td>
+								<td><?php echo tgl_indo($laporan_taun['tgl_keluar'])?></td>
 								<td><?php echo $laporan_taun['periode_pkl']?></td>
 								<td><a href="../../index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> <input type="button" value="lihat" class="btn btn-primary btn-sm"> </a>
 								    </a>
@@ -59,5 +67,8 @@
 							</tr>
 	<?php } ?>
 	</table>
+	</thead>
+	</div>
+	</thead>
 	<br>
 	<br>
