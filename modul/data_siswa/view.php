@@ -5,8 +5,8 @@ if ($_GET['pages']=='view') { ?>
     <div class="well"  style="font-size:17px;">
         <p>
 		<?php
-		$nis = $_GET['nis'];
-		$sql = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
+		$id = $_GET['id_siswa'];
+		$sql = mysql_query("SELECT * from tampil_lengkap where id_siswa = '$id'");
 		while ($data = mysql_fetch_array($sql)) { ?>
 			<table>
 				<tr>
