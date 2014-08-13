@@ -1,6 +1,6 @@
 <?
 include "../../config/config.php";
-$id_prog_keahlian=$_POST['id_prog_keahlian'];
+$id_user=$_POST['id_user'];
 $nm_prog_keahlian=$_POST['nm_prog_keahlian'];
 mysql_query("UPDATE user set username='$username',
 								  password='$password',

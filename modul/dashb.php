@@ -8,7 +8,15 @@
                     <i class="fa fa-user fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">26</div>
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT count( * ) as num FROM `data_siswa` WHERE nis ='$t[nis]'";
+							$result = mysql_query($sql);
+							$result = mysql_fetch_assoc( $result );
+							$jml = $result['num'];
+							echo $jml;
+                    	?>
+                    </div>
                     <div>Data Siswa PKL</div>
                 </div>
              </div>
@@ -30,7 +38,15 @@
                     <i class="fa fa-home fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">26</div>
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT count( * ) as num FROM `sekolah` WHERE id_sekolah ='$t[id_sekolah]'";
+							$result = mysql_query($sql);
+							$result = mysql_fetch_assoc( $result );
+							$jml = $result['num'];
+							echo $jml;
+                    	?>
+                    </div>
                     <div>Data Sekolah</div>
                 </div>
              </div>
@@ -52,7 +68,15 @@
                     <i class="fa fa-user fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">26</div>
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT count( * ) as num FROM `pembimbing` WHERE id_pembimbing ='$t[id_pembimbing]'";
+							$result = mysql_query($sql);
+							$result = mysql_fetch_assoc( $result );
+							$jml = $result['num'];
+							echo $jml;
+                    	?>
+                    </div>
                     <div>Data Pembimbing</div>
                 </div>
              </div>
@@ -74,7 +98,15 @@
                     <i class="fa fa-book fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">26</div>
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT count( * ) as num FROM `user` WHERE id_user ='$t[id_user]'";
+							$result = mysql_query($sql);
+							$result = mysql_fetch_assoc( $result );
+							$jml = $result['num'];
+							echo $jml;
+                    	?>
+                    </div>
                     <div>Data User</div>
                 </div>
              </div>
@@ -96,7 +128,15 @@
                     <i class="fa fa-user fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">26</div>
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT count( * ) as num FROM `prog_keahlian` WHERE id_prog_keahlian ='$t[id_prog_keahlian]'";
+							$result = mysql_query($sql);
+							$result = mysql_fetch_assoc( $result );
+							$jml = $result['num'];
+							echo $jml;
+                    	?>
+                    </div>
                     <div>Data Program Keahlian</div>
                 </div>
              </div>
@@ -118,7 +158,15 @@
                     <i class="fa fa-file fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">26</div>
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT count( * ) as num FROM `data_siswa` WHERE nis ='$t[nis]'";
+							$result = mysql_query($sql);
+							$result = mysql_fetch_assoc( $result );
+							$jml = $result['num'];
+							echo $jml;
+                    	?>
+                    </div>
                     <div>Laporan Pertahun</div>
                 </div>
              </div>
@@ -140,7 +188,15 @@
                     <i class="fa fa-file fa-5x"></i>
                 </div>
                 <div class="col-xs-9 text-right">
-                    <div class="huge">26</div>
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT count( * ) as num FROM `data_siswa` WHERE nis ='$t[nis]'";
+							$result = mysql_query($sql);
+							$result = mysql_fetch_assoc( $result );
+							$jml = $result['num'];
+							echo $jml;
+                    	?>
+                    </div>
                     <div>Laporan Perbulan</div>
                 </div>
              </div>

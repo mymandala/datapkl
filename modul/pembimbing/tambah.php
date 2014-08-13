@@ -27,7 +27,7 @@
 					<div class="col-sm-5">
 						<select name="id_sekolah" class="form-control">
 							<?php 
-								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah");
+								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah where status = '1'");
 								while ($row = mysql_fetch_array($sql)) {
 									echo "<option value='$row[id_sekolah]'>$row[s_nama]</option>";
 								}

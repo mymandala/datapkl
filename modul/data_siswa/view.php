@@ -37,7 +37,7 @@ if ($_GET['pages']=='view') { ?>
 				<tr>
 					<td> Tanggal Lahir </td>
 					<td> : </td>
-					<td> <?php echo $data['tanggal_lahir']; ?> </td>
+					<td> <?php echo tgl_indo($data['tanggal_lahir']); ?> </td>
 				</tr>
 				<tr>
 					<td> Alamat </td>

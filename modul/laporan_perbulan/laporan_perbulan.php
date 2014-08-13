@@ -56,7 +56,7 @@
 						<tbody>
 							<?php 
 							$i =1;
-							$qry = mysql_query("SELECT * from tampil_lengkap");
+							$qry = mysql_query("SELECT * from tampil_lengkap where status = '1'");
 							while ($data = mysql_fetch_array($qry)) { ?>
 							<tr>
 								<td> <?php echo $i++; ?> </td>

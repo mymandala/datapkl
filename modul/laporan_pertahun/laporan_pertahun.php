@@ -34,7 +34,7 @@
 							</tr>
 							<?php
 							$i =1;
-							$qry = mysql_query("SELECT * FROM tampil_lengkap");
+							$qry = mysql_query("SELECT * FROM tampil_lengkap where status = '1' ");
 							while ($laporan_taun = mysql_fetch_array($qry))
 							{ ?>
 						</thead>

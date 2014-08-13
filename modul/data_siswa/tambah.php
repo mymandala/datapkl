@@ -67,7 +67,7 @@
 					<div class="col-sm-5">
 						<select name="id_sekolah" class="form-control">
 							<?php 
-								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah");
+								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah where status = '1'");
 								while ($row = mysql_fetch_array($sql)) {
 									echo "<option value='$row[id_sekolah]'>$row[s_nama]</option>";
 								}
@@ -80,7 +80,7 @@
 					<div class="col-sm-5">
 						<select name="id_pembimbing" class="form-control">
 							<?php 
-								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing");
+								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing where status = '1'");
 								while ($row = mysql_fetch_array($sql)) {
 									echo "<option value='$row[id_pembimbing]'>$row[p_nama]</option>";
 								}
@@ -93,7 +93,7 @@
 					<div class="col-sm-5">
 						<select name="id_prog_keahlian" class="form-control">
 							<?php 
-								$sql = mysql_query("SELECT id_prog_keahlian, nama_prog_keahlian from prog_keahlian");
+								$sql = mysql_query("SELECT id_prog_keahlian, nama_prog_keahlian from prog_keahlian where status = '1'");
 								while ($row = mysql_fetch_array($sql)) {
 									echo "<option value='$row[id_prog_keahlian]'>$row[nama_prog_keahlian]</option>";
 								}
