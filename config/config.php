@@ -1,6 +1,6 @@
 <?php 
 $host   = "192.168.5.214";
-$user   = "root" ;
+$user   = "mymandala" ;
 $pass   = "wortel45" ;
 $db_name = "db_pkl";
 
