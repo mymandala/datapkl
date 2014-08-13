@@ -35,6 +35,7 @@
 					<label class="col-sm-2 control-label"> Agama </label>
 					<div class="col-sm-5">
 						<select name="id_agama" class="form-control">
+						
 							<?php 
 								$sql = mysql_query("SELECT id_agama, agama from agama");
 								while ($row = mysql_fetch_array($sql)) {

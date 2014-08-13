@@ -29,7 +29,7 @@ $user = mysql_fetch_array($query);
 	<tr>
 		<td>Email</td>
 		<td>:</td>
-		<td><input type="text" name="username" value="<?php echo $user['username']?>"></td>
+		<td><input type="text" name="username" value="<?php echo $user['email']?>"></td>
 	</tr>
 	<tr>
 		<td>Type</td>
