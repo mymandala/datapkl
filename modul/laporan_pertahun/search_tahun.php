@@ -11,27 +11,7 @@
     			<form method="post" action="index.php?pages=cari_tahun">
 					<div class="form-group">
 					<label class="col-sm-1 control-label"> Tahun </label>
-						<div class="col-sm-3">	
-							<input type="text" name="tahun" class="form-control">
-						</div>
-					</div>
-					<input type="submit" class="btn btn-primary" value="cari" name="cari">
-				</form>
-				</div>
-
-
-<?php
-	$cari = $_POST['tahun'];
-	$tampil = "SELECT * from tampil_lengkap where YEAR(tgl_masuk) like '$cari%' or YEAR (tgl_keluar) like '$cari%'";
-	
-	$sql = mysql_query ($tampil) or die (mysql_error());
-	$i =1;
-
-?>
-
-<div class="form-group">
-					<label class="col-sm-1 control-label"> Tahun </label>
-						<div class="col-sm-3">	
+						<div class="col-sm-3">
 							<input type="text" name="tahun" class="form-control">
 						</div>
 					</div>
@@ -44,15 +24,24 @@
 						<thead>
 							<tr>
 								<th> No </th>
-								<th> Nis </th>
-								<th> Nama </th>
-								<th> Sekolah/Universitas</th>
+								<th> NIS </th>
+								<th> Nama Siswa </th>
+								<th> Sekolah/Universitas </th>
 								<th> Tanggal Masuk </th>
-								<th> Tanggal Keluar</th>
+								<th> Tanggal Keluar </th>
 								<th> Periode PKL </th>
 								<th> Menu </th>
 							</tr>
-								<?php while ($laporan_taun=mysql_fetch_array($sql)) { ?>
+						</thead>
+
+<tbody>
+<?php
+	$cari = $_POST['tahun'];
+	$tampil = "SELECT * from tampil_lengkap where YEAR(tgl_masuk) like '$cari%' or YEAR (tgl_keluar) like '$cari%'";
+	
+	$sql = mysql_query ($tampil) or die (mysql_error());
+	$i =1;
+	while ($laporan_taun=mysql_fetch_array($sql)) { ?>
 		<tr>
 								<td><?php echo $i++; ?> </td>
 								<td><?php echo $laporan_taun['nis']?></td>
@@ -66,9 +55,10 @@
 							    </td>
 							</tr>
 	<?php } ?>
-	</table>
-	</thead>
+	</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
 	</div>
-	</thead>
-	<br>
-	<br>
+</div>
