@@ -1,7 +1,7 @@
 <?php 
 $host   = "192.168.5.214";
-$user   = "pkl" ;
-$pass   = "dahitti" ;
+$user   = "root" ;
+$pass   = "wortel45" ;
 $db_name = "db_pkl";
 
 	mysql_connect("$host","$user","$pass") or die(mysql_error("koneksi tidak bisa"))  ;
