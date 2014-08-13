@@ -96,4 +96,6 @@ if ($_GET['pages']=='view') { ?>
 	}
 }
 ?>
- 
+<?php
+	echo '<a href="javascript:window.print()">';
+?> 
