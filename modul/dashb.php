@@ -10,11 +10,10 @@
                 <div class="col-xs-9 text-right">
                     <div class="huge">
                     	<?php
-                    		$sql = "SELECT count( * ) as num FROM `data_siswa` WHERE nis ='$t[nis]'";
-							$result = mysql_query($sql);
-							$result = mysql_fetch_assoc( $result );
-							$jml = $result['num'];
-							echo $jml;
+                    		$sql = "SELECT * FROM tampil_lengkap WHERE status = '1'";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah; 
                     	?>
                     </div>
                     <div>Data Siswa PKL</div>
@@ -40,11 +39,10 @@
                 <div class="col-xs-9 text-right">
                     <div class="huge">
                     	<?php
-                    		$sql = "SELECT count( * ) as num FROM `sekolah` WHERE id_sekolah ='$t[id_sekolah]'";
-							$result = mysql_query($sql);
-							$result = mysql_fetch_assoc( $result );
-							$jml = $result['num'];
-							echo $jml;
+                    		$sql = "SELECT * FROM sekolah WHERE status = '1'";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah;
                     	?>
                     </div>
                     <div>Data Sekolah</div>
@@ -70,11 +68,10 @@
                 <div class="col-xs-9 text-right">
                     <div class="huge">
                     	<?php
-                    		$sql = "SELECT count( * ) as num FROM `pembimbing` WHERE id_pembimbing ='$t[id_pembimbing]'";
-							$result = mysql_query($sql);
-							$result = mysql_fetch_assoc( $result );
-							$jml = $result['num'];
-							echo $jml;
+                    		$sql = "SELECT * FROM pembimbing WHERE status = '1'";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah;
                     	?>
                     </div>
                     <div>Data Pembimbing</div>
@@ -100,11 +97,10 @@
                 <div class="col-xs-9 text-right">
                     <div class="huge">
                     	<?php
-                    		$sql = "SELECT count( * ) as num FROM `user` WHERE id_user ='$t[id_user]'";
-							$result = mysql_query($sql);
-							$result = mysql_fetch_assoc( $result );
-							$jml = $result['num'];
-							echo $jml;
+                    		$sql = "SELECT * FROM user";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah;
                     	?>
                     </div>
                     <div>Data User</div>
@@ -130,11 +126,10 @@
                 <div class="col-xs-9 text-right">
                     <div class="huge">
                     	<?php
-                    		$sql = "SELECT count( * ) as num FROM `prog_keahlian` WHERE id_prog_keahlian ='$t[id_prog_keahlian]'";
-							$result = mysql_query($sql);
-							$result = mysql_fetch_assoc( $result );
-							$jml = $result['num'];
-							echo $jml;
+                    		$sql = "SELECT * FROM prog_keahlian WHERE status = '1'";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah;
                     	?>
                     </div>
                     <div>Data Program Keahlian</div>
@@ -160,11 +155,10 @@
                 <div class="col-xs-9 text-right">
                     <div class="huge">
                     	<?php
-                    		$sql = "SELECT count( * ) as num FROM `data_siswa` WHERE nis ='$t[nis]'";
-							$result = mysql_query($sql);
-							$result = mysql_fetch_assoc( $result );
-							$jml = $result['num'];
-							echo $jml;
+                    		$sql = "SELECT * FROM tampil_lengkap WHERE status = '1'";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah;
                     	?>
                     </div>
                     <div>Laporan Pertahun</div>
@@ -190,11 +184,10 @@
                 <div class="col-xs-9 text-right">
                     <div class="huge">
                     	<?php
-                    		$sql = "SELECT count( * ) as num FROM `data_siswa` WHERE nis ='$t[nis]'";
-							$result = mysql_query($sql);
-							$result = mysql_fetch_assoc( $result );
-							$jml = $result['num'];
-							echo $jml;
+                    		$sql = "SELECT * FROM tampil_lengkap WHERE status = '1'";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah;
                     	?>
                     </div>
                     <div>Laporan Perbulan</div>
