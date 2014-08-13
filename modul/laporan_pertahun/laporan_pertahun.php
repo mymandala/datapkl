@@ -15,7 +15,7 @@
 							<input type="text" name="tahun" class="form-control">
 						</div>
 					</div>
-					<input type="submit" class="btn btn-primary" value="cari" name="cari">
+					<input type="submit" class="btn btn-primary" value="cari">
 				</form>
 			</div>
             <div class="panel-body">
@@ -24,21 +24,24 @@
 						<thead>
 							<tr>
 								<th> No </th>
-								<th> Nis </th>
-								<th> Nama </th>
-								<th> Sekolah/Universitas</th>
+								<th> NIS </th>
+								<th> Nama Siswa </th>
+								<th> Sekolah/Universitas </th>
 								<th> Tanggal Masuk </th>
-								<th> Tanggal Keluar</th>
+								<th> Tanggal Keluar </th>
 								<th> Periode PKL </th>
 								<th> Menu </th>
 							</tr>
+						</thead>
+
+
+						<tbody>
 							<?php
 							$i =1;
 							$qry = mysql_query("SELECT * FROM tampil_lengkap where status = '1' ");
 							while ($laporan_taun = mysql_fetch_array($qry))
 							{ ?>
-						</thead>
-						<tbody>
+
 								<tr>
 									<td><?php echo $i++; ?> </td>
 									<td><?php echo $laporan_taun['nis']?></td>
@@ -59,6 +62,3 @@
 		</div>
 	</div>
 </div>
-
-</body>
-</html>
