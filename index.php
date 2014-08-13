@@ -75,7 +75,7 @@ else
             
                 </button>
             
-                <a class="navbar-brand" href="index.html">Data Prakerin Jerbee</a>
+                <a class="navbar-brand" href="index.php?pages=dash">Data Prakerin Jerbee</a>
             
             </div>
             

@@ -13,7 +13,6 @@
 						<thead>
 							<tr>
 								<th> No </th>
-								<th> ID  </th>
 								<th>Nama </th>
 								<th>Alamat </th>
 								<th>Email </th>
@@ -30,7 +29,6 @@
 						<tbody>
 							<tr>
 								<td> <?php echo $i++ ?> </td>
-								<td><?php echo $sekolah['id_sekolah']?></td>
 								<td><?php echo $sekolah['s_nama']?></td>
 								<td><?php echo $sekolah['s_alamat']?></td>
 								<td><?php echo $sekolah['s_email']?></td>

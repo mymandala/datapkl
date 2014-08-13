@@ -17,6 +17,18 @@
 					</div> 
 				</div>
 				<div class="form-group">
+					<label class="col-sm-2 control-label"> Username </label>
+					<div class="col-xs-5"> 
+						<input type="text" name="username" value="<?php echo $user['username']?>" required="required" class="form-control"> </td>
+					</div> 
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Password </label>
+					<div class="col-xs-5"> 
+						<input type="text" name="password" value="" required="required" class="form-control"> </td>
+					</div> 
+				</div>
+				<div class="form-group">
 					<label class="col-sm-2 control-label"> Nama </label>
 					<div class="col-xs-5"> 
 						<input type="text" name="nama" value="<?php echo $user['nama']?>" required="required" class="form-control"> </td>
@@ -26,12 +38,6 @@
 					<label class="col-sm-2 control-label"> Email </label>
 					<div class="col-xs-5"> 
 						<input type="text" name="email" value="<?php echo $user['email']?>" required="required" class="form-control"> </td>
-					</div> 
-				</div>
-				<div class="form-group">
-					<label class="col-sm-2 control-label"> Username </label>
-					<div class="col-xs-5"> 
-						<input type="text" name="username" value="<?php echo $user['username']?>" required="required" class="form-control"> </td>
 					</div> 
 				</div>
 				

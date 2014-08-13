@@ -1,7 +1,12 @@
 <?
 include "../../config/config.php";
-$id_user=$_POST['id_user'];
-$nm_prog_keahlian=$_POST['nm_prog_keahlian'];
+$id_user = $_POST['id_user'];
+$username = $_POST['username'];
+$password = md5($_POST['password']);
+$nama = $_POST['nama'];
+$email = $_POST['email'];
+$level = $_POST['level'];
+
 mysql_query("UPDATE user set username='$username',
 								  password='$password',
 								  nama='$nama',
@@ -9,5 +14,5 @@ mysql_query("UPDATE user set username='$username',
 								  level='$level'
  								  where id_user='$id_user'")or die(mysql_error());
 
-echo "<meta http-equiv='refresh' content='0; url=../../index.php?pages=list_user'>";
+echo "<meta http-equiv='refresh' content='0; url=../../index.php?pages=profil_user'>";
 ?>

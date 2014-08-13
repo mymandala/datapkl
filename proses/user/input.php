@@ -1,14 +1,13 @@
 <?
 include "../../config/config.php";
-$id_user=$_POST['id_user'];
+
 $username=$_POST['username'];
 $password=md5($_POST['password']);
 $nama=$_POST['nama'];
 $email=$_POST['email'];
 $level=$_POST['level'];
-mysql_query("INSERT into user set id_user='$id_user',
-								  username='$username',
-								  password='$password',
+mysql_query("INSERT into user set username='$username',
+								  password = '$password',
 								  nama='$nama',
 								  email='$email',
 								  level='$level',

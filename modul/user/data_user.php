@@ -12,21 +12,22 @@
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 						<thead>
 							<tr>
-								<td>ID </td>
-								<td>Username</td>
-								<td>Nama</td>
-								<td>Email</td>
-								<td>Status</td>
-								<td width="115">Menu</td>
+								<td> No </td>
+								<td> Username </td>
+								<td> Nama </td>
+								<td> Email </td>
+								<td> Level </td>
+								<td width="60">Menu</td>
 							</tr>
 						</thead>
 						<tbody>
 							<?php
+							$i = 1;
 							$qry = mysql_query("SELECT * FROM user");
 							while ($user = mysql_fetch_array($qry)){
 							?>
 							<tr>
-								<td><?php echo $user['id_user']?></td>
+								<td> <?php echo $i++ ?> </td>
 								<td><?php echo $user['username']?></td>
 								<td><?php echo $user['nama']?></td>
 								<td><?php echo $user['email']?></td>
@@ -34,11 +35,8 @@
 									echo "Administrator";
 								} else { echo "User"; } ?>
 								</td>
-								<td><a href="proses/user/hapus.php?id_user=<?php echo $user ['id_user']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus data siswa <?php echo $user['id_user']; ?>?')">
+								<td><a href="proses/user/hapus.php?id_user=<?php echo $user['id_user']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus user <?php echo $user['nama']; ?> ?')">
 							            <input type="button" value="hapus" name="hapus" class="btn btn-primary btn-sm">
-							        </a>
-							        <a href="index.php?pages=ubah_user&id_user=<?php echo $user ['id_user']; ?> ">
-							            <input type="button" value="ubah" name="sunting" class="btn btn-primary btn-sm">
 							        </a>
 							    </td>
 							</tr>

@@ -4,18 +4,6 @@
         <p>
 			<form action="proses/user/input.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-2 control-label"> Nama </label>
-					<div class="col-xs-5"> 
-						<input type="text" name="nama" required="required" class="form-control"> </td>
-					</div> 
-				</div>
-				<div class="form-group">
-					<label class="col-sm-2 control-label"> Email </label>
-					<div class="col-xs-5"> 
-						<input type="text" name="email" required="required" class="form-control"> </td>
-					</div> 
-				</div>
-				<div class="form-group">
 					<label class="col-sm-2 control-label"> Username </label>
 					<div class="col-xs-5"> 
 						<input type="text" name="username" required="required" class="form-control"> </td>
@@ -28,9 +16,21 @@
 					</div> 
 				</div>
 				<div class="form-group">
+					<label class="col-sm-2 control-label"> Nama </label>
+					<div class="col-xs-5"> 
+						<input type="text" name="nama" required="required" class="form-control"> </td>
+					</div> 
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> Email </label>
+					<div class="col-xs-5"> 
+						<input type="text" name="email" required="required" class="form-control"> </td>
+					</div> 
+				</div>
+				<div class="form-group">
 					<label class="col-sm-2 control-label"> Type </label>
 					<div class="col-sm-5">
-						<select name="level" class="form-control">
+						<select name="level" class="form-control" required>
 							<option>--pilih type--</option>
 							<option value="1">Administrator</option>
 							<option value="2">User</option>
