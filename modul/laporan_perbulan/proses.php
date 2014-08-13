@@ -42,16 +42,17 @@
             <div class="panel-body">
             	<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
-		<tr>
-		<th> No </th>
-		<th> NIS </th>
-		<th> Nama Siswa </th>
-		<th> Sekolah/Universitas </th>
-		<th> Tanggal Masuk </th>
-		<th> Tanggal Keluar </th>
-		<th> Periode PKL </th>
-		<th> Menu </th>
-		</tr>
+						<thead>
+						<tr>
+						<th> No </th>
+						<th> NIS </th>
+						<th> Nama Siswa </th>
+						<th> Sekolah/Universitas </th>
+						<th> Tanggal Masuk </th>
+						<th> Tanggal Keluar </th>
+						<th> Periode PKL </th>
+						<th> Menu </th>
+						</tr>
 <?php
 include "config/config.php";
 //memilih table SQL yang akan ditampilkan
