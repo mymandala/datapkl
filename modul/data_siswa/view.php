@@ -90,6 +90,7 @@ if ($_GET['pages']=='view') { ?>
 			</table>
 		</div>
 		<div align="center">
+			<input type="button" value=" Cetak "onclick="window.print();return false;" class="btn btn-primary"/>
 			<a href="index.php?pages=list_siswa"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
 		</div>
 <?php	
