@@ -19,13 +19,13 @@
 							</tr>
 						</thead>
 						<tbody>
-						<?php
-						$i = 1;
-						$qry = mysql_query("SELECT * FROM prog_keahlian where status = '1'");
-						while ($jurusan = mysql_fetch_array($qry)){ ?>
+							<?php
+							$i = 1;
+							$qry = mysql_query("SELECT * FROM prog_keahlian where status = '1'");
+							while ($jurusan = mysql_fetch_array($qry)){ ?>
 							<tr>
 								<td> <?php echo $i++ ?> </td>
-								<td><?php echo $jurusan['nama_prog_keahlian']?></td>
+								<td> <?php echo $jurusan['nama_prog_keahlian']?></td>
 								<td>
 									<a href="proses/prog_keahlian/trash.php?id_prog_keahlian=<?php echo $jurusan ['id_prog_keahlian']; ?> "onclick="return confirm('Apakah Anda yakin akan membuang data Program Keahlian <?php echo $jurusan['nama_prog_keahlian']; ?>?')">
 							            <input type="button" value="buang" name="sunting" class="btn btn-primary btn-sm">
@@ -35,13 +35,12 @@
 							        </a>
 							    </td>
 							</tr>
+							<?php } ?>
 						</tbody>
-						<?php } ?>
 					</table>
 				</div>
 			</div>
 		</div>
 	</div>
 </div>
-
 
