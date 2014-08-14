@@ -44,7 +44,7 @@ mysql_query("UPDATE data_siswa set nis = '$nis',
 										id_prog_keahlian = '$id_prog',
 										periode_pkl = '$hasil',
 										photo = '$fileName'
-										where id_siswa='$id'") or die(mysql_error());
+										where nis='$nis'") or die(mysql_error());
 
 mysql_query("UPDATE periode_pkl set nis = '$nis',
 										 tgl_masuk = '$tgl_masuk',
