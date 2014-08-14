@@ -1,4 +1,4 @@
-<?
+<?php
 include "../../config/config.php";
 $id_user = $_GET['id_user'];
 mysql_query("DELETE from user  where id_user = $id_user")or die(mysql_error());
