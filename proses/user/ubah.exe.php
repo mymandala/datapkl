@@ -27,4 +27,4 @@ mysql_query("UPDATE user set username='$username',
 								  photo='$fileName',
 								  status = '1' 
 								  WHERE id_user='$id_user'")or die(mysql_error());
-header ("location:../../index.php?pages=list_user");
+header ("location:../../index.php?pages=profil_user");
