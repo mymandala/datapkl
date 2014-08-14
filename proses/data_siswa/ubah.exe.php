@@ -1,6 +1,7 @@
 <?php
 include '../../config/config.php';
-$id = $_GET['id_siswa'];
+
+$id=$_POST['id_siswa'];
 $nis = $_POST['nis'];
 $nama = $_POST['nama_siswa'];
 $jenkel = $_POST['jenis_kelamin'];
@@ -13,10 +14,7 @@ $id_pembimbing = $_POST['id_pembimbing'];
 $id_prog = $_POST['id_prog_keahlian'];
 $tgl_masuk = $_POST['tgl_masuk'];
 $tgl_keluar = $_POST['tgl_keluar'];
-$datetime1 = date_create($_POST['tgl_masuk']);
-$datetime2 = date_create($_POST['tgl_keluar']);
-$interval = date_diff($datetime1, $datetime2);
-$hasil = $interval->format('%m Bulan');
+
 
  $fileName = $_FILES['gambar']['name'];  
  $fileSize = $_FILES['gambar']['size'];  
@@ -42,7 +40,7 @@ mysql_query("UPDATE data_siswa set nis = '$nis',
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
-										periode_pkl = '$hasil',
+										periode_pkl = '0',
 										photo = '$fileName',
 										status = '1' where nis = '$nis' ") or die(mysql_error());
 
