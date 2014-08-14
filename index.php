@@ -74,7 +74,7 @@ else
                     <span class="icon-bar"></span>
             
                 </button>
-            
+            	
                 <a class="navbar-brand" href="index.php?pages=dash">Data Prakerin Jerbee</a>
             
             </div>
@@ -82,7 +82,7 @@ else
             <!-- /.navbar-header -->
 
             <ul class="nav navbar-top-links navbar-right">
-                
+            
                
                 <!-- /.dropdown -->
                 <li class="dropdown">
@@ -125,6 +125,12 @@ else
             <div class="navbar-default sidebar" role="navigation">
             
                 <div class="sidebar-nav navbar-collapse">
+            <?php
+			//	$query 		= "SELECT * FROM user where id_user='$_SESSION[id_user]'";
+			//	$sql		= mysql_query($query);
+			//	$row		= mysql_fetch_array($sql);
+             ?>
+              <!-- <img src="images/<?php echo $row['photo']; ?>" width="150" height="150" align="middle" ></td> -->
             
                     <ul class="nav" id="side-menu">
             

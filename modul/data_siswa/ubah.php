@@ -39,6 +39,7 @@
 					<label class="col-sm-2 control-label"> Agama </label>
 					<div class="col-sm-5">
 						<select name="id_agama" class="form-control">
+						<option value=""> --Pilih Agama-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_agama, agama from agama");
 								while ($row = mysql_fetch_array($sql)) {
@@ -70,6 +71,7 @@
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
 					<div class="col-sm-5">
 						<select name="id_sekolah" class="form-control">
+						<option value=""> --Pilih Sekolah/Universitas-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah");
 								while ($row = mysql_fetch_array($sql)) {
@@ -83,6 +85,7 @@
 					<label class="col-sm-2 control-label"> Pembimbing</label>
 					<div class="col-sm-5">
 						<select name="id_pembimbing" class="form-control">
+						<option value=""> --Pilih Pembimbing-- </option> 
 							<?php 
 								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing");
 								while ($row = mysql_fetch_array($sql)) {
@@ -96,6 +99,7 @@
 					<label class="col-sm-2 control-label"> Program Keahlian </label>
 					<div class="col-sm-5">
 						<select name="id_prog_keahlian" class="form-control">
+						<option value=""> --Pilih Program Keahlian-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_prog_keahlian, nama_prog_keahlian from prog_keahlian");
 								while ($row = mysql_fetch_array($sql)) {
