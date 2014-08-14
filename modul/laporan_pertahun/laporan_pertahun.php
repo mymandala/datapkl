@@ -50,7 +50,7 @@
 									<td><?php echo tgl_indo($laporan_taun['tgl_masuk']) ?></td>
 									<td><?php echo tgl_indo($laporan_taun['tgl_keluar'])?></td>
 									<td><?php echo $laporan_taun['periode_pkl']?></td>
-									<td><a href="index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> <input type="button" value="lihat" class="btn btn-primary btn-sm"> </a>
+									<td><a href="index.php?pages=view_pertahun&id_siswa=<?php echo $laporan_taun['id_siswa'];?>"> <input type="button" value="lihat" class="btn btn-primary btn-sm"> </a>
 								        </a>
 								    </td>
 								</tr>

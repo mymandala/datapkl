@@ -21,7 +21,7 @@
 								<th> Tanggal Keluar </th>
 								<th> Menu </th>
 							</tr>
-						</thead>
+				 		</thead>
 						<tbody>
 							<?php 
 							$i =1;

@@ -6,25 +6,25 @@
 </table>
 <br>
 <div class="row">
-	<div class="col-lg-8">
+	<div class="col-lg-12">
     	<div class="panel panel-default" >
             <div class="panel-body" >
             	<div class="table-responsive">
 					<table class="table table-striped table-bordered table-hover" id="dataTables-example">
 						<thead>
 							<tr>
-								<th> Id Program Keahlian</th>
+								<th> No </th>
 								<th> Jenis Program Keahlian</th>
 								<th width="115"> Menu </th>
 							</tr>
 						</thead>
-						<?php
-						$qry = mysql_query("SELECT * FROM prog_keahlian where status = '1'");
-						while ($jurusan = mysql_fetch_array($qry)){
-						?>
 						<tbody>
+						<?php
+						$i = 1;
+						$qry = mysql_query("SELECT * FROM prog_keahlian where status = '1'");
+						while ($jurusan = mysql_fetch_array($qry)){ ?>
 							<tr>
-								<td><?php echo $jurusan['id_prog_keahlian']?></td>
+								<td> <?php echo $i++ ?> </td>
 								<td><?php echo $jurusan['nama_prog_keahlian']?></td>
 								<td>
 									<a href="proses/prog_keahlian/trash.php?id_prog_keahlian=<?php echo $jurusan ['id_prog_keahlian']; ?> "onclick="return confirm('Apakah Anda yakin akan membuang data Program Keahlian <?php echo $jurusan['nama_prog_keahlian']; ?>?')">

@@ -68,7 +68,7 @@
 								<td> <?php echo $data['periode_pkl']; ?> </td>
 								<td> 
 									<div class="btn-group">
-										<a href="index.php?pages=view_perbulan&nis=<?php echo $data['nis'];?>">
+										<a href="index.php?pages=view_perbulan&id_siswa=<?php echo $data['id_siswa'];?>">
 											<input type="button" value="lihat" class="btn btn-primary btn-sm">
 										</a>
 									</div>

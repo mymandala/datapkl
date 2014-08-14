@@ -20,13 +20,13 @@
 								<th width="115"> Menu </th>
 							</tr>
 						</thead>
+						<tbody>
 							<?php
 							$i = 1;
 							$qry = mysql_query("SELECT * FROM sekolah where status = '1'");
 							while ($sekolah = mysql_fetch_array($qry))
 							{
 							?>
-						<tbody>
 							<tr>
 								<td> <?php echo $i++ ?> </td>
 								<td><?php echo $sekolah['s_nama']?></td>

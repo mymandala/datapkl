@@ -53,6 +53,7 @@
 						<th> Periode PKL </th>
 						<th> Menu </th>
 						</tr>
+					<tbody>
 <?php
 include "config/config.php";
 //memilih table SQL yang akan ditampilkan
@@ -70,8 +71,8 @@ while($data=mysql_fetch_array($hasil)){?>
 			<td> <?php echo $data['nis']; ?> </td>
 			<td> <?php echo $data['nama_siswa']; ?> </td>
 			<td> <?php echo $data['s_nama']; ?> </td>	
-			<td> <?php echo $data['tgl_masuk']; ?> </td>
-			<td> <?php echo $data['tgl_keluar']; ?> </td>
+			<td> <?php echo tgl_indo($data['tgl_masuk']); ?> </td>
+			<td> <?php echo tgl_indo($data['tgl_keluar']); ?> </td>
 			<td> <?php echo $data['periode_pkl']; ?> </td>
 			<td> 
 				<div class="btn-group">
@@ -82,4 +83,5 @@ while($data=mysql_fetch_array($hasil)){?>
 			</td>
 		</tr>
 		<?php } ?>
+	</tbody>
 		</table>
