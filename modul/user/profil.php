@@ -44,7 +44,7 @@
 				<td>
 					<table>
 						<tr>
-							<td> <img src="images/<?php echo $data['photo']; ?>" width="200" height="200" ></td>
+							<td> <img src="images/<?php echo $row['photo']; ?>" width="200" height="200" ></td>
 						</tr>
 						</table>
 				</td>

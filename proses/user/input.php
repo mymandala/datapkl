@@ -1,4 +1,4 @@
-<?
+<?php
 include "../../config/config.php";
 
 $username=$_POST['username'];
@@ -24,7 +24,7 @@ mysql_query("INSERT into user set username='$username',
 								  nama='$nama',
 								  email='$email',
 								  level='$level',
-								  photo='fileName',
+								  photo='$fileName',
 								  status = '1'")or die(mysql_error());
 header ("location:../../index.php?pages=list_user");
 ?>
