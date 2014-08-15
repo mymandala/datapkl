@@ -25,12 +25,28 @@
 					<div class="col-sm-5">
 						<div class="checkbox">
 			        		<label>
-			         			 <input type="checkbox" name="jenis_kelamin" value="Perempuan"> Perempuan
+			         			 <?php 
+
+			         			 if($data['jenis_kelamin']=='Perempuan') {
+			         			 	echo "<input type=checkbox name=jenis_kelamin value=Perempuan checked> Perempuan";
+			         			 } 
+			         			 elseif ($data['jenis_kelamin']=='Laki-laki') {
+			         			 	echo "<input type=checkbox name=jenis_kelamin value=Laki-laki checked> Laki-laki";
+			         			 }
+			         			 ?>
 			        		</label>
 			        	</div>
 			        	<div class="checkbox">
 			        		<label>
-			         			 <input type="checkbox" name="jenis_kelamin" value="Laki-laki"> Laki-laki
+			         			<?php 
+
+			         			 if($data['jenis_kelamin']=='Perempuan') {
+			         			 	echo "<input type=checkbox name=jenis_kelamin value=Laki-laki> Laki-laki";
+			         			 } 
+			         			 elseif ($data['jenis_kelamin']=='Laki-laki') {
+			         			 	echo "<input type=checkbox name=jenis_kelamin value=Perempuan> Perempuan";
+			         			 }
+			         			 ?>
 			        		</label>
 			      		</div>
 			      	</div>
@@ -43,7 +59,12 @@
 							<?php 
 								$sql = mysql_query("SELECT id_agama, agama from agama");
 								while ($row = mysql_fetch_array($sql)) {
-									echo "<option value='$row[id_agama]'> $row[agama] </option>";
+									if ($data['id_agama']==$row['id_agama']) {
+										echo "<option value='$row[id_agama]' selected> $row[agama] </option>";
+									}
+									else {
+										echo "<option value='$row[id_agama]'> $row[agama] </option>";
+									}
 								}
 							?>
 						</select>
@@ -58,7 +79,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Lahir </label>
 					<div class="col-sm-5">
-						<input type="date" name="tanggal_lahir" class="form-control" value="<?php echo $data['tgl_lahir']; ?>">
+						<input type="date" name="tanggal_lahir" class="form-control" value="<?php echo $data['tanggal_lahir']; ?>">
 		            </div>
 				</div>
 				<div class="form-group">
@@ -75,7 +96,12 @@
 							<?php 
 								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah");
 								while ($row = mysql_fetch_array($sql)) {
-									echo "<option value='$row[id_sekolah]'>$row[s_nama]</option>";
+									if ($data['id_sekolah']==$row['id_sekolah']) {
+										echo "<option value='$row[id_sekolah]' selected> $row[s_nama] </option>";
+									}
+									else {
+										echo "<option value='$row[id_sekolah]'> $row[s_nama] </option>";
+									}
 								}
 							?>
 						</select>
@@ -89,7 +115,12 @@
 							<?php 
 								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing");
 								while ($row = mysql_fetch_array($sql)) {
-									echo "<option value='$row[id_pembimbing]'>$row[p_nama]</option>";
+									if ($data['id_pembimbing']==$row['id_pembimbing']) {
+										echo "<option value='$row[id_pembimbing]' selected> $row[p_nama] </option>";
+									}
+									else {
+										echo "<option value='$row[id_pembimbing]'> $row[p_nama] </option>";
+									}
 								}
 							?>
 						</select>
@@ -103,7 +134,12 @@
 							<?php 
 								$sql = mysql_query("SELECT id_prog_keahlian, nama_prog_keahlian from prog_keahlian");
 								while ($row = mysql_fetch_array($sql)) {
-									echo "<option value='$row[id_prog_keahlian]'>$row[nama_prog_keahlian]</option>";
+									if ($data['id_prog_keahlian']==$row['id_prog_keahlian']) {
+										echo "<option value='$row[id_prog_keahlian]' selected> $row[nama_prog_keahlian] </option>";
+									}
+									else {
+										echo "<option value='$row[id_prog_keahlian]'> $row[nama_prog_keahlian] </option>";
+									}
 								}
 							?>
 						</select>
@@ -115,18 +151,20 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Masuk </label>
 					<div class="col-sm-5"> 
-						<input type="date" name="tgl_masuk" class="form-control" value="<?php echo $date['tgl_masuk']; ?>">
+						<input type="date" name="tgl_masuk" class="form-control" value="<?php echo $data['tgl_masuk']; ?>">
 					</div>
 				</div>	
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Keluar </label>
 					<div class="col-sm-5"> 
-						<input type="date" name="tgl_keluar" class="form-control" value="<?php echo $date['tgl_keluar']; ?>">
+						<input type="date" name="tgl_keluar" class="form-control" value="<?php echo $data['tgl_keluar']; ?>">
 					</div>
 				</div>	
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Photo </label>
 					<div class="col-sm-5"> 
+					<img src="images/<?php echo $data['photo'] ?>" width=150 height=150> <br><br>
+						<input type="text" name="photo" class="form-control" value="<?php echo $data['photo']; ?>">
 						<input type="file" name="gambar" class="form-control">
 					</div>
 				</div>	

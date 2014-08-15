@@ -122,7 +122,7 @@
 				</div>	
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Photo </label>
-					<div class="col-sm-5"> 
+					<div class="col-sm-5">
 						<input type="file" name="gambar" class="form-control" value="<?php echo $row['photo']; ?>">
 					</div>
 				</div>	
