@@ -46,15 +46,25 @@
 					<div class="col-sm-5">
 						<select name="level" class="form-control">
 							<option>--pilih type--</option>
-							<option value="1">Administrator</option>
-							<option value="2">User</option>
+							<?php if($user['level']=='1') {
+							echo "<option value=1 selected> Administrator</option>";
+							echo "<option value=2>User</option>";
+							 }
+							 if($user['level']=='2') {
+							 echo "<option value=2 selected>User</option>";
+							echo "<option value=1>Administrator</option>";
+							 } ?>
+							
+							
 						</select>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Photo </label>
 					<div class="col-sm-5"> 
-						<input type="file" name="img_ubah" class="form-control" value="<?php echo $user['photo']; ?>">
+					<img src="images/<?php echo $user['photo'] ?>" width=150 height=150> <br><br>
+						<input type="text" name="photo" class="form-control" value="<?php echo $user['photo']; ?>">
+						<input type="file" name="img_ubah" class="form-control">
 					</div>
 				</div>
 				<div class="form-group">

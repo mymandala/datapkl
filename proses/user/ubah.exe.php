@@ -6,6 +6,7 @@ $password=md5($_POST['password']);
 $nama=$_POST['nama'];
 $email=$_POST['email'];
 $level=$_POST['level'];
+$photo = $_POST['photo'];
 $fileName = $_FILES['img_ubah']['name'];  
  $fileSize = $_FILES['img_ubah']['size'];  
  $fileError = $_FILES['img_ubah']['error'];  
@@ -19,7 +20,18 @@ $fileName = $_FILES['img_ubah']['name'];
  }else{  
  echo "Gagal mengupload file: ".$fileError;  
  }  
+ if (empty($fileName)) {
 mysql_query("UPDATE user set username='$username',
+								  password = '$password',
+								  nama='$nama',
+								  email='$email',
+								  level='$level',
+								  photo='$photo',
+								  status = '1' 
+								  WHERE id_user='$id_user'")or die(mysql_error());
+ }
+ if (!empty($fileName)) {
+ 	mysql_query("UPDATE user set username='$username',
 								  password = '$password',
 								  nama='$nama',
 								  email='$email',
@@ -27,4 +39,6 @@ mysql_query("UPDATE user set username='$username',
 								  photo='$fileName',
 								  status = '1' 
 								  WHERE id_user='$id_user'")or die(mysql_error());
+ }
+
 header ("location:../../index.php?pages=profil_user");
