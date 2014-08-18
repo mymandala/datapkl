@@ -1,0 +1,32 @@
+@font-face{
+font-family:Dust West;
+src: url('../../fonts/Dust West.ttf');
+}
+.dustwest{
+font-family:Dust West;
+font-size:30pt;
+}
+@font-face{
+font-family:AlphaWood;
+src: url('../../fonts/AlphaWood.ttf');
+}
+.AlphaWood{
+font-family:AlphaWood;
+font-size:30pt;
+}
+@font-face{
+font-family:Anothershabby_trial;
+src: url('../../fonts/Anothershabby_trial.ttf');
+}
+.Anothershabby_trial{
+font-family:Anothershabby_trial;
+font-size:30pt;
+}
+@font-face{
+font-family:Dickson;
+src: url('../../fonts/Dickson.ttf');
+}
+.Dickson{
+font-family:Dickson;
+font-size:30pt;
+}

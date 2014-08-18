@@ -42,6 +42,7 @@ else
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="font-awesome-4.1.0/css/font-tambahan.css" rel="stylesheet" type="text/css">
 
     <!-- DataTables CSS -->
     <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
