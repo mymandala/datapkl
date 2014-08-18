@@ -30,7 +30,7 @@ $photo = $_POST['photo'];
  echo "Gagal mengupload file: ".$fileError;  
  } 
  if(empty($fileName)) {
-mysql_query("UPDATE data_siswa set nis = '$nis',
+ 	$query = "UPDATE data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
 										jenis_kelamin = '$jenkel',
 										id_agama = '$agama',
@@ -42,8 +42,11 @@ mysql_query("UPDATE data_siswa set nis = '$nis',
 										id_prog_keahlian = '$id_prog',
 										periode_pkl = '0',
 										photo = '$photo',
-										status = '1' where nis = '$nis' ") or die(mysql_error());
+										status = '1' where id_siswa = '$id' ";
+
+mysql_query($query) or die(mysql_error());
 }
+
  if(!empty($fileName)) {
 mysql_query("UPDATE data_siswa set nis = '$nis',
 										nama_siswa = '$nama',

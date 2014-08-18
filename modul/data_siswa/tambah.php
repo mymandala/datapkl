@@ -1,9 +1,13 @@
 <?php if ($_GET['pages']=='tambah_siswa') { ?>
 <div class="page-header"> <h3> Tambah Data Siswa PKL </h3> </div>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-			<form action="proses/data_siswa/tambah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Tambah Data Siswa PKL
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/data_siswa/tambah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> NIS </label>
 					<div class="col-xs-2"> 
@@ -133,7 +137,12 @@
 					</div>
 				</div>
 			</form>
-		</p>
-	</div>
-</div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
 <?php } ?>

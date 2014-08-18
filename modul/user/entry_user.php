@@ -1,8 +1,12 @@
 <div class="page-header"> <h3> Tambah Data User </h3> </div>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-			<form action="proses/user/input.php" method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Tambah Data User
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/user/input.php" method="post" enctype="multipart/form-data" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Username </label>
 					<div class="col-xs-5"> 
@@ -50,6 +54,10 @@
 					</div>
 				</div>
 			</form>
-		</p> 
-	</div> 
-</div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>

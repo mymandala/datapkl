@@ -1,9 +1,13 @@
 <?php if ($_GET['pages']=='tambah_pembimbing') { ?>
 <div class="page-header"> <h3> Tambah Data Pembimbing </h3> </div>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-			<form action="proses/pembimbing/tambah.exe.php" method="post" class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Tambah Data Pembimbing
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/pembimbing/tambah.exe.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Nama </label>
 					<div class="col-sm-5">
@@ -36,13 +40,18 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<div class="col-sm-5">
+					<div class="col-sm-5" align="center">
 						<input type="submit" value="kirim" class="btn btn-primary">
 						<a href="index.php?pages=list_pembimbing"> <input type="button" value="batal" class="btn btn-primary"> </a>
 					</div>
 				</div>
 			</form>
-		</p>
-	</div>
-</div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
 <?php } ?>

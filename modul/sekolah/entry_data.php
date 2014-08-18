@@ -1,8 +1,12 @@
-<div class="page-header"> <h3> Tambah Data Siswa PKL </h3> </div>
+<div class="page-header"> <h3> Tambah Data Sekolah/Universitas </h3> </div>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-			<form action="proses/sekolah/input.php" method="post" class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Tambah Data Sekolah/Universitas
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/sekolah/input.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Nama Sekolah/Universitas </label>
 					<div class="col-sm-5">
@@ -34,6 +38,10 @@
 					</div>
 				</div>
 			</form>
-		</p>
-	</div> 
-</div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>

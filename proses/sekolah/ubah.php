@@ -4,11 +4,15 @@ $sql="SELECT * from sekolah where id_sekolah='$id_sekolah'";
 $query = mysql_query($sql);
 $sekolah = mysql_fetch_array($query);
 ?>
-<div class="page-header"> <h3> Ubah Data Sekolah </h3> </div>
+<div class="page-header"> <h3> Ubah Data Sekolah/Universitas </h3> </div>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-			<form action="proses/sekolah/ubah.exe.php" method="post"  class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Ubah Data Sekolah/Universitas
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/sekolah/ubah.exe.php" method="post"  class="form-horizontal" role="form">
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> ID Sekolah/Universitas </label>
 					<div class="col-xs-2"> 
@@ -46,6 +50,10 @@ $sekolah = mysql_fetch_array($query);
 					</div>
 				</div>
 			</form>
-		</p> 
-	</div> 
-</div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>

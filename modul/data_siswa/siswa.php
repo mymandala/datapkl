@@ -1,6 +1,6 @@
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
-		<td width="270" style="font-size:40px;"> <h2> Data Siswa PKL </h2> </td>
+		<td width="270" style="font-size:40px;" > <h2> Data Siswa PKL </h2> </td>
 		<td> <a href="index.php?pages=tambah_siswa"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
 	</tr>
 </table>

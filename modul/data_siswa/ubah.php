@@ -1,17 +1,22 @@
 <?php if ($_GET['pages']=='ubah_siswa') { ?>
 <div class="page-header"> <h3> Ubah Data Siswa PKL </h3> </div>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-			<form action="proses/data_siswa/ubah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Ubah Data Siswa PKL
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/data_siswa/ubah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 			<?php 
 					$id = $_GET['id_siswa'];
 					$qry = mysql_query("SELECT * from tampil_lengkap where id_siswa = '$id'");
 					while($data = mysql_fetch_array($qry)) { ?>
 				<div class="form-group">
+					<input type="hidden" name="id_siswa" value="<?php echo $data['id_siswa']; ?>">
 					<label class="col-sm-2 control-label"> NIS </label>
 					<div class="col-xs-2"> 
-						<input type="text" name="nis" value="<?php echo $data['nis']; ?>" required="required" class="form-control" readonly> </td>
+						<input type="text" name="nis" value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">
@@ -177,9 +182,16 @@
 				</div>
 				<?php } ?>
 			</form>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
+			
 			<?php } ?>
-		</p>
-	</div> 
-</div>
+
 
 																																																																																				

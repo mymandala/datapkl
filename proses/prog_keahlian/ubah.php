@@ -7,9 +7,13 @@ $sekolah = mysql_fetch_array($query);
 
 <div class="page-header"> <h3> Ubah Data Program Keahlian </h3> </div>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-			<form action="proses/prog_keahlian/ubah.exe.php" method="post" class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Ubah Data Progra Keahlian
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/prog_keahlian/ubah.exe.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-3 control-label"> ID Program Keahlian </label>
 					<div class="col-xs-2"> 
@@ -29,6 +33,10 @@ $sekolah = mysql_fetch_array($query);
 					</div>
 				</div>
 			</form>
-		</p>
-	</div>
-</div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>

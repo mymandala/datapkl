@@ -1,9 +1,12 @@
 <div class="page-header"> <h3> Tambah Data Program Keahlian </h3> </div>
-<br>
 <div class="col-lg-12">
-    <div class="well">
-        <p>
-		    <form action="proses/prog_keahlian/input.php" method="post" class="form-horizontal" role="form">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            Form Tambah Data Program Keahlian
+                        </div>
+                        <div class="panel-body">
+                            <div class="row">
+                            	<form action="proses/prog_keahlian/input.php" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 					<label class="col-sm-3 control-label"> Nama Program Keahlian </label>
 					<div class="col-sm-5">
@@ -17,7 +20,12 @@
 					</div>
 				</div>
 			</form>
-		</p>
-    </div>
-</div>
+                            </div>
+                            <!-- /.row (nested) -->
+                        </div>
+                        <!-- /.panel-body -->
+                    </div>
+                    <!-- /.panel -->
+                </div>
+
 	
