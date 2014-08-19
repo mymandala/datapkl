@@ -16,7 +16,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Password </label>
 					<div class="col-xs-5"> 
-						<input type="text" name="password" required="required" class="form-control"> </td>
+						<input type="password" name="password" required="required" class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">

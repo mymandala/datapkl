@@ -9,14 +9,13 @@
                             <div class="row">
                             	<form action="proses/data_siswa/ubah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 			<?php 
-					$id = $_GET['id_siswa'];
-					$qry = mysql_query("SELECT * from tampil_lengkap where id_siswa = '$id'");
+					$nis = $_GET['nis'];
+					$qry = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
 					while($data = mysql_fetch_array($qry)) { ?>
 				<div class="form-group">
-					<input type="hidden" name="id_siswa" value="<?php echo $data['id_siswa']; ?>">
 					<label class="col-sm-2 control-label"> NIS </label>
 					<div class="col-xs-2"> 
-						<input type="text" name="nis" value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
+						<input type="text" name="nis" readonly value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">
@@ -33,10 +32,10 @@
 			         			 <?php 
 
 			         			 if($data['jenis_kelamin']=='Perempuan') {
-			         			 	echo "<input type=checkbox name=jenis_kelamin value=Perempuan checked> Perempuan";
+			         			 	echo "<input type=radio name=jenis_kelamin value=Perempuan checked> Perempuan";
 			         			 } 
 			         			 elseif ($data['jenis_kelamin']=='Laki-laki') {
-			         			 	echo "<input type=checkbox name=jenis_kelamin value=Laki-laki checked> Laki-laki";
+			         			 	echo "<input type=radio name=jenis_kelamin value=Laki-laki checked> Laki-laki";
 			         			 }
 			         			 ?>
 			        		</label>
@@ -46,10 +45,10 @@
 			         			<?php 
 
 			         			 if($data['jenis_kelamin']=='Perempuan') {
-			         			 	echo "<input type=checkbox name=jenis_kelamin value=Laki-laki> Laki-laki";
+			         			 	echo "<input type=radio name=jenis_kelamin value=Laki-laki> Laki-laki";
 			         			 } 
 			         			 elseif ($data['jenis_kelamin']=='Laki-laki') {
-			         			 	echo "<input type=checkbox name=jenis_kelamin value=Perempuan> Perempuan";
+			         			 	echo "<input type=radio name=jenis_kelamin value=Perempuan> Perempuan";
 			         			 }
 			         			 ?>
 			        		</label>
@@ -64,7 +63,7 @@
 							<?php 
 								$sql = mysql_query("SELECT id_agama, agama from agama");
 								while ($row = mysql_fetch_array($sql)) {
-									if ($data['id_agama']==$row['id_agama']) {
+									if ($data['agama']==$row['agama']) {
 										echo "<option value='$row[id_agama]' selected> $row[agama] </option>";
 									}
 									else {
@@ -101,7 +100,7 @@
 							<?php 
 								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah");
 								while ($row = mysql_fetch_array($sql)) {
-									if ($data['id_sekolah']==$row['id_sekolah']) {
+									if ($data['s_nama']==$row['s_nama']) {
 										echo "<option value='$row[id_sekolah]' selected> $row[s_nama] </option>";
 									}
 									else {
@@ -120,7 +119,7 @@
 							<?php 
 								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing");
 								while ($row = mysql_fetch_array($sql)) {
-									if ($data['id_pembimbing']==$row['id_pembimbing']) {
+									if ($data['p_nama']==$row['p_nama']) {
 										echo "<option value='$row[id_pembimbing]' selected> $row[p_nama] </option>";
 									}
 									else {
@@ -139,7 +138,7 @@
 							<?php 
 								$sql = mysql_query("SELECT id_prog_keahlian, nama_prog_keahlian from prog_keahlian");
 								while ($row = mysql_fetch_array($sql)) {
-									if ($data['id_prog_keahlian']==$row['id_prog_keahlian']) {
+									if ($data['nama_prog_keahlian']==$row['nama_prog_keahlian']) {
 										echo "<option value='$row[id_prog_keahlian]' selected> $row[nama_prog_keahlian] </option>";
 									}
 									else {

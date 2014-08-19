@@ -14,7 +14,6 @@ $id_prog = $_POST['id_prog_keahlian'];
 $tgl_masuk = $_POST['tgl_masuk'];
 $tgl_keluar = $_POST['tgl_keluar'];
 
-
  $fileName = $_FILES['gambar']['name'];  
  $fileSize = $_FILES['gambar']['size'];  
  $fileError = $_FILES['gambar']['error'];  
@@ -28,7 +27,6 @@ $tgl_keluar = $_POST['tgl_keluar'];
  }else{  
  echo "Gagal mengupload file: ".$fileError;  
  }  
-
 mysql_query("INSERT into data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
 										jenis_kelamin = '$jenkel',
@@ -39,7 +37,6 @@ mysql_query("INSERT into data_siswa set nis = '$nis',
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
-										periode_pkl = '0',
 										photo = '$fileName',
 										status = '1'") or die(mysql_error());
 

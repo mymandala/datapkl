@@ -5,8 +5,8 @@ if ($_GET['pages']=='view') { ?>
     <div class="well"  style="font-size:17px;">
         <p>
 		<?php
-		$id = $_GET['id_siswa'];
-		$sql = mysql_query("SELECT * from tampil_lengkap where id_siswa = '$id'");
+		$nis = $_GET['nis'];
+		$sql = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
 		while ($data = mysql_fetch_array($sql)) { ?>
 			<table>
 				<tr>
@@ -78,6 +78,7 @@ if ($_GET['pages']=='view') { ?>
 								<td> <?php echo tgl_indo($data['tgl_keluar']); ?> </td>
 							</tr>
 						</table>
+
 					<td width="200"></td>
 					<td>
 						<table>
@@ -90,7 +91,7 @@ if ($_GET['pages']=='view') { ?>
 			</table>
 		</div>
 		<div align="center">
-			<input type="button" value=" Cetak "onclick="window.print();return false;" class="btn btn-primary"/>
+			<input type="button" id="button" value=" Cetak "onclick="window.print();return false;" class="btn btn-primary"/>
 			<a href="index.php?pages=list_siswa"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
 		</div>
 <?php	
