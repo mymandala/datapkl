@@ -14,6 +14,8 @@ $id_prog = $_POST['id_prog_keahlian'];
 $tgl_masuk = $_POST['tgl_masuk'];
 $tgl_keluar = $_POST['tgl_keluar'];
 $photo = $_POST['photo'];
+$telepon	= $_POST['telepon'];
+$email		= $_POST['email'];
 
  $fileName = $_FILES['gambar']['name'];  
  $fileSize = $_FILES['gambar']['size'];  
@@ -39,6 +41,8 @@ $photo = $_POST['photo'];
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
+										telepon = '$telepon',
+										email = '$email',
 										photo = '$photo',
 										status = '1' where nis = '$nis' ";
 

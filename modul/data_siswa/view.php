@@ -48,6 +48,16 @@ if ($_GET['pages']=='view') { ?>
 								<td> <?php echo $data['alamat']; ?> </td>
 							</tr>
 							<tr>
+								<td> Telepon </td>
+								<td> : </td>
+								<td> <?php echo $data['telepon']; ?> </td>
+							</tr>
+							<tr>
+								<td> E-mail </td>
+								<td> : </td>
+								<td> <?php echo $data['email']; ?> </td>
+							</tr>
+							<tr>
 								<td> Nama Sekolah/Universitas </td>
 								<td> : </td>
 								<td> <?php echo $data['s_nama']; ?> </td>
@@ -77,6 +87,7 @@ if ($_GET['pages']=='view') { ?>
 								<td> : </td>
 								<td> <?php echo tgl_indo($data['tgl_keluar']); ?> </td>
 							</tr>
+							
 						</table>
 
 					<td width="200"></td>

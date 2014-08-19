@@ -68,6 +68,19 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<label class="col-sm-2 control-label"> Telepon </label>
+					<div class="col-sm-5">
+						<input type="type" name="telepon" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> E-mail </label>
+					<div class="col-sm-5">
+						<input type="type" name="email" class="form-control" required>
+					</div>
+				</div>	
+				<div class="form-group">
+				<div class="form-group">
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
 					<div class="col-sm-5">
 						<select name="id_sekolah" class="form-control" required>
@@ -124,12 +137,13 @@
 						<input type="date" name="tgl_keluar" class="form-control" required>
 					</div>
 				</div>	
-				<div class="form-group">
+				
 					<label class="col-sm-2 control-label"> Photo </label>
 					<div class="col-sm-5">
 						<input type="file" name="gambar" class="form-control" value="<?php echo $row['photo']; ?>">
 					</div>
 				</div>	
+
 				<div class="form-group">
 					<div class="col-sm-5" align="center">
 						<input type="submit" value="kirim" class="btn btn-primary">

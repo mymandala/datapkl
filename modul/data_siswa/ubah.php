@@ -93,6 +93,18 @@
 					</div>
 				</div>
 				<div class="form-group">
+					<label class="col-sm-2 control-label"> Telepon </label>
+					<div class="col-sm-5"> 
+						<input type="type" name="telepon" class="form-control" value="<?php echo $data['telepon']; ?>">
+					</div>
+				</div>	
+				<div class="form-group">
+					<label class="col-sm-2 control-label"> E-mail </label>
+					<div class="col-sm-5">
+						<input type="type" name="email" class="form-control" value="<?php echo $data['email']; ?>">
+					</div>
+				</div>
+				<div class="form-group">
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
 					<div class="col-sm-5">
 						<select name="id_sekolah" class="form-control">
@@ -164,6 +176,7 @@
 						<input type="date" name="tgl_keluar" class="form-control" value="<?php echo $data['tgl_keluar']; ?>">
 					</div>
 				</div>	
+			
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Photo </label>
 					<div class="col-sm-5"> 

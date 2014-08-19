@@ -13,6 +13,8 @@ $id_pembimbing = $_POST['id_pembimbing'];
 $id_prog = $_POST['id_prog_keahlian'];
 $tgl_masuk = $_POST['tgl_masuk'];
 $tgl_keluar = $_POST['tgl_keluar'];
+$telepon	= $_POST['telepon'];
+$email		= $_POST['email'];
 
  $fileName = $_FILES['gambar']['name'];  
  $fileSize = $_FILES['gambar']['size'];  
@@ -37,6 +39,8 @@ mysql_query("INSERT into data_siswa set nis = '$nis',
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
+										telepon = '$telepon',
+										email = '$email',
 										photo = '$fileName',
 										status = '1'") or die(mysql_error());
 
