@@ -10,7 +10,7 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label"> Nama Program Keahlian </label>
 					<div class="col-sm-5">
-						<input type="text" name="nm_prog_keahlian" class="form-control">
+						<input type="text" name="nm_prog_keahlian" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">

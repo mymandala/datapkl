@@ -10,25 +10,25 @@
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Nama Sekolah/Universitas </label>
 					<div class="col-sm-5">
-						<input type="text" name="nm_sekolah" class="form-control">
+						<input type="text" name="nm_sekolah" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Alamat </label>
 					<div class="col-sm-5">
-						<input type="text" class="form-control" name="alamat_sekolah">
+						<input type="text" class="form-control" name="alamat_sekolah" required>
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Email </label>
 					<div class="col-sm-5">
-						<input type="text" name="email_sekolah" class="form-control">
+						<input type="text" name="email_sekolah" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Telp </label>
 					<div class="col-sm-5">
-						<input type="text" name="telp_sekolah" class="form-control">
+						<input type="text" name="telp_sekolah" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">

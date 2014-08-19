@@ -11,19 +11,19 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Nama </label>
 					<div class="col-sm-5">
-						<input type="text" name="p_nama" class="form-control">
+						<input type="text" name="p_nama" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Email </label>
 					<div class="col-sm-5">
-						<input type="text" name="p_email" class="form-control">
+						<input type="email" name="p_email" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Telp </label>
 					<div class="col-sm-5"> 
-						<input type="text" name="p_telp" class="form-control">
+						<input type="text" name="p_telp" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
