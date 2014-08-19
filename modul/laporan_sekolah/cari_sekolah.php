@@ -16,9 +16,9 @@
 					<select name="sekolah" class="form-control">
 						<option value=""> --Pilih Sekolah/Universitas-- </option>
 							<?php 
-								$sql = mysql_query("SELECT s_nama from tampil_lengkap where status = '1'");
+								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah where status = '1'");
 								while ($row = mysql_fetch_array($sql)) {
-									echo "<option value='$row[id_sekolah]'>$row[s_nama]</option>";
+									echo "<option value='$row[s_nama]'>$row[s_nama]</option>";
 								}
 							?>
 						</select>
@@ -48,20 +48,14 @@
 					<label class="col-sm-1 control-label"> Tahun </label>
 						<div class="col-sm-3">	
 							<select name="tahun" class="form-control">
-								<option> --Pilih Tahun--</option>
-								<option>2007</option>
-								<option>2008</option>
-								<option>2009</option>
-								<option>2010</option>
-								<option>2011</option>
-								<option>2012</option>
-								<option>2013</option>
-								<option>2014</option>
-								<option>2015</option>
-								<option>2016</option>
-								<option>2017</option>  
-								<option>2018</option>  
-							</select>
+								<?php
+
+for($i=date('2005'); $i<=date('Y')+32; $i+=1)
+		{
+echo"<option value='$i'> $i </option>";
+}
+?>
+</select>
 						</div>
 					</div>
 					<input type="submit" class="btn btn-primary" value="cari">
@@ -89,6 +83,9 @@ include "config/config.php";
 //memilih table SQL yang akan ditampilkan
 if (!empty($_POST))
 {
+$tahun = $_POST['tahun'];
+$bulan = $_POST['bulan'];
+$sekolah = $_POST['sekolah'];
 
 $tampil="SELECT * FROM tampil_lengkap WHERE s_nama like '%$_POST[sekolah]%' AND '$_POST[bulan]' BETWEEN MONTH(tgl_masuk) AND MONTH(tgl_keluar) 
  AND '$_POST[tahun]' BETWEEN YEAR(tgl_masuk) AND YEAR(tgl_keluar)";
