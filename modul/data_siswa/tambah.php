@@ -11,7 +11,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label" > NIS </label>
 					<div class="col-xs-2"> 
-						<input type="text" name="nis" required class="form-control"> </td>
+						<input type="number" name="nis" required class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">
@@ -70,13 +70,13 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Telepon </label>
 					<div class="col-sm-5">
-						<input type="type" name="telepon" class="form-control" required>
+						<input type="number" name="telepon" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> E-mail </label>
 					<div class="col-sm-5">
-						<input type="type" name="email" class="form-control" required>
+						<input type="email" name="email" class="form-control" required>
 					</div>
 				</div>	
 				<div class="form-group">

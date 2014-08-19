@@ -15,7 +15,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> NIS </label>
 					<div class="col-xs-2"> 
-						<input type="text" name="nis" readonly value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
+						<input type="number" name="nis" readonly value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">
@@ -95,7 +95,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Telepon </label>
 					<div class="col-sm-5"> 
-						<input type="type" name="telepon" class="form-control" value="<?php echo $data['telepon']; ?>">
+						<input type="number" name="telepon" class="form-control" value="<?php echo $data['telepon']; ?>">
 					</div>
 				</div>	
 				<div class="form-group">

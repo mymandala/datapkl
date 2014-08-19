@@ -33,20 +33,14 @@
 					<label class="col-sm-1 control-label"> Tahun </label>
 						<div class="col-sm-3">	
 							<select name="tahun" class="form-control">
-								<option> --Pilih Tahun--</option>
-								<option>2007</option>
-								<option>2008</option>
-								<option>2009</option>
-								<option>2010</option>
-								<option>2011</option>
-								<option>2012</option>
-								<option>2013</option>
-								<option>2014</option>
-								<option>2015</option>
-								<option>2016</option>
-								<option>2017</option>  
-								<option>2018</option>  
-							</select>
+								<?php
+
+for($i=date('2005'); $i<=date('Y')+32; $i+=1)
+		{
+echo"<option value='$i'> $i </option>";
+}
+?>
+</select>
 						</div>
 					</div>
 					<input type="submit" class="btn btn-primary" value="cari">
