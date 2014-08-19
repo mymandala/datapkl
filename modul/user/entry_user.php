@@ -28,7 +28,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Email </label>
 					<div class="col-xs-5"> 
-						<input type="text" name="email" required="required" class="form-control"> </td>
+						<input type="email" name="email" required="required" class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">

@@ -35,9 +35,14 @@
 									echo "Administrator";
 								} else { echo "User"; } ?>
 								</td>
-								<td><a href="proses/user/hapus.php?id_user=<?php echo $user['id_user']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus user <?php echo $user['nama']; ?> ?')">
+								<td><?php if ($user['level']=='1') {
+									echo "<input type=button value=hapus name=hapus class=btn btn-primary btn-sm>";
+									}else { ?>
+										<a href="proses/user/hapus.php?id_user=<?php echo $user['id_user']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus user <?php echo $user['nama']; ?> ?')">
 							            <input type="button" value="hapus" name="hapus" class="btn btn-primary btn-sm">
 							        </a>
+
+									<?php } ?>
 							    </td>
 							</tr>
 							<?php }?>
