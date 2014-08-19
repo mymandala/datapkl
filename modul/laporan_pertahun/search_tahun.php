@@ -12,7 +12,21 @@
 					<div class="form-group">
 					<label class="col-sm-1 control-label"> Tahun </label>
 						<div class="col-sm-3">
-							<input type="text" name="tahun" class="form-control">
+							<select name="tahun" class="form-control">
+								<option> --Pilih Tahun--</option>
+								<option>2007</option>
+								<option>2008</option>
+								<option>2009</option>
+								<option>2010</option>
+								<option>2011</option>
+								<option>2012</option>
+								<option>2013</option>
+								<option>2014</option>
+								<option>2015</option>
+								<option>2016</option>
+								<option>2017</option>  
+								<option>2018</option>  
+							</select>
 						</div>
 					</div>
 					<input type="submit" class="btn btn-primary" value="cari">
@@ -36,9 +50,13 @@
 
 <tbody>
 <?php
+include "config/config.php";
+//memilih table SQL yang akan ditampilkan
+if (!empty($_POST))
+{
 	$cari = $_POST['tahun'];
 	$tampil = "SELECT * from tampil_lengkap where YEAR(tgl_masuk) like '$cari%' or YEAR (tgl_keluar) like '$cari%'";
-	
+}
 	$sql = mysql_query ($tampil) or die (mysql_error());
 	$i =1;
 	while ($laporan_taun=mysql_fetch_array($sql)) { ?>

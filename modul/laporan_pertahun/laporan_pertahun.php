@@ -12,7 +12,21 @@
 					<div class="form-group">
 					<label class="col-sm-1 control-label"> Tahun </label>
 						<div class="col-sm-3">	
-							<input type="text" name="tahun" class="form-control">
+							<select name="bulan" class="form-control">
+								<option> --Pilih Tahun--</option>
+								<option value="1">2007</option>
+								<option value="2">2008</option>
+								<option value="3">2009</option>
+								<option value="4">2010</option>
+								<option value="5">2011</option>
+								<option value="6">2012</option>
+								<option value="7">2013</option>
+								<option value="8">2014</option>
+								<option value="9">2015</option>
+								<option value="10">2016</option>
+								<option value="11">2017</option>  
+								<option value="12">2018</option>  
+							</select>
 						</div>
 					</div>
 					<input type="submit" class="btn btn-primary" value="cari">
