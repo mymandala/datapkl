@@ -1,5 +1,5 @@
 <?php
-if ($_GET['pages']=='view_perbulan') { ?>
+if ($_GET['pages']=='view_persekolah') { ?>
 	<div class="page-header"> <h3> Data Siswa PKL </h3> </div>
 <div class="col-lg-12">
     <div class="well"  style="font-size:17px;">
@@ -103,7 +103,7 @@ if ($_GET['pages']=='view_perbulan') { ?>
 		</div>
 		<div align="center">
 			<input type="button" id="button" value=" Cetak "onclick="window.print();return false;" class="btn btn-primary"/>
-			<a href="index.php?pages=laporan_perbulan"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
+			<a href="index.php?pages=laporan_sekolah"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
 		</div>
 <?php	
 	}

@@ -12,7 +12,7 @@
     			<form method="post" action="index.php?pages=cari_sekolah">
     				<div class="form-group">
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
-					<div class="col-sm-5">
+					<div class="col-sm-3">
 					<select name="sekolah" class="form-control">
 						<option value=""> --Pilih Sekolah/Universitas-- </option>
 							<?php 
@@ -26,7 +26,7 @@
 				</div>
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
-						<div class="col-sm-3">	
+						<div class="col-sm-2">	
 							<select name="bulan" class="form-control">
 								<option> --Pilih Bulan--</option>
 								<option value="1">Januari</option>
@@ -46,7 +46,7 @@
 					</div>
 					<div class="form-group">
 					<label class="col-sm-1 control-label"> Tahun </label>
-						<div class="col-sm-3">	
+						<div class="col-sm-2">	
 							<select name="tahun" class="form-control">
 								<?php
 
@@ -105,7 +105,7 @@ while($data=mysql_fetch_array($hasil)){?>
 			<td> 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary btn-sm"> 
-						<a href="index.php?pages=view_sekolah&id_siswa=<?php echo $data['id_siswa'];?>"> <font color="white"> Lihat </font> </a> 
+						<a href="index.php?pages=view_sekolah&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
 					</button>
 				</div>
 			</td>
