@@ -105,7 +105,7 @@ while($data=mysql_fetch_array($hasil)){?>
 			<td> 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary btn-sm"> 
-						<a href="index.php?pages=view_sekolah&id_siswa=<?php echo $data['id_siswa'];?>"> <font color="white"> Lihat </font> </a> 
+						<a href="index.php?pages=view_sekolah&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
 					</button>
 				</div>
 			</td>
