@@ -46,6 +46,10 @@ else
 
     <!-- DataTables CSS -->
     <link href="css/plugins/dataTables.bootstrap.css" rel="stylesheet">
+	
+	<!--css validators-->
+	<link href="css/dist/css/bootstrapValidator.css" rel="stylesheet" type="text/css">
+	<link href="css/dist/css/bootstrapValidator.min.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -283,6 +287,18 @@ else
     <!-- DataTables JavaScript -->
     <script src="js/plugins/dataTables/jquery.dataTables.js"></script>
     <script src="js/plugins/dataTables/dataTables.bootstrap.js"></script>
+	
+	<!-- js validators-->
+	<script src="css/dist/js/bootstrapValidator.js"></script>
+	<script src="css/dist/js/bootstrapValidator.min.js"></script>
+	<script src="css/dist/js/language/de_DE.js"></script>
+	<script src="css/dist/js/language/en_US.js"></script>
+	<script src="css/dist/js/language/es_CL.js"></script>
+	<script src="css/dist/js/language/hu_HU.js"></script>
+	<script src="css/dist/js/language/vi_VN.js"></script>
+	<script src="css/dist/js/language/zh_CN.js"></script>
+	<script src="css/dist/js/language/zh_TW.js"></script>
+	<script src="css/src/js/validator/base64.js"></script>
 
     <script>
     $(document).ready(function() {
