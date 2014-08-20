@@ -23,7 +23,7 @@ if ($ketemu > 0){
 
   $_SESSION['username']    = $r['username'];
   $_SESSION['password']    = $r['password'];
-  $_SESSION['level']	   = $r['level'];
+  $_SESSION['level']	     = $r['level'];
   $_SESSION['nama']        = $r['nama'];
   $_SESSION['id_user']     = $r['id_user'];
   $_SESSION['email']       = $r['email'];
