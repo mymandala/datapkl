@@ -21,7 +21,7 @@
     <![endif]-->
 	</head>
 
-<body>
+<body background="images/opacity.jpg">
 	<center>
 				<img src="images/login.png">
 			</center>
