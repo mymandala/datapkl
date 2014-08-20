@@ -11,7 +11,7 @@
     			<form method="post" action="index.php?pages=cari_sekolah">
     			<div class="form-group">
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
-					<div class="col-sm-5">
+					<div class="col-sm-3">
 					<select name="id_sekolah" class="form-control">
 						<option value=""> --Pilih Sekolah/Universitas-- </option>
 							<?php 
@@ -25,7 +25,7 @@
 				</div>
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
-						<div class="col-sm-3">	
+						<div class="col-sm-2">	
 							<select name="bulan" class="form-control">
 								<option> --Pilih Bulan--</option>
 								<option value="1">Januari</option>
@@ -43,12 +43,9 @@
 							</select>
 						</div>
 					</div>
-					<br>
-					<br>
-					<br>
 					<div class="form-group">
 					<label class="col-sm-1 control-label"> Tahun </label>
-						<div class="col-sm-3">	
+						<div class="col-sm-2">	
 							<select name="bulan" class="form-control">
 								<option selected="selected">Tahun</option>
 <?php
