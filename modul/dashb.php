@@ -1,14 +1,10 @@
-<?php
-
-    if($_SESSION['level']=='3') {
-        echo "";
-    }
-    elseif ($_SESSION['level']=='2' or $_SESSION['level']=='1'); {
-    ?>
-
 <div class="page-header"> <h2> Dashboard </h2> </div>
 <br>
-<div class="col-lg-3 col-md-6">
+<?php
+if ($_SESSION['level']=='3') {
+ 	echo "";
+ } elseif ($_SESSION['level']=='1' or $_SESSION['level']=='2') { ?>
+<div class="col-lg-4 col-md-8">
     <div class="panel panel-primary">
         <div class="panel-heading">
             <div class="row">
@@ -37,7 +33,7 @@
         </a>
     </div>
 </div>
-<div class="col-lg-3 col-md-6">
+<div class="col-lg-4 col-md-8">
     <div class="panel panel-green">
         <div class="panel-heading">
             <div class="row">
@@ -66,7 +62,7 @@
         </a>
     </div>
 </div>
-<div class="col-lg-3 col-md-6">
+<div class="col-lg-4 col-md-8">
     <div class="panel panel-yellow">
         <div class="panel-heading">
             <div class="row">
@@ -95,7 +91,10 @@
         </a>
     </div>
 </div>
-<div class="col-lg-3 col-md-6">
+<?php if ($_SESSION['level']=='2') {
+	echo "";
+} else { ?>
+<div class="col-lg-4 col-md-8">
     <div class="panel panel-red">
         <div class="panel-heading">
             <div class="row">
@@ -124,8 +123,9 @@
         </a>
     </div>
 </div>
+<?php } ?>
 <div class="col-lg-4 col-md-8">
-    <div class="panel panel-red">
+    <div class="panel panel-primary">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
@@ -153,8 +153,9 @@
         </a>
     </div>
 </div>
+<?php } ?>
 <div class="col-lg-4 col-md-8">
-    <div class="panel panel-primary">
+    <div class="panel panel-green">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
@@ -183,7 +184,7 @@
     </div>
 </div>
 <div class="col-lg-4 col-md-8">
-    <div class="panel panel-green">
+    <div class="panel panel-yellow">
         <div class="panel-heading">
             <div class="row">
                 <div class="col-xs-3">
@@ -211,4 +212,32 @@
         </a>
     </div>
 </div>
-<?php } ?>
+<div class="col-lg-4 col-md-8">
+    <div class="panel panel-red">
+        <div class="panel-heading">
+            <div class="row">
+                <div class="col-xs-3">
+                    <i class="fa fa-file fa-5x"></i>
+                </div>
+                <div class="col-xs-9 text-right">
+                    <div class="huge">
+                    	<?php
+                    		$sql = "SELECT * FROM tampil_lengkap WHERE status = '1'";
+							$query= mysql_query($sql);
+							$jumlah=mysql_num_rows($query);
+							echo $jumlah;
+                    	?>
+                    </div>
+                    <div>Laporan Sekolah</div>
+                </div>
+             </div>
+        </div>
+        <a href="index.php?pages=laporan_sekolah">
+	        <div class="panel-footer">
+	            <span class="pull-left">Lihat Selengkapnya</span>
+	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+	            <div class="clearfix"></div>
+	        </div>
+        </a>
+    </div>
+</div>
