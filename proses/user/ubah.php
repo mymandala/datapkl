@@ -48,15 +48,15 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Type </label>
 					<div class="col-sm-5">
-						<select name="level" class="form-control">
-							<option>--pilih type--</option>
+						<select name="level" class="form-control" required>
+							<option value="">--pilih type--</option>
 							<?php if($user['level']=='1') {
 							echo "<option value=1 selected> Administrator</option>";
 							echo "<option value=2>User</option>";
 							 }
 							 if($user['level']=='2') {
 							 echo "<option value=2 selected>User</option>";
-							echo "<option value=1>Administrator</option>";
+							echo "<option value=1 disabled>Administrator</option>";
 							 } ?>
 							
 							
