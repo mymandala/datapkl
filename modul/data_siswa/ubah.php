@@ -101,7 +101,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> E-mail </label>
 					<div class="col-sm-5">
-						<input type="type" name="email" class="form-control" value="<?php echo $data['email']; ?>">
+						<input type="email" name="email" class="form-control" value="<?php echo $data['email']; ?>">
 					</div>
 				</div>
 				<div class="form-group">

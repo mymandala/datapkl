@@ -1,3 +1,11 @@
+<?php 
+session_start() ; 
+if (empty($_SESSION['id_user']))
+{
+
+header('location:index.php');
+}
+?>
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
 		<td width="270" style="font-size:40px;"> <h2> Data Siswa PKL </h2> </td>

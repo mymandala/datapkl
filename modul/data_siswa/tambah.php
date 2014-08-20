@@ -11,7 +11,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label" > NIS </label>
 					<div class="col-xs-2"> 
-						<input type="number" name="nis" required class="form-control"> </td>
+						<input type="auto number" name="nis" required class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">
@@ -70,7 +70,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Telepon </label>
 					<div class="col-sm-5">
-						<input type="number" name="telepon" class="form-control" required>
+						<input type="autonumber" name="telepon" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
@@ -78,7 +78,7 @@
 					<div class="col-sm-5">
 						<input type="email" name="email" class="form-control" required>
 					</div>
-				</div>	
+				</div>
 				<div class="form-group">
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
