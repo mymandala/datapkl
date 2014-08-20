@@ -1,3 +1,13 @@
+<?php
+
+	if($_SESSION['level']=='1') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
 <?php if ($_GET['pages']=='ubah_siswa') { ?>
 <div class="page-header"> <h3> Ubah Data Siswa PKL </h3> </div>
 <div class="col-lg-12">

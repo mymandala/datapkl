@@ -1,4 +1,15 @@
 <?php
+
+	if($_SESSION['level']=='1') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
+
+<?php
 if ($_GET['pages']=='view') { ?>
 	<div class="page-header"> <h3> Data Siswa PKL </h3> </div>
 <div class="col-lg-12">
@@ -112,3 +123,4 @@ if ($_GET['pages']=='view') { ?>
 <?php
 	echo '<a href="javascript:window.print()">';
 ?> 
+<?php } ?>

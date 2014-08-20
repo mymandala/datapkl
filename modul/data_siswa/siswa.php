@@ -1,11 +1,14 @@
-<?php 
-session_start() ; 
-if (empty($_SESSION['id_user']))
-{
+<?php
 
-header('location:index.php');
-}
-?>
+	if($_SESSION['level']=='1') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
+
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
 		<td width="270" style="font-size:40px;"> <h2> Data Siswa PKL </h2> </td>
@@ -70,3 +73,5 @@ header('location:index.php');
 		</div>
 	</div>
 </div>
+<?php } ?>
+<?php } ?>

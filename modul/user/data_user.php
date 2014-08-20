@@ -1,9 +1,13 @@
 <?php
 
-	if($_SESSION['level']=='2') {
+	if($_SESSION['level']=='1') {
 		echo "";
 	}
-	elseif ($_SESSION['level']=='1') { ?>
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
 
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
@@ -39,8 +43,11 @@
 								<td><?php echo $user['nama']?></td>
 								<td><?php echo $user['email']?></td>
 								<td><?php if ($user['level']=='1') {
-									echo "Administrator";
-								} else { echo "User"; } ?>
+									echo "Administrator";}
+									elseif($user['level']=='2') {
+									echo "User"; }
+									elseif($user['level']=='3') {
+									echo "Management";} ?>
 								</td>
 								<td><?php if ($user['level']=='1') {
 									echo "<input type=button value=hapus name=hapus class=btn btn-primary btn-sm>";

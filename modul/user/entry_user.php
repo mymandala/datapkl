@@ -1,5 +1,16 @@
 <?php
 
+	if($_SESSION['level']=='1') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
+
+<?php
+
 	if($_SESSION['level']=='2') {
 		echo "";
 	}
@@ -45,6 +56,7 @@
 							<option>--pilih type--</option>
 							<option value="1">Administrator</option>
 							<option value="2">User</option>
+							<option value="3">Management</option>>
 						</select>
 					</div>
 				</div>

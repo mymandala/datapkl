@@ -1,3 +1,13 @@
+<?php
+
+	if($_SESSION['level']=='1') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
 		<td width="350" style="font-size:40px;"> <h2> Trash Data Sekolah/Universitas </h2> </td>
@@ -13,9 +23,7 @@
 							<tr>
 								<th> No </th>
 								<th> ID  </th>
-								<th>Nama Sekolah</th>
-								<th>Kepala Sekolah</th>
-								<th>NIP</th>
+								<th>Nama </th>
 								<th>Alamat </th>
 								<th>Email </th>
 								<th>Telp </th>
@@ -33,8 +41,6 @@
 								<td> <?php echo $i++ ?> </td>
 								<td><?php echo $sekolah['id_sekolah']?></td>
 								<td><?php echo $sekolah['s_nama']?></td>
-								<td><?php echo $sekolah['kpl_sekolah']?></td>
-								<td><?php echo $sekolah['nip']?></td>
 								<td><?php echo $sekolah['s_alamat']?></td>
 								<td><?php echo $sekolah['s_email']?></td>
 								<td><?php echo $sekolah['s_telp']?></td>
@@ -55,3 +61,4 @@
 		</div>
 	</div>
 </div>
+<?php } ?>

@@ -1,3 +1,14 @@
+<?php
+
+	if($_SESSION['level']=='1') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
+
 <div class="page-header"> <h3> Data User </h3> </div>
 <div class="col-lg-12">
     <div class="well"  style="font-size:17px;">
@@ -62,3 +73,4 @@
 		</p>
 	</div> 
 </div>
+<?php } ?>

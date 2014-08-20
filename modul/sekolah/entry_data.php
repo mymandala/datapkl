@@ -1,3 +1,14 @@
+<?php
+
+	if($_SESSION['level']=='1') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='3'){
+	?>
+
 <div class="page-header"> <h3> Tambah Data Sekolah/Universitas </h3> </div>
 <div class="col-lg-12">
                     <div class="panel panel-default">
@@ -14,18 +25,6 @@
 					</div>
 				</div>
 				<div class="form-group">
-				<label class="col-sm-3 control-label"> Nama Kepala Sekolah </label>
-					<div class="col-sm-5">
-						<input type="text" name="kpl_sekolah" class="form-control" required>
-					</div>
-				</div>
-				<div class="form-group">
-				<label class="col-sm-3 control-label"> NIP </label>
-					<div class="col-sm-5">
-						<input type="text" name="nip" class="form-control" required>
-					</div>
-				</div>
-				<div class="form-group">
 				<label class="col-sm-3 control-label"> Alamat </label>
 					<div class="col-sm-5">
 						<input type="text" class="form-control" name="alamat_sekolah" required>
@@ -34,7 +33,7 @@
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Email </label>
 					<div class="col-sm-5">
-						<input type="email" name="email_sekolah" class="form-control" required>
+						<input type="text" name="email_sekolah" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
@@ -57,3 +56,4 @@
                     </div>
                     <!-- /.panel -->
                 </div>
+<?php } ?>

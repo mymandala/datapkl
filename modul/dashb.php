@@ -1,3 +1,14 @@
+<?php
+
+    if($_SESSION['level']=='1') {
+        echo "";
+    }
+    elseif ($_SESSION['level']=='2') {
+        echo "";
+    }
+    elseif ($_SESSION['level']=='3'){
+    ?>
+
 <div class="page-header"> <h2> Dashboard </h2> </div>
 <br>
 <div class="col-lg-3 col-md-6">
@@ -203,3 +214,4 @@
         </a>
     </div>
 </div>
+<?php } ?>
