@@ -34,6 +34,7 @@ mysql_query("INSERT into data_siswa set nis = '$nis',
 										jenis_kelamin = '$jenkel',
 										id_agama = '$agama',
 										tempat_lahir = '$tmp_lahir',
+										
 										tanggal_lahir = '$tgl_lahir',
 										alamat = '$alamat',
 										id_sekolah = '$id_sklh',

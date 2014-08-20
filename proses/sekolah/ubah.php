@@ -26,18 +26,6 @@ $sekolah = mysql_fetch_array($query);
 					</div>
 				</div>
 				<div class="form-group">
-				<label class="col-sm-3 control-label"> Kepala Sekolah </label>
-					<div class="col-sm-5">
-						<input type="text" name="kpl_sekolah" class="form-control" value="<?php echo $sekolah['kpl_sekolah']?>">
-					</div>
-				</div>
-				<div class="form-group">
-				<label class="col-sm-3 control-label"> NIP </label>
-					<div class="col-sm-5">
-						<input type="text" name="nip" class="form-control" value="<?php echo $sekolah['nip']?>">
-					</div>
-				</div>
-				<div class="form-group">
 				<label class="col-sm-3 control-label"> Alamat </label>
 					<div class="col-sm-5">
 						<input type="text" class="form-control" value="<?php echo $sekolah['s_alamat']?>" name="alamat_sekolah">
@@ -46,7 +34,7 @@ $sekolah = mysql_fetch_array($query);
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Email </label>
 					<div class="col-sm-5">
-						<input type="email" name="email_sekolah" class="form-control" value="<?php echo $sekolah['s_email']?>">
+						<input type="text" name="email_sekolah" class="form-control" value="<?php echo $sekolah['s_email']?>">
 					</div>
 				</div>
 				<div class="form-group">
