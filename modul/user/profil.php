@@ -58,7 +58,7 @@
 			<a href="index.php?pages=ubah_user&id_user=<?php echo $row['id_user']; ?> ">
 				<input type="button" value="ubah" name="sunting" class="btn btn-primary">
 			</a>
-			<a href="index.php?pages=list_user"> 
+			<a href="index.php?pages=dash"> 
 				<input type="button" value="Kembali" class="btn btn-primary"> 
 			</a>
 		</div>

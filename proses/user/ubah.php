@@ -51,12 +51,21 @@
 						<select name="level" class="form-control" required>
 							<option value="">--pilih type--</option>
 							<?php if($user['level']=='1') {
-							echo "<option value=1 selected> Administrator</option>";
-							echo "<option value=2>User</option>";
+								echo "<option value=1 selected> Administrator</option>";
+								echo "<option value=2>User</option>";
+								echo "<option value=3>Management</option>";
 							 }
-							 if($user['level']=='2') {
-							 echo "<option value=2 selected>User</option>";
-							echo "<option value=1 disabled>Administrator</option>";
+
+							 elseif ($user['level']=='2') {
+							 	echo "<option value=1 disabled>Administrator</option>";
+								echo "<option value=2 selected>User</option>";
+								echo "<option value=3>Management</option>";
+							 }
+
+							 elseif ($user['level']=='3') {
+								echo "<option value=1 disabled>Administrator</option>";
+								echo "<option value=2 disabled>User</option>";
+								echo "<option value=3 selected>Management</option>";
 							 } ?>
 							
 							
@@ -74,7 +83,7 @@
 				<div class="form-group">
 					<div class="col-sm-5" align="center">
 						<input type="submit" value="kirim" class="btn btn-primary">
-						<a href="index.php?pages=list_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
+						<a href="index.php?pages=profil_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
 					</div>
 				</div>
 			</form>
