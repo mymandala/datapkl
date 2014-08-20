@@ -1,8 +1,8 @@
 <?php 
-if($_SESSION['level']=='3') {
+if($_SESSION['level']=='3' or $_SESSION['level']=='2') {
         echo "";
     }
-    elseif ($_SESSION['level']=='2' or $_SESSION['level']=='1') {
+    elseif ($_SESSION['level']=='1') {
     ?>
 
 <div class="page-header"> <h3> Tambah Data User </h3> </div>
