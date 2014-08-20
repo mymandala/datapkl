@@ -19,10 +19,11 @@
 					$nis = $_GET['nis'];
 					$qry = mysql_query("SELECT * from tampil_lengkap where nis = '$nis'");
 					while($data = mysql_fetch_array($qry)) { ?>
+					<input type="hidden" name="nis_lama" value="<?php echo $data['nis']; ?>">
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> NIS </label>
 					<div class="col-xs-2"> 
-						<input type="number" name="nis" readonly value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
+						<input type="text" name="nis" value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
 					</div> 
 				</div>
 				<div class="form-group">
@@ -102,7 +103,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Telepon </label>
 					<div class="col-sm-5"> 
-						<input type="number" name="telepon" class="form-control" value="<?php echo $data['telepon']; ?>">
+						<input type="text" name="telepon" class="form-control" value="<?php echo $data['telepon']; ?>">
 					</div>
 				</div>	
 				<div class="form-group">
@@ -194,7 +195,7 @@
 				</div>	
 
 				<div class="form-group">
-					<div class="col-sm-5">
+					<div class="col-sm-5" align="center">
 						<input type="submit" value="kirim" class="btn btn-primary">
 						<a href="index.php?pages=list_siswa"> <input type="button" value="batal" class="btn btn-primary"> </a>
 					</div>
@@ -213,4 +214,4 @@
 			<?php } ?>
 
 
-																																																																																				
+	<?php } ?>																																																																																			

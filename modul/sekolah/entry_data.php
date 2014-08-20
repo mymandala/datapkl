@@ -29,13 +29,25 @@ if($_SESSION['level']=='3') {
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Email </label>
 					<div class="col-sm-5">
-						<input type="text" name="email_sekolah" class="form-control" required>
+						<input type="email" name="email_sekolah" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Telp </label>
 					<div class="col-sm-5">
 						<input type="text" name="telp_sekolah" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label"> Kepala Sekolah </label>
+					<div class="col-sm-5">
+						<input type="text" name="kpl_sekolah" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label"> NIP </label>
+					<div class="col-sm-5">
+						<input type="text" name="nip" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">

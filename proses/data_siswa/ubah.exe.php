@@ -1,6 +1,7 @@
 <?php
 include '../../config/config.php';
 
+$nis_lama = $_POST['nis_lama'];
 $nis = $_POST['nis'];
 $nama = $_POST['nama_siswa'];
 $jenkel = $_POST['jenis_kelamin'];
@@ -31,7 +32,7 @@ $email		= $_POST['email'];
  echo "Gagal mengupload file: ".$fileError;  
  } 
  if(empty($fileName)) {
- 	$query = "UPDATE data_siswa set
+ 	$query = "UPDATE data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
 										jenis_kelamin = '$jenkel',
 										id_agama = '$agama',
@@ -44,13 +45,13 @@ $email		= $_POST['email'];
 										telepon = '$telepon',
 										email = '$email',
 										photo = '$photo',
-										status = '1' where nis = '$nis' ";
+										status = '1' where nis = '$nis_lama'";
 
 mysql_query($query) or die(mysql_error());
 }
 
  if(!empty($fileName)) {
-mysql_query("UPDATE data_siswa set 
+mysql_query("UPDATE data_siswa set nis = '$nis',
 										nama_siswa = '$nama',
 										jenis_kelamin = '$jenkel',
 										id_agama = '$agama',
@@ -60,14 +61,13 @@ mysql_query("UPDATE data_siswa set
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
-										periode_pkl = '0',
 										photo = '$fileName',
-										status = '1' where nis = '$nis' ") or die(mysql_error());
+										status = '1' where nis = '$nis_lama' ") or die(mysql_error());
 }
 
-mysql_query("UPDATE periode_pkl set 
+mysql_query("UPDATE periode_pkl set nis = '$nis',
 										 tgl_masuk = '$tgl_masuk',
-										 tgl_keluar = '$tgl_keluar' where nis = '$nis'") or die (mysql_error());
+										 tgl_keluar = '$tgl_keluar' where nis = '$nis_lama'") or die (mysql_error());
 header ("location:../../index.php?pages=list_siswa");
 
 ?>

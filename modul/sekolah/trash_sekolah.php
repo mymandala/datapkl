@@ -24,6 +24,8 @@ if($_SESSION['level']=='3') {
 								<th>Alamat </th>
 								<th>Email </th>
 								<th>Telp </th>
+								<th> Kepala Sekolah </th>
+								<th> NIP </th>
 								<th width="130"> Menu </th>
 							</tr>
 						</thead>
@@ -41,6 +43,8 @@ if($_SESSION['level']=='3') {
 								<td><?php echo $sekolah['s_alamat']?></td>
 								<td><?php echo $sekolah['s_email']?></td>
 								<td><?php echo $sekolah['s_telp']?></td>
+								<td> <?php echo $sekolah['kpl_sekolah']; ?> </td>
+								<td> <?php echo $sekolah['nip']; ?> </td>
 								<td>
 							      	<a href="proses/sekolah/hapus.php?id_sekolah=<?php echo $sekolah ['id_sekolah']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus data Sekolah <?php echo $sekolah['s_nama']; ?>?')">
 							            <input type="button" value="hapus" class="btn btn-primary btn-sm">
