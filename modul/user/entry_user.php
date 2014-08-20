@@ -1,3 +1,10 @@
+<?php
+
+	if($_SESSION['level']=='2') {
+		echo "";
+	}
+	elseif ($_SESSION['level']=='1') { ?>
+
 <div class="page-header"> <h3> Tambah Data User </h3> </div>
 <div class="col-lg-12">
                     <div class="panel panel-default">
@@ -61,3 +68,4 @@
                     </div>
                     <!-- /.panel -->
                 </div>
+<?php } ?>
