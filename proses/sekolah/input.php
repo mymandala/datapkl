@@ -2,11 +2,15 @@
 include "../../config/config.php";
 $id_sekolah=$_POST['id_sekolah'];
 $nm_sekolah=$_POST['nm_sekolah'];
+$kpl_sekolah=$_POST['kpl_sekolah'];
+$$nip=$_POST['nip'];
 $alamat_sekolah=$_POST['alamat_sekolah'];
 $email_sekolah=$_POST['email_sekolah'];
 $telp_sekolah=$_POST['telp_sekolah'];
 mysql_query("INSERT into sekolah set id_sekolah='$id_sekolah',
 									 s_nama='$nm_sekolah',
+									 kpl_sekolah='$kpl_sekolah',
+									 nip='$nip',
 									 s_alamat='$alamat_sekolah',
 									 s_email='$email_sekolah',
 									 s_telp='$telp_sekolah',

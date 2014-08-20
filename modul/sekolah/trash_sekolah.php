@@ -13,7 +13,9 @@
 							<tr>
 								<th> No </th>
 								<th> ID  </th>
-								<th>Nama </th>
+								<th>Nama Sekolah</th>
+								<th>Kepala Sekolah</th>
+								<th>NIP</th>
 								<th>Alamat </th>
 								<th>Email </th>
 								<th>Telp </th>
@@ -31,6 +33,8 @@
 								<td> <?php echo $i++ ?> </td>
 								<td><?php echo $sekolah['id_sekolah']?></td>
 								<td><?php echo $sekolah['s_nama']?></td>
+								<td><?php echo $sekolah['kpl_sekolah']?></td>
+								<td><?php echo $sekolah['nip']?></td>
 								<td><?php echo $sekolah['s_alamat']?></td>
 								<td><?php echo $sekolah['s_email']?></td>
 								<td><?php echo $sekolah['s_telp']?></td>
