@@ -155,9 +155,11 @@ else
         	}
         	elseif ($_SESSION['level'] == '2') {
         	    $qry = mysql_query("SELECT * FROM menu where parent_page = '0' and level='0'");
+
         	}
-            
-            
+             elseif ($_SESSION['level'] == '3') {
+                $qry = mysql_query("SELECT * FROM menu where level='2'");
+            }
             while ($menu = mysql_fetch_array($qry)) 
 
                 { 
@@ -176,6 +178,7 @@ else
                     
                      if ($menu['id_page'] == $row['parent_page']) { $aktif = "class='active'"; }
 
+           
         ?>
         
                     <li <?php echo $aktif ?>>
