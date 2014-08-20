@@ -1,14 +1,3 @@
-<?php
-
-	if($_SESSION['level']=='1') {
-		echo "";
-	}
-	elseif ($_SESSION['level']=='2') {
-		echo "";
-	}
-	elseif ($_SESSION['level']=='3'){
-	?>
-
 <div class="page-header"> <h3> Data User </h3> </div>
 <div class="col-lg-12">
     <div class="well"  style="font-size:17px;">
@@ -47,7 +36,10 @@
 							<td> : </td>
 							<td> <?php if ($row['level']=='1') {
 									echo "Administrator";
-									} else { echo "User"; } ?>
+									} elseif($row['level']=='2') { echo "User";
+									} elseif($row['level']=='3') { echo "management";
+									}
+									 ?>
 							</td>
 						</tr>
 					</table>

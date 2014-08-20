@@ -1,13 +1,9 @@
-<?php
-
-	if($_SESSION['level']=='1') {
-		echo "";
-	}
-	elseif ($_SESSION['level']=='2') {
-		echo "";
-	}
-	elseif ($_SESSION['level']=='3'){
-	?>
+<?php 
+if($_SESSION['level']=='3') {
+        echo "";
+    }
+    elseif ($_SESSION['level']=='2' or $_SESSION['level']=='1') {
+    ?>
 
 <div class="page-header"> <h3> Tambah Data Sekolah/Universitas </h3> </div>
 <div class="col-lg-12">

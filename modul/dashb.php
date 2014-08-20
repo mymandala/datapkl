@@ -1,12 +1,9 @@
 <?php
 
-    if($_SESSION['level']=='1') {
-        echo "";
+    if($_SESSION['level']=='3') {
+        echo "tidak ada";
     }
-    elseif ($_SESSION['level']=='2') {
-        echo "";
-    }
-    elseif ($_SESSION['level']=='3'){
+    elseif ($_SESSION['level']=='2' && $_SESSION['level']=='1'); {
     ?>
 
 <div class="page-header"> <h2> Dashboard </h2> </div>

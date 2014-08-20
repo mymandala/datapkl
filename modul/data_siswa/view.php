@@ -1,13 +1,10 @@
 <?php
 
-	if($_SESSION['level']=='1') {
-		echo "";
-	}
-	elseif ($_SESSION['level']=='2') {
-		echo "";
-	}
-	elseif ($_SESSION['level']=='3'){
-	?>
+	if($_SESSION['level']=='3') {
+        echo "";
+    }
+    elseif ($_SESSION['level']=='2' or $_SESSION['level']=='1') {
+    ?>
 
 <?php
 if ($_GET['pages']=='view') { ?>
