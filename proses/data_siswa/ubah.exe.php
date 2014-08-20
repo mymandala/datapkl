@@ -60,7 +60,7 @@ mysql_query("UPDATE data_siswa set
 										id_sekolah = '$id_sklh',
 										id_pembimbing = '$id_pembimbing',
 										id_prog_keahlian = '$id_prog',
-										periode_pkl = '0',
+							
 										photo = '$fileName',
 										status = '1' where nis = '$nis' ") or die(mysql_error());
 }
