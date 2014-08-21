@@ -21,9 +21,9 @@
     <![endif]-->
 	</head>
 
-<body background="images/opacity.jpg">
+<body>
 	<center>
-				<img src="images/logopkl.png">
+				<img src="images/login.png">
 			</center>
 	<div class="container">
         <div class="row">

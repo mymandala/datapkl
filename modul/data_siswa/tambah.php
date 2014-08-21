@@ -45,7 +45,7 @@ if($_SESSION['level']=='3') {
 					<label class="col-sm-2 control-label"> Agama </label>
 					<div class="col-sm-5">
 						<select name="id_agama" class="form-control" required>
-							<option value=""> --Pilih Agama-- </option>
+							<option value="-"> --Pilih Agama-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_agama, agama from agama");
 								while ($row = mysql_fetch_array($sql)) {
@@ -64,7 +64,7 @@ if($_SESSION['level']=='3') {
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Lahir </label>
 					<div class="col-sm-5">
-		                <input type="date" name="tanggal_lahir" required class="form-control">
+		                <input type="date" name="tanggal_lahir" class="form-control">
 		            </div>
 				</div>
 				<div class="form-group">
@@ -104,7 +104,7 @@ if($_SESSION['level']=='3') {
 					<label class="col-sm-2 control-label"> Pembimbing</label>
 					<div class="col-sm-5">
 						<select name="id_pembimbing" class="form-control" required>
-						<option value=""> --Pilih Pembimbing-- </option>
+						<option value="-"> --Pilih Pembimbing-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing where status = '1'");
 								while ($row = mysql_fetch_array($sql)) {
@@ -118,7 +118,7 @@ if($_SESSION['level']=='3') {
 					<label class="col-sm-2 control-label"> Program Keahlian </label>
 					<div class="col-sm-5">
 						<select name="id_prog_keahlian" class="form-control" required>
-						<option value=""> --Pilih Program Keahlian-- </option>
+						<option value="-"> --Pilih Program Keahlian-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_prog_keahlian, nama_prog_keahlian from prog_keahlian where status = '1'");
 								while ($row = mysql_fetch_array($sql)) {
@@ -134,13 +134,13 @@ if($_SESSION['level']=='3') {
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Masuk </label>
 					<div class="col-sm-5"> 
-						<input type="date" name="tgl_masuk" class="form-control" required>
+						<input type="date" name="tgl_masuk" class="form-control">
 					</div>
 				</div>	
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Keluar </label>
 					<div class="col-sm-5"> 
-						<input type="date" name="tgl_keluar" class="form-control" required>
+						<input type="date" name="tgl_keluar" class="form-control">
 					</div>
 				</div>	
 				
