@@ -23,7 +23,7 @@
 
 <body background="images/opacity.jpg">
 	<center>
-				<img src="images/login.png">
+				<img src="images/logopkl.png">
 			</center>
 	<div class="container">
         <div class="row">
