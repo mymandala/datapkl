@@ -15,7 +15,7 @@ if($_SESSION['level']=='3') {
                             <div class="row">
                             	<form action="proses/data_siswa/tambah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-2 control-label" > NIS </label>
+					<label class="col-sm-2 control-label" > NIS/NIM </label>
 					<div class="col-xs-2"> 
 						<input type="auto number" name="nis" required class="form-control"> </td>
 					</div> 
