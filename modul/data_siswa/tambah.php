@@ -15,7 +15,7 @@ if($_SESSION['level']=='3') {
                             <div class="row">
                             	<form action="proses/data_siswa/tambah.exe.php" enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
-					<label class="col-sm-2 control-label" > NIS </label>
+					<label class="col-sm-2 control-label" > NIS/NIM </label>
 					<div class="col-xs-2"> 
 						<input type="auto number" name="nis" required class="form-control"> </td>
 					</div> 
@@ -64,7 +64,7 @@ if($_SESSION['level']=='3') {
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Lahir </label>
 					<div class="col-sm-5">
-		                <input type="date" name="tanggal_lahir" required class="form-control">
+		                <input type="date" name="tanggal_lahir" class="form-control">
 		            </div>
 				</div>
 				<div class="form-group">
@@ -76,7 +76,7 @@ if($_SESSION['level']=='3') {
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Telepon </label>
 					<div class="col-sm-5">
-						<input type="autonumber" name="telepon" class="form-control" required>
+						<input type="text" name="telepon" class="form-control" required>
 					</div>
 				</div>
 				<div class="form-group">
@@ -134,13 +134,13 @@ if($_SESSION['level']=='3') {
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Masuk </label>
 					<div class="col-sm-5"> 
-						<input type="date" name="tgl_masuk" class="form-control" required>
+						<input type="date" name="tgl_masuk" class="form-control">
 					</div>
 				</div>	
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tanggal Keluar </label>
 					<div class="col-sm-5"> 
-						<input type="date" name="tgl_keluar" class="form-control" required>
+						<input type="date" name="tgl_keluar" class="form-control">
 					</div>
 				</div>	
 				

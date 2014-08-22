@@ -21,7 +21,7 @@
 					while($data = mysql_fetch_array($qry)) { ?>
 					<input type="hidden" name="nis_lama" value="<?php echo $data['nis']; ?>">
 				<div class="form-group">
-					<label class="col-sm-2 control-label"> NIS </label>
+					<label class="col-sm-2 control-label"> NIS/NIM </label>
 					<div class="col-xs-2"> 
 						<input type="text" name="nis" value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
 					</div> 
@@ -29,7 +29,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Nama Siswa </label>
 					<div class="col-sm-5">
-						<input type="text" name="nama_siswa" class="form-control" value="<?php echo $data['nama_siswa']; ?>">
+						<input type="text" name="nama_siswa" required class="form-control" value="<?php echo $data['nama_siswa']; ?>">
 					</div>
 				</div>
 				<div class="form-group">
@@ -85,7 +85,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Tempat Lahir </label>
 					<div class="col-sm-5"> 
-						<input type="text" name="tempat_lahir" class="form-control" value="<?php echo $data['tempat_lahir']; ?>">
+						<input type="text" required name="tempat_lahir" class="form-control" value="<?php echo $data['tempat_lahir']; ?>">
 					</div>
 				</div>
 				<div class="form-group">
@@ -97,25 +97,25 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Alamat </label>
 					<div class="col-sm-5"> 
-						<textarea name="alamat" class="form-control"> <?php echo $data['alamat']; ?> </textarea>
+						<textarea name="alamat" class="form-control" required> <?php echo $data['alamat']; ?> </textarea>
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Telepon </label>
 					<div class="col-sm-5"> 
-						<input type="text" name="telepon" class="form-control" value="<?php echo $data['telepon']; ?>">
+						<input type="text" name="telepon" class="form-control" required value="<?php echo $data['telepon']; ?>">
 					</div>
 				</div>	
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> E-mail </label>
 					<div class="col-sm-5">
-						<input type="email" name="email" class="form-control" value="<?php echo $data['email']; ?>">
+						<input type="email" name="email" class="form-control" required value="<?php echo $data['email']; ?>">
 					</div>
 				</div>
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
 					<div class="col-sm-5">
-						<select name="id_sekolah" class="form-control">
+						<select name="id_sekolah" class="form-control" required>
 						<option value=""> --Pilih Sekolah/Universitas-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_sekolah, s_nama from sekolah");
@@ -132,9 +132,9 @@
 					</div>
 				</div>
 				<div class="form-group">
-					<label class="col-sm-2 control-label"> Pembimbing</label>
+					<label class="col-sm-2 control-label"> Pembimbing </label>
 					<div class="col-sm-5">
-						<select name="id_pembimbing" class="form-control">
+						<select name="id_pembimbing" class="form-control" required>
 						<option value=""> --Pilih Pembimbing-- </option> 
 							<?php 
 								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing");
@@ -153,7 +153,7 @@
 					<div class="form-group">
 					<label class="col-sm-2 control-label"> Program Keahlian </label>
 					<div class="col-sm-5">
-						<select name="id_prog_keahlian" class="form-control">
+						<select name="id_prog_keahlian" class="form-control" required>
 						<option value=""> --Pilih Program Keahlian-- </option>
 							<?php 
 								$sql = mysql_query("SELECT id_prog_keahlian, nama_prog_keahlian from prog_keahlian");

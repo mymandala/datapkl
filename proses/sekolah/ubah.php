@@ -12,7 +12,7 @@ $sekolah = mysql_fetch_array($query);
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                            	<form action="proses/sekolah/ubah.exe.php" method="post"  class="form-horizontal" role="form">
+                            	<form action="proses/sekolah/ubah.exe.php" Enctype="multipart/form-data" method="post"  class="form-horizontal" role="form">
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> ID Sekolah/Universitas </label>
 					<div class="col-xs-2"> 
@@ -53,6 +53,15 @@ $sekolah = mysql_fetch_array($query);
 				<label class="col-sm-3 control-label"> NIP </label>
 					<div class="col-sm-5">
 						<input type="text" name="nip" required class="form-control" value="<?php echo $sekolah['nip']?>">
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label"> Photo </label>
+					<div class="col-sm-5">
+						<img src="images/<?php echo $sekolah['photo'] ?>" width="50" height="50"> <br><br>
+						<input type="text" name="photo" class="form-control" value="<?php echo $sekolah['photo']; ?>">
+						<input type="file" name="photo" class="form-control">
+					</div>
 					</div>
 				</div>
 				<div class="form-group">

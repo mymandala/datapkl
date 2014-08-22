@@ -30,7 +30,7 @@ if ($ketemu > 0){
   
   // session timeout
 
-  header("location:../index.php?pages=dash");
+  header("location:../page_dash");
 }
 else{
   header("location:../login.php");
