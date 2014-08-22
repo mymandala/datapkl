@@ -7,7 +7,7 @@ if($_SESSION['level']=='3') {
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
 		<td width="350" style="font-size:40px;"> <h2> Data Sekolah/Universitas </h2> </td>
-		<td> <a href="index.php?pages=entry_data_sekolah"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
+		<td> <a href="page_entry_data_sekolah"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
 	</tr>
 </table>
 <div class="row">
@@ -51,7 +51,7 @@ if($_SESSION['level']=='3') {
 									 } ?>
 									</td>
 								<td>
-							        <a href="index.php?pages=ubah_data_sekolah&id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
+							        <a href="page_ubah_data_sekolah&id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
 							            <input type="button" value="ubah" class="btn btn-primary btn-sm">
 							        </a>
 							        <a href="proses/sekolah/trash.php?id_sekolah=<?php echo $sekolah ['id_sekolah']; ?>" onclick="return confirm('Apakah Anda yakin akan membuang data Sekolah <?php echo $sekolah['s_nama']; ?> ?')">

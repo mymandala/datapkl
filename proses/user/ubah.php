@@ -88,7 +88,7 @@
 				<div class="form-group">
 					<div class="col-sm-5" align="center">
 						<input type="submit" value="kirim" class="btn btn-primary">
-						<a href="index.php?pages=profil_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
+						<a href="page_profil_user"> <input type="button" value="batal" class="btn btn-primary"> </a>
 					</div>
 				</div>
 			</form>

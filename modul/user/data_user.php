@@ -7,9 +7,11 @@ if($_SESSION['level']=='3' or $_SESSION['level']=='2') {
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
 		<td width="270" style="font-size:40px;"> <h2> Data User </h2> </td>
-		<td> <a href="index.php?pages=entry_user"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
+		<td> <a href="page_entry_user"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
 	</tr>
 </table>
+<form method="post" action="proses/user/hapus.php">
+	
 <div class="row">
 	<div class="col-lg-12">
     	<div class="panel panel-default">
@@ -46,9 +48,9 @@ if($_SESSION['level']=='3' or $_SESSION['level']=='2') {
 								</td>
 								<td><?php if ($user['level']=='1') {
 									echo "<input type=button value=hapus name=hapus class=btn btn-primary btn-sm>";
-									}else { ?>
-										<a href="proses/user/hapus.php?id_user=<?php echo $user['id_user']; ?>" onclick="return confirm('Apakah Anda yakin akan menghapus user <?php echo $user['nama']; ?> ?')">
-							            <input type="button" value="hapus" name="hapus" class="btn btn-primary btn-sm">
+									} else { ?>
+										<a href="proses/user/hapus.php?id_user=<?php echo $user['id_user'];?>" onclick="return confirm('Apakah Anda yakin akan menghapus user <?php echo $user['nama']; ?> ?')">
+							            <input type="submit" value="hapus" name="hapus" class="btn btn-primary btn-sm">
 							        </a>
 
 									<?php } ?>
@@ -62,4 +64,5 @@ if($_SESSION['level']=='3' or $_SESSION['level']=='2') {
 		</div>
 	</div>
 </div>
+</form>
 <?php } ?>

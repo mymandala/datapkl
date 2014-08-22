@@ -9,7 +9,7 @@
 	<div class="col-lg-12">
     	<div class="panel panel-default">
     		<div class="panel-heading">
-    			<form method="post" action="index.php?pages=search_perbulan">
+    			<form method="post" action="page_search_perbulan">
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
 						<div class="col-sm-3">	
@@ -93,7 +93,7 @@ echo"<option value='$i'> $i </option>";
 								<td> <?php echo $data['periode_pkl']; ?> </td>
 								<td> 
 									<div class="btn-group">
-										<a href="index.php?pages=view_perbulan&nis=<?php echo $data['nis'];?>">
+										<a href="page_view_perbulan&nis=<?php echo $data['nis'];?>">
 											<input type="button" value="lihat" class="btn btn-primary btn-sm">
 										</a>
 									</div>

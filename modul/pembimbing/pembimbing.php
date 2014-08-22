@@ -9,7 +9,7 @@
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
 		<td width="270" style="font-size:40px;"> <h2> Pembimbing </h2> </td>
-		<td> <a href="index.php?pages=tambah_pembimbing"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
+		<td> <a href="page_tambah_pembimbing"> <input type="button" value=" + Tambah Data" class="btn btn-primary"></a></td>
 	</tr>
 </table>
 <br>
@@ -39,7 +39,7 @@
 								<td> <?php echo $data['p_telp']; ?> </td>
 								<td> <?php echo $data['s_nama']; ?> </td>
 								<td> <a href="proses/pembimbing/trash.php?id_pembimbing=<?php echo $data['id_pembimbing'];?>"onclick="return confirm('Apakah Anda yakin akan membuang data pembimbing <?php echo $data['p_nama']; ?>?')"> <input type="button" value="buang" class="btn btn-primary btn-sm"></a>  
-								<a href="index.php?pages=ubah_pembimbing&id_pembimbing=<?php echo $data['id_pembimbing']?>"> <input type="button" value="ubah" class="btn btn-primary btn-sm"> </a> </td>
+								<a href="page_ubah_pembimbing&id_pembimbing=<?php echo $data['id_pembimbing']?>"> <input type="button" value="ubah" class="btn btn-primary btn-sm"> </a> </td>
 							</tr>
 							<?php } ?>
 						</tbody>

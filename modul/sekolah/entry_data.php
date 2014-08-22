@@ -59,7 +59,7 @@ if($_SESSION['level']=='3') {
 				<div class="form-group">
 					<div class="col-sm-5" align="center">
 						<input type="submit" value="Simpan" name="simpan" class="btn btn-primary">
-						<a href="index.php?pages=list_sekolah"> <input type="button" value="batal" class="btn btn-primary"> </a>
+						<a href="page_list_sekolah"> <input type="button" value="batal" class="btn btn-primary"> </a>
 					</div>
 				</div>
 			</form>

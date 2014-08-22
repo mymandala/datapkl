@@ -68,6 +68,6 @@ mysql_query("UPDATE data_siswa set nis = '$nis',
 mysql_query("UPDATE periode_pkl set nis = '$nis',
 										 tgl_masuk = '$tgl_masuk',
 										 tgl_keluar = '$tgl_keluar' where nis = '$nis_lama'") or die (mysql_error());
-header ("location:../../index.php?pages=list_siswa");
+header ("location:../../page_list_siswa");
 
 ?>

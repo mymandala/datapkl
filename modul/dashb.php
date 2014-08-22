@@ -24,7 +24,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=list_siswa">
+        <a href="page_list_siswa">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -53,7 +53,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=list_sekolah">
+        <a href="page_list_sekolah">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -82,7 +82,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=list_pembimbing">
+        <a href="page_list_pembimbing">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -114,7 +114,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=list_user">
+        <a href="page_list_user">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -144,7 +144,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=list_prog_keahlian">
+        <a href="page_list_prog_keahlian">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -174,7 +174,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=laporan_pertahun">
+        <a href="page_laporan_pertahun">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -203,7 +203,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=laporan_perbulan">
+        <a href="page_laporan_perbulan">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
@@ -232,7 +232,7 @@ if ($_SESSION['level']=='3') {
                 </div>
              </div>
         </div>
-        <a href="index.php?pages=laporan_sekolah">
+        <a href="page_laporan_sekolah">
 	        <div class="panel-footer">
 	            <span class="pull-left">Lihat Selengkapnya</span>
 	            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>

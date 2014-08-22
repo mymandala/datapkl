@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteRule ^dashboard$ index.php?pages=dash
-
 RewriteRule ^page_(.*)$ index.php?pages=$1
+
 
 
 Options All -Indexes

@@ -35,7 +35,7 @@
 	<div class="col-lg-12">
     	<div class="panel panel-default">
     		<div class="panel-heading">
-    			<form method="post" action="index.php?pages=search_perbulan">
+    			<form method="post" action="page_search_perbulan">
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
 						<div class="col-sm-3">	
@@ -57,9 +57,6 @@
 						$parm 		= array("class"=>"form-control","name"=>"bulan","selected"=>$default_bulan);
 							echo pilihan($data,$parm);
 						 ?>
-
-						
-
 						</div>
 					</div>
 					<div class="form-group">

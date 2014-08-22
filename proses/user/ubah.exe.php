@@ -41,4 +41,4 @@ mysql_query("UPDATE user set username='$username',
 								  WHERE id_user='$id_user'")or die(mysql_error());
  }
  
-header ("location:../../index.php?pages=profil_user");
+header ("location:../../page_profil_user");

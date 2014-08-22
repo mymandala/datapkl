@@ -13,6 +13,6 @@ mysql_query("INSERT into pembimbing set id_pembimbing = '$id',
 										p_telp = '$telp',
 										id_sekolah = '$id_sklh',
 										status = '1'") or die(mysql_error());
-header ("location:../../index.php?pages=list_pembimbing");
+header ("location:../../page_list_pembimbing");
 
 ?>

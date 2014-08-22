@@ -61,10 +61,10 @@
 			</table>
 		</div>
 		<div align="center">
-			<a href="index.php?pages=ubah_user&id_user=<?php echo $row['id_user']; ?> ">
+			<a href="page_ubah_user&id_user=<?php echo $row['id_user']; ?> ">
 				<input type="button" value="ubah" name="sunting" class="btn btn-primary">
 			</a>
-			<a href="index.php?pages=dash"> 
+			<a href="page_dash"> 
 				<input type="button" value="Kembali" class="btn btn-primary"> 
 			</a>
 		</div>

@@ -35,7 +35,7 @@
 	<div class="col-lg-12">
     	<div class="panel panel-default">
     		<div class="panel-heading">
-    			<form method="post" action="index.php?pages=cari_tahun">
+    			<form method="post" action="page_cari_tahun">
 					<div class="form-group">
 					<label class="col-sm-1 control-label"> Tahun </label>
 						<div class="col-sm-3">
@@ -92,7 +92,7 @@ if (!empty($_POST))
 								<td><?php echo tgl_indo($laporan_taun['tgl_masuk'])?></td>
 								<td><?php echo tgl_indo($laporan_taun['tgl_keluar'])?></td>
 								<td><?php echo $laporan_taun['periode_pkl']?></td>
-								<td><a href="index.php?pages=view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> <input type="button" value="lihat" class="btn btn-primary btn-sm"> </a>
+								<td><a href="page_view_pertahun&nis=<?php echo $laporan_taun['nis'];?>"> <input type="button" value="lihat" class="btn btn-primary btn-sm"> </a>
 								    </a>
 							    </td>
 							</tr>

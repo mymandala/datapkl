@@ -49,6 +49,6 @@ mysql_query("INSERT into periode_pkl set nis = '$nis',
 										 tgl_masuk = '$tgl_masuk',
 										 tgl_keluar = '$tgl_keluar'") or die (mysql_error());
 
-header ("location:../../index.php?pages=list_siswa");
+header ("location:../../page_list_siswa");
 
 ?>

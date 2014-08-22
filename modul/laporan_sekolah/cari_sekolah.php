@@ -9,7 +9,7 @@
 	<div class="col-lg-12">
     	<div class="panel panel-default">
     		<div class="panel-heading">
-    			<form method="post" action="index.php?pages=cari_sekolah">
+    			<form method="post" action="page_cari_sekolah">
     				<div class="form-group">
 					<label class="col-sm-2 control-label"> Sekolah/Universitas </label>
 					<div class="col-sm-3">
@@ -107,7 +107,7 @@ while($data=mysql_fetch_array($hasil)){?>
 			<td> 
 				<div class="btn-group">
 					<button type="button" class="btn btn-primary btn-sm"> 
-						<a href="index.php?pages=view_sekolah&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
+						<a href="page_view_sekolah&nis=<?php echo $data['nis'];?>"> <font color="white"> Lihat </font> </a> 
 					</button>
 				</div>
 			</td>

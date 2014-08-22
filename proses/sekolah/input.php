@@ -31,5 +31,5 @@ mysql_query("INSERT into sekolah set id_sekolah='$id_sekolah',
 									 photo = '$fileName',
 									 status = '1'")or die(mysql_error());
 
-header ("location:../../index.php?pages=list_sekolah");
+header ("location:../../page_list_sekolah");
 ?>

@@ -109,7 +109,7 @@ if ($_GET['pages']=='view_perbulan') { ?>
 		</div>
 		<div align="center">
 			<input type="button" id="button" value=" Cetak "onclick="window.print();return false;" class="btn btn-primary"/>
-			<a href="index.php?pages=laporan_perbulan"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
+			<a href="page_laporan_perbulan"> <input type="button" value="Kembali" class="btn btn-primary"> </a>
 		</div>
 <?php	
 	}

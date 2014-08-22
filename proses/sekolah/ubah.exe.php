@@ -28,5 +28,5 @@ mysql_query("UPDATE sekolah set s_nama='$nm_sekolah',
 								nip = '$nip',
 								photo = '$fileName' where id_sekolah='$id_sekolah'")or die(mysql_error());
 
-echo "<meta http-equiv='refresh' content='0; url=../../index.php?pages=list_sekolah'>";
+echo "<meta http-equiv='refresh' content='0; url=../../page_list_sekolah'>";
 ?>

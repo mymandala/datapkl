@@ -70,7 +70,7 @@ if ($_GET['pages']=='view_laporan') {
 				<td> <?php echo $data['tgl_keluar']; ?> </td>
 			</tr>
 			<tr>
-				<td colspan="3"> <a href="index.php?pages=laporan_pertahun"> kembali </a> </td>
+				<td colspan="3"> <a href="page_laporan_pertahun"> kembali </a> </td>
 			</tr>
 		</table>
 

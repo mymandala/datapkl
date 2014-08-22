@@ -26,5 +26,5 @@ mysql_query("INSERT into user set username='$username',
 								  level='$level',
 								  photo='$fileName',
 								  status = '1'")or die(mysql_error());
-header ("location:../../index.php?pages=list_user");
+header ("location:../../page_list_user");
 ?>
