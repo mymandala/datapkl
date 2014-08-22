@@ -94,7 +94,13 @@ if ($_GET['pages']=='view_persekolah') { ?>
 					<td>
 						<table>
 							<tr>
-								<td> <img src="images/<?php echo $data['photo']; ?>" width="200" height="200" ></td>
+								<td> 
+								<?php if(!empty($data['photo'])) { ?>
+								<img src="images/<?php echo $data['photo']; ?>" width="200" height="200" >
+								<?php }else{
+								echo "<img src=images/photo.jpg width=200 height=200>";
+								} ?>
+								</td>
 							</tr>
 						</table>
 					</td>

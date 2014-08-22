@@ -46,10 +46,16 @@
 				<td width="200"></td>
 				<td>
 					<table>
-						<tr>
-							<td> <img src="images/<?php echo $row['photo']; ?>" width="200" height="200" ></td>
-						</tr>
-						</table>
+							<tr>
+								<td> 
+								<?php if(!empty($data['photo'])) { ?>
+								<img src="images/<?php echo $row['photo']; ?>" width="200" height="200" >
+								<?php }else{
+								echo "<img src=images/photo.jpg width=200 height=200>";
+								} ?>
+								</td>
+							</tr>
+					</table>
 				</td>
 				</tr>
 			</table>
