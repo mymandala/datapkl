@@ -13,20 +13,36 @@
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
 						<div class="col-sm-3">	
+						<?php 
+							$jan = "Januari";
+							$feb = "Februari";
+							$mar = "Maret";
+							$ap = "April";
+							$mei = "Mei";
+							$jun = "Juni";
+							$jul = "Juli";
+							$aug = "Agustus";
+							$sep = "September";
+							$oct = "Oktober";
+							$nov = "November";
+							$des = "Desember";			
+						?>
 							<select name="bulan" class="form-control">
 								<option> --Pilih Bulan--</option>
-								<option value="1">Januari</option>
-								<option value="2">Februari</option>
-								<option value="3">Maret</option>
-								<option value="4">April</option>
-								<option value="5">Mei</option>
-								<option value="6">Juni</option>
-								<option value="7">Juli</option>
-								<option value="8">Agustus</option>
-								<option value="9">September</option>
-								<option value="10">Oktober</option>
-								<option value="11">November</option>  
-								<option value="12">Desember</option>  
+								<?php
+								echo "<option value=1>".$jan."</option>";
+								echo "<option value=2>".$feb."</option>";
+								echo "<option value=3>".$mar."</option>";
+								echo "<option value=4>".$ap."</option>";
+								echo "<option value=5>".$mei."</option>";
+								echo "<option value=6>".$jun."</option>";
+								echo "<option value=7>".$jul."</option>";
+								echo "<option value=8>".$aug."</option>";
+								echo "<option value=9>".$sep."</option>";
+								echo "<option value=10>".$oct."</option>";
+								echo "<option value=11>".$nov."</option>";
+								echo "<option value=12>".$des."</option>";
+							 ?> 
 							</select>
 						</div>
 					</div>

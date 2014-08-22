@@ -39,6 +39,7 @@
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
 						<div class="col-sm-3">	
+
 						<?php
 						if(!isset($_POST['bulan'])){$default_bulan = 0;} else{$default_bulan = $_POST['bulan'];}
 						$data[] 	= array("bulan_number"=>1,"bulan_nama"=>"Januari");
@@ -56,6 +57,9 @@
 						$parm 		= array("class"=>"form-control","name"=>"bulan","selected"=>$default_bulan);
 							echo pilihan($data,$parm);
 						 ?>
+
+						
+
 						</div>
 					</div>
 					<div class="form-group">
@@ -68,9 +72,11 @@ for($i=date('2007'); $i<=date('Y')+1; $i+=1)
 		{
 			if ($_POST['tahun']==$i) {
 				echo"<option value='$i' selected> $i </option>";
+
 			}
 echo"<option value='$i'> $i </option>";
 }
+
 ?>
 </select>
 						</div>
