@@ -187,10 +187,15 @@
 			
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Photo </label>
-					<div class="col-sm-5"> 
+					<div class="col-sm-5">
+					<?php if(!empty($data['photo'])) { ?>
 					<img src="images/<?php echo $data['photo'] ?>" width=150 height=150> <br><br>
 						<input type="text" name="photo" class="form-control" value="<?php echo $data['photo']; ?>">
 						<input type="file" name="gambar" class="form-control">
+					<?php } else { ?>
+						<img src="images/photo.jpg" width="200" height="200"><br>
+						<input type="file" name="gambar" class="form-control">
+					<?php } ?>
 					</div>
 				</div>	
 
