@@ -1,3 +1,29 @@
+<?php
+	function pilihan($data,$param){
+		$hasil		= "<select ";
+		$paramKey	= array_keys($param);
+		for($i=0;$i<count($param);$i++){
+			if($paramKey[$i] == "disabled" or $paramKey[$i] == "selected" or $paramKey[$i] == "readonly"){
+				$disabled = $param["disabled"];
+				$selected = $param["selected"];
+				$readonly = $param["readonly"];
+			}
+			else{
+				$hasil	.= $paramKey[$i]."=\"".$param[$paramKey[$i]]."\" ";
+			}
+		}
+		$hasil 		.= $disabled." ".$readonly.">";
+		for($i=0;$i<count($data);$i++){
+			$dataKey	= array_keys($data[$i]);
+			$pilihan 	= "";
+			if($data[$i][$dataKey[0]] == $selected){
+				$pilihan = "selected";
+			}
+			$hasil .= "<option value=\"".$data[$i][$dataKey[0]]."\" ".$pilihan.">".$data[$i][$dataKey[1]]."</option>";
+		}	
+		$hasil .= "</select>";
+		return $hasil;
+	} ?>
 
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
@@ -13,21 +39,23 @@
 	    			<div class="form-group">
 					<label class="col-sm-1 control-label" > Bulan </label>
 						<div class="col-sm-3">	
-							<select name="bulan" class="form-control">
-								<option> --Pilih Bulan--</option>
-								<option value="1">Januari</option>
-								<option value="2">Februari</option>
-								<option value="3">Maret</option>
-								<option value="4">April</option>
-								<option value="5">Mei</option>
-								<option value="6">Juni</option>
-								<option value="7">Juli</option>
-								<option value="8">Agustus</option>
-								<option value="9">September</option>
-								<option value="10">Oktober</option>
-								<option value="11">November</option>  
-								<option value="12">Desember</option>  
-							</select>
+						<?php
+						if(!isset($_POST['bulan'])){$default_bulan = 0;} else{$default_bulan = $_POST['bulan'];}
+						$data[] 	= array("bulan_number"=>1,"bulan_nama"=>"Januari");
+						$data[] 	= array("bulan_number"=>2,"bulan_nama"=>"Februari");
+						$data[] 	= array("bulan_number"=>3,"bulan_nama"=>"Maret");
+						$data[] 	= array("bulan_number"=>4,"bulan_nama"=>"April");
+						$data[] 	= array("bulan_number"=>5,"bulan_nama"=>"Mei");
+						$data[] 	= array("bulan_number"=>6,"bulan_nama"=>"Juni");
+						$data[] 	= array("bulan_number"=>7,"bulan_nama"=>"Juli");
+						$data[] 	= array("bulan_number"=>8,"bulan_nama"=>"Agustus");
+						$data[] 	= array("bulan_number"=>9,"bulan_nama"=>"September");
+						$data[] 	= array("bulan_number"=>10,"bulan_nama"=>"Oktober");
+						$data[] 	= array("bulan_number"=>11,"bulan_nama"=>"November");
+						$data[] 	= array("bulan_number"=>12,"bulan_nama"=>"Desember");
+						$parm 		= array("class"=>"form-control","name"=>"bulan","selected"=>$default_bulan);
+							echo pilihan($data,$parm);
+						 ?>
 						</div>
 					</div>
 					<div class="form-group">
@@ -36,8 +64,11 @@
 							<select name="tahun" class="form-control">
 								<?php
 
-for($i=date('2005'); $i<=date('Y')+32; $i+=1)
+for($i=date('2007'); $i<=date('Y')+1; $i+=1)
 		{
+			if ($_POST['tahun']==$i) {
+				echo"<option value='$i' selected> $i </option>";
+			}
 echo"<option value='$i'> $i </option>";
 }
 ?>

@@ -80,7 +80,7 @@ else
             
                 </button>
             	
-                <a class="navbar-brand" href="index.php?pages=dash">Data Prakerin Jerbee</a>
+                <a class="navbar-brand" href="dashboard">Data Prakerin Jerbee</a>
             
             </div>
             
@@ -100,7 +100,7 @@ else
             
                     <ul class="dropdown-menu dropdown-user">
             
-                        <li><a href="index.php?pages=profil_user"><i class="fa fa-user fa-fw"></i> User Profile</a>
+                        <li><a href="page_profil_user"><i class="fa fa-user fa-fw"></i> User Profile</a>
             
                         </li>
             
@@ -183,7 +183,7 @@ else
         
                     <li <?php echo $aktif ?>>
                         
-                        <a href="index.php?pages=<?php echo $menu['id_page']; ?>">
+                        <a href="page_<?php echo $menu['id_page']; ?>">
                         
                             <i class="fa <?php echo $menu['icon_page']; ?> fa-fw"></i> 
                         
@@ -211,7 +211,7 @@ else
                     
                                 <li>
                     
-                                    <a <?php echo $aktif ?> href="index.php?pages=<?php echo $sub_menu['id_page']; ?>"><?php echo $sub_menu['label_page']; ?></a>
+                                    <a <?php echo $aktif ?> href="page_<?php echo $sub_menu['id_page']; ?>"><?php echo $sub_menu['label_page']; ?></a>
                     
                                 </li>
                     

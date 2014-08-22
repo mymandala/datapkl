@@ -21,7 +21,7 @@
 					while($data = mysql_fetch_array($qry)) { ?>
 					<input type="hidden" name="nis_lama" value="<?php echo $data['nis']; ?>">
 				<div class="form-group">
-					<label class="col-sm-2 control-label"> NIS </label>
+					<label class="col-sm-2 control-label"> NIS/NIM </label>
 					<div class="col-xs-2"> 
 						<input type="text" name="nis" value="<?php echo $data['nis']; ?>" required="required" class="form-control"> </td>
 					</div> 
