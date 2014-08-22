@@ -13,7 +13,7 @@ if($_SESSION['level']=='3') {
                         </div>
                         <div class="panel-body">
                             <div class="row">
-                            	<form action="proses/sekolah/input.php" method="post" class="form-horizontal" role="form">
+                            	<form action="proses/sekolah/input.php" Enctype="multipart/form-data" method="post" class="form-horizontal" role="form">
 				<div class="form-group">
 				<label class="col-sm-3 control-label"> Nama Sekolah/Universitas </label>
 					<div class="col-sm-5">
@@ -48,6 +48,12 @@ if($_SESSION['level']=='3') {
 				<label class="col-sm-3 control-label"> NIP </label>
 					<div class="col-sm-5">
 						<input type="text" name="nip" class="form-control" required>
+					</div>
+				</div>
+				<div class="form-group">
+				<label class="col-sm-3 control-label"> Photo </label>
+					<div class="col-sm-5">
+						<input type="file" name="photo" class="form-control">
 					</div>
 				</div>
 				<div class="form-group">

@@ -25,6 +25,7 @@ if($_SESSION['level']=='3') {
 								<th>Telp </th>
 								<th> Kepala Sekolah </th>
 								<th> NIP </th>
+								<th> Photo </th>
 								<th width="115"> Menu </th>
 							</tr>
 						</thead>
@@ -43,6 +44,12 @@ if($_SESSION['level']=='3') {
 								<td><?php echo $sekolah['s_telp']?></td>
 								<td> <?php echo $sekolah['kpl_sekolah']; ?> </td>
 								<td> <?php echo $sekolah['nip']; ?> </td>
+								<td> <?php if (!empty($sekolah['photo'])) { ?>
+									 <img src="images/<?php echo $sekolah['photo']; ?>" width="50" height="50" >
+									 <?php } else {
+										echo "<img src=images/photo.jpg width=50 height=50>";
+									 } ?>
+									</td>
 								<td>
 							        <a href="index.php?pages=ubah_data_sekolah&id_sekolah=<?php echo $sekolah ['id_sekolah']; ?> ">
 							            <input type="button" value="ubah" class="btn btn-primary btn-sm">
