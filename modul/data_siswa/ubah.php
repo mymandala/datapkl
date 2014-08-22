@@ -29,7 +29,7 @@
 				<div class="form-group">
 					<label class="col-sm-2 control-label"> Nama Siswa </label>
 					<div class="col-sm-5">
-						<input type="text" name="nama_siswa" class="form-control" value="<?php echo $data['nama_siswa']; ?>">
+						<input type="text" name="nama_siswa" required class="form-control" value="<?php echo $data['nama_siswa']; ?>">
 					</div>
 				</div>
 				<div class="form-group">
@@ -135,7 +135,7 @@
 					<label class="col-sm-2 control-label"> Pembimbing </label>
 					<div class="col-sm-5">
 						<select name="id_pembimbing" class="form-control" required>
-						<option value="-"> --Pilih Pembimbing-- </option> 
+						<option value=""> --Pilih Pembimbing-- </option> 
 							<?php 
 								$sql = mysql_query("SELECT id_pembimbing, p_nama from pembimbing");
 								while ($row = mysql_fetch_array($sql)) {
