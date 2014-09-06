@@ -1,5 +1,5 @@
 <?php
-if ($_GET['pages']=='view_persekolah') { ?>
+if ($_GET['pages']=='view_sekolah') { ?>
 	<div class="page-header"> <h3> Data Siswa PKL </h3> </div>
 <div class="col-lg-12">
     <div class="well"  style="font-size:17px;">

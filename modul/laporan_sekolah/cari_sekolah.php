@@ -1,7 +1,33 @@
+<?php
+	function pilihan($data,$param){
+		$hasil		= "<select ";
+		$paramKey	= array_keys($param);
+		for($i=0;$i<count($param);$i++){
+			if($paramKey[$i] == "disabled" or $paramKey[$i] == "selected" or $paramKey[$i] == "readonly"){
+				$disabled = $param["disabled"];
+				$selected = $param["selected"];
+				$readonly = $param["readonly"];
+			}
+			else{
+				$hasil	.= $paramKey[$i]."=\"".$param[$paramKey[$i]]."\" ";
+			}
+		}
+		$hasil 		.= $disabled." ".$readonly.">";
+		for($i=0;$i<count($data);$i++){
+			$dataKey	= array_keys($data[$i]);
+			$pilihan 	= "";
+			if($data[$i][$dataKey[0]] == $selected){
+				$pilihan = "selected";
+			}
+			$hasil .= "<option value=\"".$data[$i][$dataKey[0]]."\" ".$pilihan.">".$data[$i][$dataKey[1]]."</option>";
+		}	
+		$hasil .= "</select>";
+		return $hasil;
+	} ?>
 
 <table style="margin:10px;" width="1000">
 	<tr class="page-header">
-		<td width="270" style="font-size:40px;"> <h2> Laporan Data Siswa PKL Perbulan </h2> </td>
+		<td width="270" style="font-size:40px;"> <h2> Laporan Data Siswa PKL Sekolah </h2> </td>
 	</tr>
 </table>
 <br>
